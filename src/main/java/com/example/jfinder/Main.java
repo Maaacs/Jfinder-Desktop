@@ -2,28 +2,43 @@ package com.example.jfinder;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class Main extends Application {
-    //private static Scene homeScene;
+    double x,y = 0;
     @Override
     public void start(Stage stage) throws IOException {
-        //Parent fxmlHome = FXMLLoader.load(getClass().getResource("home-view.fxml"));
-        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("home-view.fxml"));
-        Scene homeScene = new Scene(fxmlLoader.load(), 802, 497);
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("home-view.fxml")));
+        Scene homeScene = new Scene(root);
+        stage.initStyle(StageStyle.UNDECORATED);
+        //move around
+        root.setOnMousePressed(evt ->{
+            x = evt.getSceneX();
+            y = evt.getSceneY();
+        });
+        root.setOnMouseDragged(evt ->{
+            stage.setX(evt.getScreenX()- x);
+            stage.setY(evt.getScreenY()- y);
+        });
 
-        //stage.initStyle(StageStyle.UNDECORATED);
+
         stage.setScene(homeScene);
         stage.show();
 
-        /*FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
+
+        stage.setScene(homeScene);
+        stage.show();
+        /*FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("home-view.fxml"));
+        Scene homeScene = new Scene(fxmlLoader.load(), 802, 497);
+        stage.setScene(homeScene);
         stage.show();*/
+
     }
 
     public static void main(String[] args) {
