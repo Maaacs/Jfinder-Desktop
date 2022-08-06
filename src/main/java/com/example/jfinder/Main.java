@@ -14,7 +14,7 @@ public class Main extends Application {
     double x,y = 0;
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("home-view.fxml")));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("usuario-view.fxml")));
         Scene homeScene = new Scene(root);
         stage.initStyle(StageStyle.UNDECORATED);
         //move around
@@ -34,7 +34,7 @@ public class Main extends Application {
 
         stage.setScene(homeScene);
         stage.show();
-        /*FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("home-view.fxml"));
+        /*FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("usuario-view.fxml"));
         Scene homeScene = new Scene(fxmlLoader.load(), 802, 497);
         stage.setScene(homeScene);
         stage.show();*/
