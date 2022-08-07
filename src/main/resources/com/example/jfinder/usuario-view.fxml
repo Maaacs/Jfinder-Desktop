@@ -39,9 +39,6 @@
                         <Button layoutX="78.0" layoutY="40.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="186.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
                            <graphic>
                               <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="135.0" text="Adicionar Usuário" textFill="#631eda">
-                                 <font>
-                                    <Font size="16.0" />
-                                 </font>
                                  <graphic>
                                     <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -168,12 +165,9 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button fx:id="encerrarSessao" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="6.0" layoutY="151.0" mnemonicParsing="false" onAction="#encerrarSessaoOnAction" prefHeight="33.0" prefWidth="183.0" styleClass="navbutton" stylesheets="@css/style.css" text="Encerrar Sessão" textFill="WHITE">
-                                 <padding>
-                                    <Insets left="35.0" />
-                                 </padding>
+                              <Button fx:id="encerrarSessao" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="151.0" mnemonicParsing="false" onAction="#encerrarSessaoOnAction" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Encerrar Sessão" textFill="WHITE">
                                  <graphic>
-                                    <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@icons/logout.png" />
                                        </image>
