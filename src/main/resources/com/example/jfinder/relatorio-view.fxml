@@ -31,7 +31,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button fx:id="Documentos1" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="58.0" mnemonicParsing="false" onAction="#DocumentosOnAction" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Documentos" textFill="WHITE">
+                              <Button fx:id="Documentos1" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="55.0" mnemonicParsing="false" onAction="#DocumentosOnAction" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Documentos" textFill="WHITE">
                                  <graphic>
                                     <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -40,7 +40,7 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button fx:id="Relatorios1" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="112.0" mnemonicParsing="false" onAction="#RelatoriosOnAction" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Relatórios" textFill="WHITE">
+                              <Button fx:id="Relatorios1" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="103.0" mnemonicParsing="false" onAction="#RelatoriosOnAction" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Relatórios" textFill="WHITE">
                                  <graphic>
                                     <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -49,7 +49,15 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button fx:id="encerrarSessao" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="38.0" layoutY="190.0" mnemonicParsing="false" onAction="#encerrarSessaoOnAction" prefHeight="17.0" prefWidth="107.0" styleClass="navbutton" stylesheets="@css/style.css" text="Encerrar Sessão" textFill="WHITE" />
+                              <Button fx:id="encerrarSessao" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="151.0" mnemonicParsing="false" onAction="#encerrarSessaoOnAction" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Encerrar Sessão" textFill="WHITE">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@icons/logout.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
                            </children>
                            <VBox.margin>
                               <Insets />
@@ -78,7 +86,7 @@
                         </ImageView>
                         <Label graphicTextGap="10.0" prefHeight="28.0" prefWidth="65.0" text="Jfinder" textFill="#631eda">
                            <font>
-                              <Font name="Comic Sans MS" size="17.0" />
+                              <Font size="17.0" />
                            </font>
                            <HBox.margin>
                               <Insets left="4.0" />
@@ -102,7 +110,7 @@
                               <Image url="@icons/Relatorios.png" />
                            </image>
                         </ImageView>
-                        <Label graphicTextGap="10.0" layoutX="39.0" layoutY="18.0" prefHeight="28.0" prefWidth="96.0" text="Relatórios" textFill="#631eda">
+                        <Label graphicTextGap="10.0" layoutX="39.0" layoutY="18.0" prefHeight="28.0" prefWidth="108.0" text="Relatórios" textFill="#631eda">
                            <font>
                               <Font name="Comic Sans MS" size="17.0" />
                            </font>

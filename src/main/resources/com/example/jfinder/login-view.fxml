@@ -24,35 +24,35 @@
       <AnchorPane layoutX="400.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: white;">
          <children>
             <TextField fx:id="usuarioLogin" layoutX="96.0" layoutY="224.0" prefHeight="25.0" prefWidth="211.0" />
-            <Text layoutX="36.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario:">
+            <Text layoutX="37.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario:" wrappingWidth="57.0">
                <font>
-                  <Font name="Comic Sans MS" size="13.0" />
+                  <Font size="14.0" />
                </font>
             </Text>
             <PasswordField fx:id="senhaLogin" layoutX="96.0" layoutY="260.0" prefHeight="26.0" prefWidth="211.0" />
-            <Text layoutX="40.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
+            <Text layoutX="38.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" wrappingWidth="57.0">
                <font>
-                  <Font name="Comic Sans MS" size="13.0" />
+                  <Font size="14.0" />
                </font>
             </Text>
-            <Label layoutX="120.0" layoutY="70.0" text="Acesse sua conta">
+            <Label layoutX="137.0" layoutY="62.0" text="Acesse sua conta">
                <font>
-                  <Font name="Comic Sans MS" size="20.0" />
+                  <Font size="17.0" />
                </font>
             </Label>
             <Label layoutX="131.0" layoutY="31.0" text="Bem-vindo!">
                <font>
-                  <Font name="Comic Sans MS" size="28.0" />
+                  <Font size="28.0" />
                </font>
             </Label>
             <JFXButton fx:id="entrar" buttonType="RAISED" layoutX="134.0" layoutY="324.0" onAction="#entrarOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Entrar" textFill="WHITE">
                <font>
-                  <Font name="Comic Sans MS" size="13.0" />
+                  <Font size="14.0" />
                </font>
             </JFXButton>
             <JFXButton fx:id="sair" buttonType="RAISED" layoutX="134.0" layoutY="383.0" onAction="#sairOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Sair" textFill="WHITE">
                <font>
-                  <Font name="Comic Sans MS" size="13.0" />
+                  <Font size="14.0" />
                </font>
             </JFXButton>
             <ImageView fitHeight="53.0" fitWidth="50.0" layoutX="176.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
@@ -60,12 +60,12 @@
                   <Image url="@icons/user2Login.png" />
                </image>
             </ImageView>
-            <Label layoutX="88.0" layoutY="40.0" prefHeight="26.0" prefWidth="50.0" text="Jfile" textFill="#6a05c3">
+            <Label layoutX="69.0" layoutY="37.0" prefHeight="26.0" prefWidth="50.0" text="Jfile" textFill="#6a05c3">
                <font>
-                  <Font name="Comic Sans MS" size="16.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
-            <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="54.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="46.0" fitWidth="50.0" layoutX="26.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@icons/box3.png" />
                </image>
