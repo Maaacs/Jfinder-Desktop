@@ -23,6 +23,16 @@
     -fx-background-color:linear-gradient(to bottom right,rgba(121, 1, 255, 2.2), rgba(70, 200, 239, 2.2));
 }
 
+.menubutton
+{
+    -fx-background-color:linear-gradient(to bottom right,rgba(245, 245, 245, 0.9), rgba(245, 245, 245, 0.9));
+}
+
+.menubutton:hover
+{
+    -fx-background-color:linear-gradient(to bottom right, rgb(118, 39, 238), rgba(70, 200, 239, 2.2));
+}
+
 .login-bg
 {
     -fx-background-color:linear-gradient(to bottom right, #662d60,#4029A6) ;

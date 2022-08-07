@@ -35,8 +35,9 @@ public class Main extends Application {
         Parent fxmlRelatorio = FXMLLoader.load(getClass().getResource("relatorio-view.fxml"));
         relatorioScene = new Scene(fxmlRelatorio, 800, 500);
 
+
         primaryStage.initStyle(StageStyle.UNDECORATED);
-        primaryStage.setScene(usuarioScene);
+        primaryStage.setScene(loginScene);
         primaryStage.show();
     }
     public static void changeScreen(String scr) {

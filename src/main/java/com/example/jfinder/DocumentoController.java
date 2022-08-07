@@ -16,8 +16,7 @@ public class DocumentoController {
     private Button encerrarSessao;
 
     public void encerrarSessaoOnAction(ActionEvent event){
-        Stage stage = (Stage) encerrarSessao.getScene().getWindow();
-        stage.close();
+        Main.changeScreen("login-view");
     }
 
     public void UsuariosOnAction(ActionEvent event) {

@@ -1,25 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.LoginController">
    <children>
-      <AnchorPane prefHeight="500.0" prefWidth="421.0" styleClass="navbar" stylesheets="@css/style.css" />
-      <AnchorPane layoutX="421.0" prefHeight="29.0" prefWidth="379.0">
+      <AnchorPane prefHeight="500.0" prefWidth="400.0" styleClass="principal" stylesheets="@css/style.css">
          <children>
-            <Button layoutX="324.0" layoutY="3.0" mnemonicParsing="false" style="-fx-background-color: #F4F4F4;" textFill="#c31414" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <graphic>
-                  <ImageView fitHeight="21.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@icons/fechar.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
+            <ImageView fitHeight="128.0" fitWidth="116.0" layoutX="130.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/box3.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
+      <AnchorPane layoutX="400.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: white;">
+         <children>
+            <TextField fx:id="usuarioLogin" layoutX="96.0" layoutY="224.0" prefHeight="25.0" prefWidth="211.0" />
+            <Text layoutX="36.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario:">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Text>
+            <PasswordField fx:id="senhaLogin" layoutX="96.0" layoutY="260.0" prefHeight="26.0" prefWidth="211.0" />
+            <Text layoutX="40.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </Text>
+            <Label layoutX="120.0" layoutY="70.0" text="Acesse sua conta">
+               <font>
+                  <Font name="Comic Sans MS" size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="131.0" layoutY="31.0" text="Bem-vindo!">
+               <font>
+                  <Font name="Comic Sans MS" size="28.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="entrar" buttonType="RAISED" layoutX="134.0" layoutY="324.0" onAction="#entrarOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Entrar" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="sair" buttonType="RAISED" layoutX="134.0" layoutY="383.0" onAction="#sairOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Sair" textFill="WHITE">
+               <font>
+                  <Font name="Comic Sans MS" size="13.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="53.0" fitWidth="50.0" layoutX="176.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/user2Login.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="88.0" layoutY="40.0" prefHeight="26.0" prefWidth="50.0" text="Jfile" textFill="#6a05c3">
+               <font>
+                  <Font name="Comic Sans MS" size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="41.0" layoutX="54.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/box3.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
    </children>
 </AnchorPane>

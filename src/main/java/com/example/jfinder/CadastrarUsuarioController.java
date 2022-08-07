@@ -1,4 +1,4 @@
 package com.example.jfinder;
 
-public class CadastrarUsuarioView {
+public class CadastrarUsuarioController {
 }
