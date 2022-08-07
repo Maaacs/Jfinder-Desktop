@@ -46,6 +46,9 @@
                                        </image>
                                     </ImageView>
                                  </graphic>
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
                               </Label>
                            </graphic>
                         </Button>
@@ -53,7 +56,7 @@
                            <graphic>
                               <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="141.0" text="Remover Usuário" textFill="#631eda">
                                  <font>
-                                    <Font size="17.0" />
+                                    <Font size="14.0" />
                                  </font>
                                  <graphic>
                                     <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
@@ -69,7 +72,7 @@
                            <graphic>
                               <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="111.0" text="Buscar Usuário" textFill="#631eda">
                                  <font>
-                                    <Font size="17.0" />
+                                    <Font size="14.0" />
                                  </font>
                                  <graphic>
                                     <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
@@ -85,7 +88,7 @@
                            <graphic>
                               <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="109.0" text="Alterar Usuário" textFill="#631eda">
                                  <font>
-                                    <Font size="17.0" />
+                                    <Font size="14.0" />
                                  </font>
                                  <graphic>
                                     <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
