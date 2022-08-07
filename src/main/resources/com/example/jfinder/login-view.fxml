@@ -24,13 +24,13 @@
       <AnchorPane layoutX="400.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: white;">
          <children>
             <TextField fx:id="usuarioLogin" layoutX="96.0" layoutY="224.0" prefHeight="25.0" prefWidth="211.0" />
-            <Text layoutX="37.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario:" wrappingWidth="57.0">
+            <Text layoutX="30.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario:" wrappingWidth="66.0">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
             <PasswordField fx:id="senhaLogin" layoutX="96.0" layoutY="260.0" prefHeight="26.0" prefWidth="211.0" />
-            <Text layoutX="38.0" layoutY="278.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" wrappingWidth="57.0">
+            <Text layoutX="31.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" wrappingWidth="57.0">
                <font>
                   <Font size="14.0" />
                </font>

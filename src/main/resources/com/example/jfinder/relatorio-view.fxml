@@ -18,7 +18,7 @@
          <left>
             <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox alignment="TOP_CENTER" layoutY="-6.0" prefHeight="439.0" prefWidth="195.0" style="-fx-background-radius: 0 60 0 0;" styleClass="principal" stylesheets="@css/style.css">
+                  <VBox alignment="TOP_CENTER" layoutY="-5.0" prefHeight="438.0" prefWidth="195.0" style="-fx-background-radius: 0 60 0 0;" styleClass="principal" stylesheets="@css/style.css">
                      <children>
                         <Pane prefHeight="418.0" prefWidth="195.0" style="-fx-background-radius: 0 60 0 0;">
                            <children>
