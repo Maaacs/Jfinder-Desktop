@@ -27,7 +27,7 @@
                         </ImageView>
                         <Label graphicTextGap="10.0" layoutX="59.0" layoutY="30.0" prefHeight="28.0" prefWidth="76.0" text="Usuários" textFill="#631eda">
                            <font>
-                              <Font name="Comic Sans MS" size="17.0" />
+                              <Font name="System Font" size="17.0" />
                            </font>
                         </Label>
                      </children>
@@ -38,9 +38,9 @@
                      <children>
                         <Button layoutX="78.0" layoutY="40.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="186.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
                            <graphic>
-                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="144.0" text="Adicionar Usuário" textFill="#631eda">
+                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="121.0" text="Adicionar Usuário" textFill="#631eda">
                                  <font>
-                                    <Font name="Comic Sans MS" size="17.0" />
+                                    <Font size="16.0" />
                                  </font>
                                  <graphic>
                                     <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
@@ -54,9 +54,9 @@
                         </Button>
                         <Button layoutX="344.0" layoutY="40.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="186.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
                            <graphic>
-                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="136.0" text="Remover Usuário" textFill="#631eda">
+                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="126.0" text="Remover Usuário" textFill="#631eda">
                                  <font>
-                                    <Font name="Comic Sans MS" size="17.0" />
+                                    <Font size="17.0" />
                                  </font>
                                  <graphic>
                                     <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
@@ -70,9 +70,9 @@
                         </Button>
                         <Button layoutX="78.0" layoutY="199.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="186.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
                            <graphic>
-                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="120.0" text="Buscar Usuário" textFill="#631eda">
+                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="111.0" text="Buscar Usuário" textFill="#631eda">
                                  <font>
-                                    <Font name="Comic Sans MS" size="17.0" />
+                                    <Font size="17.0" />
                                  </font>
                                  <graphic>
                                     <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
@@ -86,9 +86,9 @@
                         </Button>
                         <Button layoutX="344.0" layoutY="199.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="186.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
                            <graphic>
-                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="128.0" text="Alterar Usuário" textFill="#631eda">
+                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="109.0" text="Alterar Usuário" textFill="#631eda">
                                  <font>
-                                    <Font name="Comic Sans MS" size="17.0" />
+                                    <Font size="17.0" />
                                  </font>
                                  <graphic>
                                     <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
@@ -168,7 +168,10 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button fx:id="encerrarSessao" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="38.0" layoutY="190.0" mnemonicParsing="false" onAction="#encerrarSessaoOnAction" prefHeight="17.0" prefWidth="107.0" styleClass="navbutton" stylesheets="@css/style.css" text="Encerrar Sessão" textFill="WHITE" />
+                              <Button fx:id="encerrarSessao" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="33.0" layoutY="189.0" mnemonicParsing="false" onAction="#encerrarSessaoOnAction" prefHeight="26.0" prefWidth="130.0" styleClass="navbutton" stylesheets="@css/style.css" text="Encerrar Sessão" textFill="WHITE">
+                                 <padding>
+                                    <Insets left="20.0" />
+                                 </padding></Button>
                            </children>
                            <VBox.margin>
                               <Insets />
