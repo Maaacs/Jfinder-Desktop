@@ -16,11 +16,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <BorderPane prefHeight="497.0" prefWidth="802.0">
+        <BorderPane prefHeight="500.0" prefWidth="800.0">
             <left>
-                <VBox prefHeight="497.0" prefWidth="198.0" style="-fx-background-color: #3D208A #3D208A;" BorderPane.alignment="CENTER">
+                <VBox prefHeight="500.0" prefWidth="198.0" style="-fx-background-color: #3D208A #3D208A;" BorderPane.alignment="CENTER">
                     <children>
                         <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="198.0" style="-fx-background-color: #4029A6 #4029A6;" text="Usuários" textFill="WHITE">
                             <graphic>
@@ -62,7 +62,7 @@
                 </VBox>
             </left>
             <top>
-                <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="802.0" style="-fx-background-color: #3D208A #3D208A #3D208A #3D208A;" BorderPane.alignment="CENTER">
+                <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="800.0" style="-fx-background-color: #3D208A #3D208A #3D208A #3D208A;" BorderPane.alignment="CENTER">
                     <children>
                         <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                             <image>

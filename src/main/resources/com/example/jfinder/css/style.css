@@ -1,16 +1,57 @@
 .button
 {
-    -fx-background-color :  #3D208A;
+    -fx-background-color :  #4029A6;
 }
 
-.button:pressed
+.principal
 {
-    -fx-brackground-color : #3D208A;
+    -fx-background-color : #3D208A;
+}
+
+.navbar
+{
+    -fx-background-color:linear-gradient(to bottom right, #662d60,#4029A6) ;
+}
+
+.navbutton
+{
+    -fx-background-color:linear-gradient(to bottom right,rgba(121, 1, 255, 0.9), rgba(100, 1, 239, 0.9));
+}
+
+.navbutton:hover
+{
+    -fx-background-color:linear-gradient(to bottom right,rgba(121, 1, 255, 2.2), rgba(70, 200, 239, 2.2));
+}
+
+.login-bg
+{
+    -fx-background-color:linear-gradient(to bottom right, #662d60,#4029A6) ;
+}
+
+.exit{
+    -fx-background-color: #f15b72;
+    -fx-background-radius:5px;
+    -fx-cursor:hand;
+
+}
+
+.exit:hover{
+    -fx-background-color: #f15b72;
+}
+
+.box{
+
+    -fx-border-radius: 50px;
 }
 
 
-.table-view .column-header,
+</style>
+
+
+
+
+/*.table-view .column-header,
 .table-view .column-header-background .filter{
     -fx-cell-size : 20;
-    -fx-background-color: #7156DD;
+    -fx-background-color: #7156DD;*/
 }

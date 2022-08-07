@@ -16,53 +16,78 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="497.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <BorderPane prefHeight="497.0" prefWidth="802.0">
+        <BorderPane prefHeight="500.0" prefWidth="800.0">
             <left>
-                <VBox prefHeight="497.0" prefWidth="198.0" style="-fx-background-color: #3D208A #3D208A;" BorderPane.alignment="CENTER">
+                <VBox alignment="TOP_CENTER" prefHeight="430.0" prefWidth="195.0" styleClass="principal" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
                     <children>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="198.0" style="-fx-background-color: #4029A6 #4029A6;" text="Usuários" textFill="WHITE">
-                            <graphic>
-                                <ImageView fitHeight="20.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@icons/usuarios.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
+                  <AnchorPane prefHeight="51.0" prefWidth="198.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="7.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Usuários" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/usuarios.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="198.0" style="-fx-background-color: #4029A6 #4029A6 #4029A6 #4029A6;" text="Documentos" textFill="WHITE">
-                            <graphic>
-                                <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@icons/documentos.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="51.0" prefWidth="198.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="2.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Documentos" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/documentos.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Button>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="198.0" style="-fx-background-color: #4029A6 #4029A6 #4029A6 #4029A6;" text="Relatórios" textFill="WHITE">
-                            <graphic>
-                                <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@icons/Relatorios.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic>
-                            <padding>
-                                <Insets left="30.0" />
-                            </padding>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="51.0" prefWidth="198.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Relatórios" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/Relatorios.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
                         </Button>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="51.0" prefWidth="198.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="-8.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Outros" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@icons/logo.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </AnchorPane>
                     </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets top="60.0" />
+               </padding>
                 </VBox>
             </left>
             <top>
-                <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="802.0" style="-fx-background-color: #3D208A #3D208A #3D208A #3D208A;" BorderPane.alignment="CENTER">
+                <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="800.0" styleClass="principal" stylesheets="@css/style.css" BorderPane.alignment="CENTER">
                     <children>
                         <ImageView fitHeight="31.0" fitWidth="34.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -84,16 +109,30 @@
                 </HBox>
             </top>
          <center>
-            <TabPane prefHeight="362.0" prefWidth="604.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <TabPane prefHeight="385.0" prefWidth="526.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
               <tabs>
                 <Tab text="Adicionar">
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="423.0" prefWidth="604.0">
                            <children>
-                              <HBox alignment="CENTER_LEFT" layoutY="14.0" prefHeight="46.0" prefWidth="604.0">
-                                 <padding>
-                                    <Insets left="30.0" />
-                                 </padding>
+                              <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="604.0">
+                                 <children>
+                                    <Label graphicTextGap="10.0" text="Usuários">
+                                       <font>
+                                          <Font name="Comic Sans MS" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets left="4.0" />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@icons/usuarios.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                 </children>
                               </HBox>
                               <HBox layoutX="-1.0" layoutY="60.0" prefHeight="24.0" prefWidth="607.0">
                                  <children>
@@ -116,27 +155,6 @@
                                     </TextField>
                                  </children>
                               </HBox>
-                              <Button layoutX="14.0" layoutY="344.0" mnemonicParsing="false" stylesheets="@css/style.css" text="Cancelar" textFill="WHITE" />
-                              <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="604.0">
-                                 <children>
-                                    <Label graphicTextGap="10.0" text="Usuários">
-                                       <font>
-                                          <Font name="Comic Sans MS" size="18.0" />
-                                       </font>
-                                       <HBox.margin>
-                                          <Insets left="4.0" />
-                                       </HBox.margin>
-                                       <graphic>
-                                          <ImageView fitHeight="19.0" fitWidth="19.0" pickOnBounds="true" preserveRatio="true">
-                                             <image>
-                                                <Image url="@icons/usuarios.png" />
-                                             </image>
-                                          </ImageView>
-                                       </graphic>
-                                    </Label>
-                                 </children>
-                              </HBox>
-                              <Button layoutX="504.0" layoutY="343.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="86.0" text="Confirmar" />
                               <HBox layoutX="-1.0" layoutY="131.0" prefHeight="24.0" prefWidth="607.0">
                                  <children>
                                     <Label alignment="CENTER_RIGHT" text="Sobrenome">
@@ -158,7 +176,7 @@
                                     </TextField>
                                  </children>
                               </HBox>
-                              <HBox layoutX="-1.0" layoutY="213.0" prefHeight="24.0" prefWidth="607.0">
+                              <HBox layoutX="-1.0" layoutY="213.0" prefHeight="24.0" prefWidth="607.0" stylesheets="@css/style.css">
                                  <children>
                                     <Label alignment="CENTER_RIGHT" text="CPF">
                                        <HBox.margin>
@@ -189,6 +207,8 @@
                                     </TextField>
                                  </children>
                               </HBox>
+                              <Button layoutX="504.0" layoutY="343.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="86.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar" textFill="WHITE" />
+                              <Button layoutX="14.0" layoutY="344.0" mnemonicParsing="false" styleClass="navbutton" stylesheets="@css/style.css" text="Cancelar" textFill="WHITE" />
                            </children>
                         </AnchorPane>
                   </content>
@@ -220,7 +240,7 @@
                                           <Insets left="10.0" />
                                        </HBox.margin>
                                     </TextField>
-                                    <Button mnemonicParsing="false" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                                    <Button mnemonicParsing="false" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
                                        <HBox.margin>
                                           <Insets left="16.0" />
                                        </HBox.margin>
@@ -280,7 +300,7 @@
                                     </TextField>
                                  </children>
                               </HBox>
-                              <Button layoutX="14.0" layoutY="344.0" mnemonicParsing="false" stylesheets="@css/style.css" text="Cancelar" textFill="WHITE" />
+                              <Button layoutX="14.0" layoutY="344.0" mnemonicParsing="false" styleClass="navbutton" stylesheets="@css/style.css" text="Cancelar" textFill="WHITE" />
                               <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="604.0">
                                  <children>
                                     <Label graphicTextGap="10.0" text="Usuários">
@@ -300,7 +320,7 @@
                                     </Label>
                                  </children>
                               </HBox>
-                              <Button layoutX="504.0" layoutY="343.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="86.0" text="Confirmar" />
+                              <Button layoutX="504.0" layoutY="343.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="86.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar" textFill="WHITE" />
                               <HBox layoutX="-1.0" layoutY="131.0" prefHeight="24.0" prefWidth="607.0">
                                  <children>
                                     <Label alignment="CENTER_RIGHT" text="Sobrenome">
@@ -385,7 +405,7 @@
                                           <Insets left="10.0" />
                                        </HBox.margin>
                                     </TextField>
-                                    <Button mnemonicParsing="false" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                                    <Button mnemonicParsing="false" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
                                        <HBox.margin>
                                           <Insets left="16.0" />
                                        </HBox.margin>
