@@ -11,37 +11,51 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Main extends Application {
-    double x,y = 0;
+    private static Stage stage;
+    private static Scene loginScene;
+    private static Scene usuarioScene;
+
+    private static Scene documentoScene;
+
+    private static Scene relatorioScene;
     @Override
-    public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("usuario-view.fxml")));
-        Scene homeScene = new Scene(root);
-        stage.initStyle(StageStyle.UNDECORATED);
-        //move around
-        root.setOnMousePressed(evt ->{
-            x = evt.getSceneX();
-            y = evt.getSceneY();
-        });
-        root.setOnMouseDragged(evt ->{
-            stage.setX(evt.getScreenX()- x);
-            stage.setY(evt.getScreenY()- y);
-        });
+    public void start(Stage primaryStage) throws Exception {
+        stage = primaryStage;
 
 
-        stage.setScene(homeScene);
-        stage.show();
+        Parent fxmlLogin = FXMLLoader.load(getClass().getResource("login-view.fxml"));
+        loginScene = new Scene(fxmlLogin, 800, 500);
 
+        Parent fxmlUsuario = FXMLLoader.load(getClass().getResource("usuario-view.fxml"));
+        usuarioScene = new Scene(fxmlUsuario, 800, 500);
 
-        stage.setScene(homeScene);
-        stage.show();
-        /*FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("usuario-view.fxml"));
-        Scene homeScene = new Scene(fxmlLoader.load(), 802, 497);
-        stage.setScene(homeScene);
-        stage.show();*/
+        Parent fxmlDocumento = FXMLLoader.load(getClass().getResource("documento-view.fxml"));
+        documentoScene = new Scene(fxmlDocumento, 800, 500);
 
+        Parent fxmlRelatorio = FXMLLoader.load(getClass().getResource("relatorio-view.fxml"));
+        relatorioScene = new Scene(fxmlRelatorio, 800, 500);
+
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.setScene(usuarioScene);
+        primaryStage.show();
     }
-
+    public static void changeScreen(String scr) {
+        switch(scr) {
+            case "login-view":
+                stage.setScene(loginScene);
+                break;
+            case "usuario-view":
+                stage.setScene(usuarioScene);
+                break;
+            case "documento-view":
+                stage.setScene(documentoScene);
+                break;
+            case "relatorio-view":
+                stage.setScene(relatorioScene);
+                break;
+        }
+    }
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }

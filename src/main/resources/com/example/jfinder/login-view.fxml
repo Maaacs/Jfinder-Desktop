@@ -5,7 +5,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.LoginView">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.LoginController">
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="421.0" styleClass="navbar" stylesheets="@css/style.css" />
       <AnchorPane layoutX="421.0" prefHeight="29.0" prefWidth="379.0">

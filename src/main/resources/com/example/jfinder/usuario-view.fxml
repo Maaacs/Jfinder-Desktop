@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.UsuarioController">
     <children>
         <BorderPane prefHeight="500.0" prefWidth="800.0">
             <left>
@@ -24,7 +24,7 @@
                     <children>
                   <AnchorPane prefHeight="51.0" prefWidth="198.0">
                      <children>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="7.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Usuários" textFill="WHITE">
+                        <Button fx:id="Usuarios" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="7.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Usuários" textFill="WHITE">
                            <graphic>
                               <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -37,7 +37,7 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="51.0" prefWidth="198.0">
                      <children>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="2.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Documentos" textFill="WHITE">
+                        <Button fx:id="Documentos" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="2.0" mnemonicParsing="false" onAction="#DocumentosOnAction" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Documentos" textFill="WHITE">
                            <graphic>
                               <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -50,7 +50,7 @@
                   </AnchorPane>
                   <AnchorPane prefHeight="51.0" prefWidth="198.0">
                      <children>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Relatórios" textFill="WHITE">
+                        <Button fx:id="Relatorios" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="-3.0" mnemonicParsing="false" onAction="#RelatoriosOnAction"  prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Relatórios" textFill="WHITE">
                            <graphic>
                               <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -61,19 +61,12 @@
                         </Button>
                      </children>
                   </AnchorPane>
-                  <AnchorPane prefHeight="51.0" prefWidth="198.0">
-                     <children>
-                        <Button alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="-8.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Outros" textFill="WHITE">
-                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@icons/logo.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                     </children>
-                  </AnchorPane>
+                  <AnchorPane prefHeight="51.0" prefWidth="198.0" />
+                  <Button fx:id="encerrarSessao" alignment="BASELINE_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#encerrarSessaoOnAction" prefHeight="17.0" prefWidth="107.0" styleClass="navbutton" stylesheets="@css/style.css" text="Encerrar Sessão" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets top="130.0" />
+                     </VBox.margin>
+                  </Button>
                     </children>
                <opaqueInsets>
                   <Insets />
@@ -148,7 +141,7 @@
                                     <Insets left="30.0" />
                                  </padding>
                                  <children>
-                                    <TextField alignment="CENTER" prefHeight="25.0" prefWidth="357.0">
+                                    <TextField fx:id="Nome" alignment="CENTER" prefHeight="25.0" prefWidth="357.0">
                                        <HBox.margin>
                                           <Insets left="90.0" />
                                        </HBox.margin>
@@ -169,7 +162,7 @@
                                     <Insets left="30.0" />
                                  </padding>
                                  <children>
-                                    <TextField alignment="CENTER" prefHeight="25.0" prefWidth="357.0">
+                                    <TextField fx:id="Sobrenome" alignment="CENTER" prefHeight="25.0" prefWidth="357.0">
                                        <HBox.margin>
                                           <Insets left="90.0" />
                                        </HBox.margin>
@@ -195,20 +188,20 @@
                                     <Insets left="30.0" />
                                  </padding>
                                  <children>
-                                    <TextField alignment="CENTER" prefHeight="26.0" prefWidth="159.0">
+                                    <TextField fx:id="Cpf" alignment="CENTER" prefHeight="26.0" prefWidth="159.0">
                                        <HBox.margin>
                                           <Insets left="103.0" />
                                        </HBox.margin>
                                     </TextField>
-                                    <TextField alignment="CENTER" layoutX="143.0" layoutY="14.0" prefHeight="26.0" prefWidth="161.0">
+                                    <TextField fx:id="Cargo" alignment="CENTER" layoutX="143.0" layoutY="14.0" prefHeight="26.0" prefWidth="161.0">
                                        <HBox.margin>
                                           <Insets left="38.0" />
                                        </HBox.margin>
                                     </TextField>
                                  </children>
                               </HBox>
-                              <Button layoutX="504.0" layoutY="343.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="86.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar" textFill="WHITE" />
-                              <Button layoutX="14.0" layoutY="344.0" mnemonicParsing="false" styleClass="navbutton" stylesheets="@css/style.css" text="Cancelar" textFill="WHITE" />
+                              <Button fx:id="Confirmar" layoutX="504.0" layoutY="343.0" minHeight="0.0" minWidth="0.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="86.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar" textFill="WHITE" />
+                              <Button fx:id="Cancelar" layoutX="14.0" layoutY="344.0" mnemonicParsing="false" styleClass="navbutton" stylesheets="@css/style.css" text="Cancelar" textFill="WHITE" />
                            </children>
                         </AnchorPane>
                   </content>

@@ -35,17 +35,16 @@
 
 }
 
-.exit:hover{
+.exit:hover
+{
     -fx-background-color: #f15b72;
 }
 
 .box{
-
     -fx-border-radius: 50px;
 }
 
 
-</style>
 
 
 
@@ -54,4 +53,3 @@
 .table-view .column-header-background .filter{
     -fx-cell-size : 20;
     -fx-background-color: #7156DD;*/
-}

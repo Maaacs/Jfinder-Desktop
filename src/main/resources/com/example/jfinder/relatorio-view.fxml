@@ -16,7 +16,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.DocumentoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.RelatorioController">
     <children>
         <BorderPane prefHeight="500.0" prefWidth="800.0">
             <left>
@@ -37,7 +37,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="51.0" prefWidth="198.0">
                             <children>
-                                <Button fx:id="Documentos" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="2.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Documentos" textFill="WHITE">
+                                <Button fx:id="Documentos" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="2.0" mnemonicParsing="false" onAction="#DocumentosOnAction" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Documentos" textFill="WHITE">
                                     <graphic>
                                         <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -50,7 +50,7 @@
                         </AnchorPane>
                         <AnchorPane prefHeight="51.0" prefWidth="198.0">
                             <children>
-                                <Button fx:id="Relatorios" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="-3.0" mnemonicParsing="false" onAction="#RelatoriosOnAction" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Relatórios" textFill="WHITE">
+                                <Button fx:id="Relatorios" alignment="BASELINE_LEFT" graphicTextGap="10.0" layoutX="7.0" layoutY="-3.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="181.0" styleClass="navbutton" stylesheets="@css/style.css" text="Relatórios" textFill="WHITE">
                                     <graphic>
                                         <ImageView fitHeight="20.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                             <image>
@@ -110,7 +110,7 @@
                                     <children>
                                         <HBox alignment="CENTER_LEFT" prefHeight="46.0" prefWidth="604.0">
                                             <children>
-                                                <Label graphicTextGap="10.0" text="Documentos">
+                                                <Label graphicTextGap="10.0" text="Relatórios">
                                                     <font>
                                                         <Font name="Comic Sans MS" size="18.0" />
                                                     </font>
