@@ -38,7 +38,7 @@
                      <children>
                         <Button layoutX="78.0" layoutY="40.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="186.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
                            <graphic>
-                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="121.0" text="Adicionar Usuário" textFill="#631eda">
+                              <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="135.0" text="Adicionar Usuário" textFill="#631eda">
                                  <font>
                                     <Font size="16.0" />
                                  </font>
@@ -54,7 +54,7 @@
                         </Button>
                         <Button layoutX="344.0" layoutY="40.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="186.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
                            <graphic>
-                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="126.0" text="Remover Usuário" textFill="#631eda">
+                              <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="141.0" text="Remover Usuário" textFill="#631eda">
                                  <font>
                                     <Font size="17.0" />
                                  </font>
@@ -70,7 +70,7 @@
                         </Button>
                         <Button layoutX="78.0" layoutY="199.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="186.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
                            <graphic>
-                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="111.0" text="Buscar Usuário" textFill="#631eda">
+                              <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="111.0" text="Buscar Usuário" textFill="#631eda">
                                  <font>
                                     <Font size="17.0" />
                                  </font>
@@ -86,7 +86,7 @@
                         </Button>
                         <Button layoutX="344.0" layoutY="199.0" mnemonicParsing="false" prefHeight="109.0" prefWidth="186.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
                            <graphic>
-                              <Label contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="109.0" text="Alterar Usuário" textFill="#631eda">
+                              <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="109.0" text="Alterar Usuário" textFill="#631eda">
                                  <font>
                                     <Font size="17.0" />
                                  </font>
@@ -120,7 +120,7 @@
                               </ImageView>
                               <Label graphicTextGap="10.0" prefHeight="28.0" prefWidth="65.0" text="Jfinder" textFill="#631eda">
                                   <font>
-                                      <Font name="Comic Sans MS" size="17.0" />
+                                      <Font size="17.0" />
                                   </font>
                                   <HBox.margin>
                                       <Insets left="4.0" top="5.0" />
@@ -168,9 +168,9 @@
                                     </ImageView>
                                  </graphic>
                               </Button>
-                              <Button fx:id="encerrarSessao" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="24.0" layoutY="172.0" mnemonicParsing="false" onAction="#encerrarSessaoOnAction" prefHeight="33.0" prefWidth="148.0" styleClass="navbutton" stylesheets="@css/style.css" text="Encerrar Sessão" textFill="WHITE">
+                              <Button fx:id="encerrarSessao" alignment="BASELINE_LEFT" contentDisplay="RIGHT" graphicTextGap="10.0" layoutX="6.0" layoutY="151.0" mnemonicParsing="false" onAction="#encerrarSessaoOnAction" prefHeight="33.0" prefWidth="183.0" styleClass="navbutton" stylesheets="@css/style.css" text="Encerrar Sessão" textFill="WHITE">
                                  <padding>
-                                    <Insets left="20.0" />
+                                    <Insets left="35.0" />
                                  </padding>
                                  <graphic>
                                     <ImageView fitHeight="16.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
