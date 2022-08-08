@@ -1,11 +1,11 @@
 package com.example.jfinder;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
 
-public class DocumentoController {
+public class BuscarUsuarioController {
     @FXML
     private Button Usuarios;
     @FXML
@@ -15,18 +15,21 @@ public class DocumentoController {
     @FXML
     private Button encerrarSessao;
     @FXML
-    private Button documentoCadastrar;
+    private JFXButton buscarUsuario;
     @FXML
-    private Button documentoAlterar;
+    private JFXButton voltarBuscarUsuario;
     @FXML
-    private Button documentoRemover;
-    @FXML
-    private Button documentoBuscar;
+    private JFXButton atualizarBuscarUsuario;
 
+    public void voltarBuscarOnAction(ActionEvent event){
+        Main.changeScreen("usuario-view");
+    }
+    public void confirmarOnAction(ActionEvent event){
+        Main.changeScreen("usuario-view");
+    }
     public void encerrarSessaoOnAction(ActionEvent event){
         Main.changeScreen("login-view");
     }
-
     public void UsuariosOnAction(ActionEvent event) {
         Main.changeScreen("usuario-view");
     }
@@ -39,19 +42,4 @@ public class DocumentoController {
         Main.changeScreen("relatorio-view");
     }
 
-    public void documentoCadastrarOnAction(ActionEvent event){
-        Main.changeScreen("cadastrarDocumento-view");
-    }
-
-    public void documentoAlterarOnAction(ActionEvent event){
-        Main.changeScreen("alterarDocumento-view");
-    }
-
-    public void documentoBuscarOnAction(ActionEvent event){
-        Main.changeScreen("buscarDocumento-view");
-    }
-
-    public void documentoRemoverOnAction(ActionEvent event){
-        Main.changeScreen("removerDocumento-view");
-    }
 }

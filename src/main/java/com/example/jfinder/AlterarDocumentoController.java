@@ -1,11 +1,11 @@
 package com.example.jfinder;
 
+import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
 
-public class DocumentoController {
+public class AlterarDocumentoController {
     @FXML
     private Button Usuarios;
     @FXML
@@ -15,13 +15,7 @@ public class DocumentoController {
     @FXML
     private Button encerrarSessao;
     @FXML
-    private Button documentoCadastrar;
-    @FXML
-    private Button documentoAlterar;
-    @FXML
-    private Button documentoRemover;
-    @FXML
-    private Button documentoBuscar;
+    private JFXButton voltarAlteracaoDocumento;
 
     public void encerrarSessaoOnAction(ActionEvent event){
         Main.changeScreen("login-view");
@@ -39,19 +33,7 @@ public class DocumentoController {
         Main.changeScreen("relatorio-view");
     }
 
-    public void documentoCadastrarOnAction(ActionEvent event){
-        Main.changeScreen("cadastrarDocumento-view");
-    }
-
-    public void documentoAlterarOnAction(ActionEvent event){
-        Main.changeScreen("alterarDocumento-view");
-    }
-
-    public void documentoBuscarOnAction(ActionEvent event){
-        Main.changeScreen("buscarDocumento-view");
-    }
-
-    public void documentoRemoverOnAction(ActionEvent event){
-        Main.changeScreen("removerDocumento-view");
+    public void voltarOnAction(ActionEvent event){
+        Main.changeScreen("documento-view");
     }
 }

@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -12,13 +16,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.DocumentoController">
-    <children>
-        <BorderPane prefHeight="500.0" prefWidth="800.0">
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.RemoverDocumentoController">
+   <children>
+      <BorderPane prefHeight="500.0" prefWidth="800.0">
          <top>
             <Pane prefHeight="56.0" prefWidth="800.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="800.0" style="-fx-background-color: #fff;">
+                  <HBox alignment="CENTER_LEFT" layoutX="-1.0" prefHeight="58.0" prefWidth="800.0" style="-fx-background-color: #fff;">
                      <children>
                         <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -107,10 +112,10 @@
                      <children>
                         <ImageView fitHeight="41.0" fitWidth="49.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons/documentos.png" />
+                              <Image url="@icons/removeDoc2.png" />
                            </image>
                         </ImageView>
-                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="160.0" text="Documentos" textFill="#631eda">
+                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="160.0" text="Remover Documento" textFill="#631eda">
                            <font>
                               <Font size="17.0" />
                            </font>
@@ -121,75 +126,39 @@
                <bottom>
                   <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
-                        <Button fx:id="documentoCadastrar" layoutX="66.0" layoutY="40.0" mnemonicParsing="false" onAction="#documentoCadastrarOnAction" prefHeight="109.0" prefWidth="185.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
-                           <graphic>
-                              <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="184.0" text="Adicionar Documento" textFill="#631eda">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <graphic>
-                                    <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@icons/addDoc2.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Label>
-                           </graphic>
-                        </Button>
-                        <Button fx:id="documentoRemover" layoutX="343.0" layoutY="40.0" mnemonicParsing="false" onAction="#documentoRemoverOnAction" prefHeight="109.0" prefWidth="185.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
-                           <graphic>
-                              <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="162.0" text="Remover Documento" textFill="#631eda">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <graphic>
-                                    <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@icons/removeDoc2.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Label>
-                           </graphic>
-                        </Button>
-                        <Button fx:id="documentoBuscar" layoutX="66.0" layoutY="184.0" mnemonicParsing="false" onAction="#documentoBuscarOnAction" prefHeight="109.0" prefWidth="185.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
-                           <graphic>
-                              <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="149.0" text="Buscar Documento" textFill="#631eda">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <graphic>
-                                    <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@icons/SearchDoc2.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Label>
-                           </graphic>
-                        </Button>
-                        <Button fx:id="documentoAlterar" layoutX="343.0" layoutY="184.0" mnemonicParsing="false" onAction="#documentoAlterarOnAction" prefHeight="109.0" prefWidth="185.0" style="-fx-background-radius: 30;" styleClass="menubutton" stylesheets="@css/style.css">
-                           <graphic>
-                              <Label alignment="CENTER" contentDisplay="TOP" graphicTextGap="0.0" prefHeight="65.0" prefWidth="153.0" text="Alterar Documento" textFill="#631eda">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <graphic>
-                                    <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
-                                       <image>
-                                          <Image url="@icons/editDoc2.png" />
-                                       </image>
-                                    </ImageView>
-                                 </graphic>
-                              </Label>
-                           </graphic>
-                        </Button>
+                        <TableView layoutX="-5.0" layoutY="57.0" prefHeight="100.0" prefWidth="605.0">
+                           <columns>
+                              <TableColumn prefWidth="177.0" style="-fx-background-color: #B0E0E6;" text="Tipo" />
+                              <TableColumn minWidth="0.0" prefWidth="199.0" style="-fx-background-color: #B0E0E6;" text="Interessado" />
+                              <TableColumn prefWidth="238.0" style="-fx-background-color: #B0E0E6;" text="Data de arquivamento" />
+                           </columns>
+                        </TableView>
+                        <JFXButton buttonType="RAISED" layoutX="373.0" layoutY="319.0" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Remover" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <TextField layoutX="86.0" layoutY="14.0" prefHeight="30.0" prefWidth="169.0" promptText="Número de referência" />
+                        <JFXButton buttonType="RAISED" layoutX="8.0" layoutY="15.0" prefHeight="16.0" prefWidth="66.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton buttonType="RAISED" layoutX="473.0" layoutY="319.0" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="voltarDocumento" buttonType="RAISED" layoutX="274.0" layoutY="319.0" onAction="#voltarOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Voltar" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
                      </children>
                   </Pane>
                </bottom>
             </BorderPane>
          </center>
-        </BorderPane>
-    </children>
+      </BorderPane>
+   </children>
 </AnchorPane>

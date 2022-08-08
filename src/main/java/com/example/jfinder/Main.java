@@ -26,6 +26,13 @@ public class Main extends Application {
     private static Scene usuarioRemoveScene;
 
     private static Scene usuarioAlterarScene;
+
+    private static Scene documentoCadastroScene;
+
+    private static Scene documentoAlterarScene;
+
+    private static Scene documentoBuscarScene;
+    private static Scene documentoRemoverScene;
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
@@ -55,6 +62,17 @@ public class Main extends Application {
         Parent fxmlAlterarUsuario = FXMLLoader.load(getClass().getResource("alterarUsuario-view.fxml"));
         usuarioAlterarScene = new Scene(fxmlAlterarUsuario, 800, 500);
 
+        Parent fxmlCadastrarDocumento = FXMLLoader.load(getClass().getResource("cadastrarDocumento-view.fxml"));
+        documentoCadastroScene = new Scene(fxmlCadastrarDocumento, 800, 500);
+
+        Parent fxmlAlterarDocumento = FXMLLoader.load(getClass().getResource("alterarDocumento-view.fxml"));
+        documentoAlterarScene = new Scene(fxmlAlterarDocumento, 800, 500);
+
+        Parent fxmlBuscarDocumento = FXMLLoader.load(getClass().getResource("buscarDocumento-view.fxml"));
+        documentoBuscarScene = new Scene(fxmlBuscarDocumento, 800, 500);
+
+        Parent fxmlRemoverDocumento = FXMLLoader.load(getClass().getResource("removerDocumento-view.fxml"));
+        documentoRemoverScene = new Scene(fxmlRemoverDocumento, 800, 500);
 
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(loginScene);
@@ -85,6 +103,18 @@ public class Main extends Application {
                 break;
             case "alterarUsuario-view":
                 stage.setScene(usuarioAlterarScene);
+                break;
+            case "cadastrarDocumento-view":
+                stage.setScene(documentoCadastroScene);
+                break;
+            case "alterarDocumento-view":
+                stage.setScene(documentoAlterarScene);
+                break;
+            case "buscarDocumento-view":
+                stage.setScene(documentoBuscarScene);
+                break;
+            case "removerDocumento-view":
+                stage.setScene(documentoRemoverScene);
                 break;
         }
     }

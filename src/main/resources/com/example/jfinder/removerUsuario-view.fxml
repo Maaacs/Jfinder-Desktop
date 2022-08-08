@@ -125,25 +125,30 @@
                <bottom>
                   <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TableView layoutX="-5.0" layoutY="16.0" prefHeight="194.0" prefWidth="605.0">
+                        <TableView layoutX="-5.0" layoutY="62.0" prefHeight="100.0" prefWidth="605.0">
                            <columns>
                               <TableColumn prefWidth="177.0" style="-fx-background-color: #B0E0E6;" text="Nome" />
                               <TableColumn minWidth="0.0" prefWidth="210.0" style="-fx-background-color: #B0E0E6;" text="Sobrenome" />
                               <TableColumn prefWidth="227.0" style="-fx-background-color: #B0E0E6;" text="Cargo" />
                            </columns>
                         </TableView>
-                        <JFXButton fx:id="voltarCadastroUsuario" buttonType="RAISED" layoutX="371.0" layoutY="319.0" onAction="#voltarOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Voltar" textFill="WHITE">
+                        <JFXButton fx:id="removerUsuario" buttonType="RAISED" layoutX="371.0" layoutY="319.0" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Remover" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <TextField fx:id="cpfAlterarUsuario" layoutX="2.0" layoutY="225.0" prefHeight="28.0" prefWidth="169.0" promptText="CPF" />
-                        <JFXButton fx:id="okAlterarUsuario" buttonType="RAISED" layoutX="186.0" layoutY="225.0" prefHeight="27.0" prefWidth="97.0" styleClass="navbutton" stylesheets="@css/style.css" text="Remover" textFill="WHITE">
+                        <TextField fx:id="cpfAlterarUsuario" layoutX="86.0" layoutY="14.0" prefHeight="30.0" prefWidth="169.0" promptText="CPF" />
+                        <JFXButton fx:id="buscarUsuario" buttonType="RAISED" layoutX="8.0" layoutY="15.0" prefHeight="16.0" prefWidth="66.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
                         <JFXButton fx:id="atualizarBuscarUsuario" buttonType="RAISED" layoutX="473.0" layoutY="319.0" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="voltarCadastroUsuario1" buttonType="RAISED" layoutX="271.0" layoutY="319.0" onAction="#voltarOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Voltar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>

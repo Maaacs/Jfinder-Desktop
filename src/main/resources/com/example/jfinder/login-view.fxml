@@ -60,7 +60,7 @@
                   <Image url="@icons/user2Login.png" />
                </image>
             </ImageView>
-            <Label layoutX="69.0" layoutY="37.0" prefHeight="26.0" prefWidth="50.0" text="Jfile" textFill="#6a05c3">
+            <Label layoutX="69.0" layoutY="37.0" prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
                <font>
                   <Font size="16.0" />
                </font>

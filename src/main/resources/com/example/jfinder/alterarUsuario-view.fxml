@@ -109,7 +109,7 @@
                      <children>
                         <ImageView fitHeight="41.0" fitWidth="49.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@icons/removeUser2.png" />
+                              <Image url="@icons/changeUser.png" />
                            </image>
                         </ImageView>
                         <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="160.0" text="Alterar Usuário" textFill="#631eda">
