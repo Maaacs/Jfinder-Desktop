@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 
-public class CadastrarUsuarioController {
+public class AlterarUsuarioController {
     @FXML
     private Button Usuarios;
     @FXML
@@ -16,24 +16,25 @@ public class CadastrarUsuarioController {
     @FXML
     private Button encerrarSessao;
     @FXML
-    private JFXButton confirmarCadastroUsuario;
+    private TextField cpfAlterarUsuario;
     @FXML
-    private JFXButton voltarCadastroUsuario;
+    private JFXButton okAlterarUsuario;
     @FXML
-    private TextField nomeCadastroUsuario;
+    private TextField nomeAlterarUsuario;
     @FXML
-    private TextField sobrenomeCadastroUsuario;
+    private TextField sobrenomeAlterarUsuario;
     @FXML
-    private TextField cpfCadastroUsuario;
+    private TextField cargoAlterarUsuario;
     @FXML
-    private TextField cargoCadastroUsuario;
+    private JFXButton confirmarAlteracaoUsuario;
+    @FXML
+    private JFXButton voltarAlteracaoUsuario;
+
 
     public void voltarOnAction(ActionEvent event){
         Main.changeScreen("usuario-view");
     }
-    /*public void confirmarOnAction(ActionEvent event){
-        Main.changeScreen("login-view");
-    }*/
+
     public void encerrarSessaoOnAction(ActionEvent event){
         Main.changeScreen("login-view");
     }

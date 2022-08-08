@@ -18,6 +18,14 @@ public class Main extends Application {
     private static Scene documentoScene;
 
     private static Scene relatorioScene;
+
+    private static Scene usuarioCadastroScene;
+
+    private static Scene usuarioBuscaScene;
+
+    private static Scene usuarioRemoveScene;
+
+    private static Scene usuarioAlterarScene;
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
@@ -34,6 +42,18 @@ public class Main extends Application {
 
         Parent fxmlRelatorio = FXMLLoader.load(getClass().getResource("relatorio-view.fxml"));
         relatorioScene = new Scene(fxmlRelatorio, 800, 500);
+
+        Parent fxmlCadastrarUsuario = FXMLLoader.load(getClass().getResource("cadastrarUsuario-view.fxml"));
+        usuarioCadastroScene = new Scene(fxmlCadastrarUsuario, 800, 500);
+
+        Parent fxmlBuscarUsuario = FXMLLoader.load(getClass().getResource("buscarUsuario-view.fxml"));
+        usuarioBuscaScene = new Scene(fxmlBuscarUsuario, 800, 500);
+
+        Parent fxmlRemoverUsuario = FXMLLoader.load(getClass().getResource("removerUsuario-view.fxml"));
+        usuarioRemoveScene = new Scene(fxmlRemoverUsuario, 800, 500);
+
+        Parent fxmlAlterarUsuario = FXMLLoader.load(getClass().getResource("alterarUsuario-view.fxml"));
+        usuarioAlterarScene = new Scene(fxmlAlterarUsuario, 800, 500);
 
 
         primaryStage.initStyle(StageStyle.UNDECORATED);
@@ -53,6 +73,18 @@ public class Main extends Application {
                 break;
             case "relatorio-view":
                 stage.setScene(relatorioScene);
+                break;
+            case "cadastrarUsuario-view":
+                stage.setScene(usuarioCadastroScene);
+                break;
+            case "buscarUsuario-view":
+                stage.setScene(usuarioBuscaScene);
+                break;
+            case "removerUsuario-view":
+                stage.setScene(usuarioRemoveScene);
+                break;
+            case "alterarUsuario-view":
+                stage.setScene(usuarioAlterarScene);
                 break;
         }
     }

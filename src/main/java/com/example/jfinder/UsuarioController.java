@@ -26,6 +26,14 @@ public class UsuarioController{
         private Button Cancelar;
         @FXML
         private Button encerrarSessao;
+        @FXML
+        private Button usuarioAdicionar;
+        @FXML
+        private Button usuarioBuscar;
+        @FXML
+        private Button usuarioRemover;
+        @FXML
+        private Button usuarioAlterar;
 
         public void encerrarSessaoOnAction(ActionEvent event){
                 Main.changeScreen("login-view");
@@ -41,6 +49,21 @@ public class UsuarioController{
 
         public void RelatoriosOnAction(ActionEvent event) {
                 Main.changeScreen("relatorio-view");
+        }
+
+        public void usuarioAdicionarOnAction(ActionEvent event){
+                Main.changeScreen("cadastrarUsuario-view");
+        }
+
+        public void usuarioBuscarOnAction(ActionEvent event){
+                Main.changeScreen("buscarUsuario-view");
+        }
+
+        public void usuarioRemoverOnAction(ActionEvent event){
+                Main.changeScreen("removerUsuario-view");
+        }
+        public void usuarioAlterarOnAction(ActionEvent event){
+                Main.changeScreen("alterarUsuario-view");
         }
 
 }

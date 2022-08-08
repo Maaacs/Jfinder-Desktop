@@ -4,9 +4,8 @@ import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.TextField;
 
-public class CadastrarUsuarioController {
+public class BuscarUsuarioView {
     @FXML
     private Button Usuarios;
     @FXML
@@ -16,24 +15,18 @@ public class CadastrarUsuarioController {
     @FXML
     private Button encerrarSessao;
     @FXML
-    private JFXButton confirmarCadastroUsuario;
+    private JFXButton buscarUsuario;
     @FXML
-    private JFXButton voltarCadastroUsuario;
+    private JFXButton voltarBuscarUsuario;
     @FXML
-    private TextField nomeCadastroUsuario;
-    @FXML
-    private TextField sobrenomeCadastroUsuario;
-    @FXML
-    private TextField cpfCadastroUsuario;
-    @FXML
-    private TextField cargoCadastroUsuario;
+    private JFXButton atualizarBuscarUsuario;
 
-    public void voltarOnAction(ActionEvent event){
+    public void voltarBuscarOnAction(ActionEvent event){
         Main.changeScreen("usuario-view");
     }
-    /*public void confirmarOnAction(ActionEvent event){
-        Main.changeScreen("login-view");
-    }*/
+    public void confirmarOnAction(ActionEvent event){
+        Main.changeScreen("usuario-view");
+    }
     public void encerrarSessaoOnAction(ActionEvent event){
         Main.changeScreen("login-view");
     }
@@ -48,4 +41,5 @@ public class CadastrarUsuarioController {
     public void RelatoriosOnAction(ActionEvent event) {
         Main.changeScreen("relatorio-view");
     }
+
 }
