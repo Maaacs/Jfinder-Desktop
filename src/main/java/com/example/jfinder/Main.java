@@ -33,10 +33,15 @@ public class Main extends Application {
 
     private static Scene documentoBuscarScene;
     private static Scene documentoRemoverScene;
+
+    private static Scene relatorioUsuarioScene;
+
+    private static Scene relatorioDocumentoScene;
+
+
     @Override
     public void start(Stage primaryStage) throws Exception {
         stage = primaryStage;
-
 
         Parent fxmlLogin = FXMLLoader.load(getClass().getResource("login-view.fxml"));
         loginScene = new Scene(fxmlLogin, 800, 500);
@@ -73,6 +78,12 @@ public class Main extends Application {
 
         Parent fxmlRemoverDocumento = FXMLLoader.load(getClass().getResource("removerDocumento-view.fxml"));
         documentoRemoverScene = new Scene(fxmlRemoverDocumento, 800, 500);
+
+        Parent fxmlRelatorioUsuario = FXMLLoader.load(getClass().getResource("relatorioUsuario-view.fxml"));
+        relatorioUsuarioScene = new Scene(fxmlRelatorioUsuario, 800, 500);
+
+        Parent fxmlRelatorioDocumento = FXMLLoader.load(getClass().getResource("relatorioDocumento-view.fxml"));
+        relatorioDocumentoScene = new Scene(fxmlRelatorioDocumento, 800, 500);
 
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.setScene(loginScene);
@@ -115,6 +126,12 @@ public class Main extends Application {
                 break;
             case "removerDocumento-view":
                 stage.setScene(documentoRemoverScene);
+                break;
+            case "relatorioUsuario-view":
+                stage.setScene(relatorioUsuarioScene);
+                break;
+            case "relatorioDocumento-view":
+                stage.setScene(relatorioDocumentoScene);
                 break;
         }
     }

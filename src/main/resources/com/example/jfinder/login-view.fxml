@@ -3,16 +3,14 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.LoginController">
    <children>
-      <AnchorPane prefHeight="500.0" prefWidth="400.0" styleClass="principal" stylesheets="@css/style.css">
+      <AnchorPane prefHeight="500.0" prefWidth="400.0" styleClass="loginTheme" stylesheets="@css/style.css">
          <children>
             <ImageView fitHeight="128.0" fitWidth="116.0" layoutX="130.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -23,18 +21,7 @@
       </AnchorPane>
       <AnchorPane layoutX="400.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: white;">
          <children>
-            <TextField fx:id="usuarioLogin" layoutX="96.0" layoutY="224.0" prefHeight="25.0" prefWidth="211.0" />
-            <Text layoutX="30.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Usuario:" wrappingWidth="66.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Text>
-            <PasswordField fx:id="senhaLogin" layoutX="96.0" layoutY="260.0" prefHeight="26.0" prefWidth="211.0" />
-            <Text layoutX="31.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Senha:" wrappingWidth="57.0">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Text>
+            <PasswordField fx:id="idAcessoTextField" layoutX="94.0" layoutY="250.0" prefHeight="26.0" prefWidth="211.0" />
             <Label layoutX="137.0" layoutY="62.0" text="Acesse sua conta">
                <font>
                   <Font size="17.0" />
@@ -45,17 +32,17 @@
                   <Font size="28.0" />
                </font>
             </Label>
-            <JFXButton fx:id="entrar" buttonType="RAISED" layoutX="134.0" layoutY="324.0" onAction="#entrarOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Entrar" textFill="WHITE">
+            <JFXButton fx:id="entrar" buttonType="RAISED" layoutX="133.0" layoutY="323.0" onAction="#entrarOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Entrar" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="sair" buttonType="RAISED" layoutX="134.0" layoutY="383.0" onAction="#sairOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Sair" textFill="WHITE">
+            <JFXButton fx:id="sair" buttonType="RAISED" layoutX="133.0" layoutY="382.0" onAction="#sairOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Sair" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <ImageView fitHeight="53.0" fitWidth="50.0" layoutX="176.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="79.0" fitWidth="64.0" layoutX="168.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@icons/user2Login.png" />
                </image>
@@ -70,6 +57,8 @@
                   <Image url="@icons/box3.png" />
                </image>
             </ImageView>
+            <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="290.0" prefHeight="17.0" prefWidth="160.0" textFill="RED" />
+            <Label layoutX="94.0" layoutY="226.0" text="ID de acesso:" />
          </children></AnchorPane>
    </children>
 </AnchorPane>
