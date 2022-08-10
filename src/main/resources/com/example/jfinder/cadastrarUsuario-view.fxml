@@ -158,6 +158,11 @@
                            </font>
                         </JFXButton>
                         <Label fx:id="cadastroMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="286.0" prefHeight="17.0" prefWidth="160.0" textFill="RED" />
+                        <Label fx:id="cadastroUsuarioMessageLabel" layoutX="197.0" layoutY="294.0" prefHeight="18.0" prefWidth="201.0" textFill="#1cd034">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
                      </children>
                         </Pane>
                     </bottom>

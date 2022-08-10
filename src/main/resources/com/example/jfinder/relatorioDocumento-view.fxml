@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.RelatorioDocumentoView">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.RelatorioDocumentoController">
    <children>
       <BorderPane prefHeight="510.0" prefWidth="810.0">
          <top>
@@ -129,14 +129,15 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <TableView layoutX="-5.0" layoutY="-6.0" prefHeight="315.0" prefWidth="615.0">
+                        <TableView fx:id="tabelaDocumentos" layoutX="-5.0" layoutY="-6.0" prefHeight="315.0" prefWidth="615.0">
                            <columns>
-                              <TableColumn prefWidth="177.0" style="-fx-background-color: #B0E0E6;" text="Número de referência" />
-                              <TableColumn minWidth="0.0" prefWidth="210.0" style="-fx-background-color: #B0E0E6;" text="Tipo" />
-                              <TableColumn prefWidth="227.0" style="-fx-background-color: #B0E0E6;" text="Interessado" />
+                              <TableColumn fx:id="colunaNumReferencia" prefWidth="136.0" style="-fx-background-color: #B0E0E6;" text="Número de referência" />
+                              <TableColumn fx:id="colunaTipoDocumento" minWidth="0.0" prefWidth="112.0" style="-fx-background-color: #B0E0E6;" text="Tipo" />
+                              <TableColumn fx:id="colunaInteressadoDocumento" prefWidth="116.0" style="-fx-background-color: #B0E0E6;" text="Interessado" />
+                              <TableColumn fx:id="ColunaDescricaoDocumento" prefWidth="250.0" style="-fx-background-color: #B0E0E6;" text="Descrição" />
                            </columns>
                         </TableView>
-                        <JFXButton buttonType="RAISED" layoutX="473.0" layoutY="319.0" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
+                        <JFXButton fx:id="atualizarTabela" buttonType="RAISED" layoutX="473.0" layoutY="319.0" onAction="#atualizarTabelaOnAction" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>

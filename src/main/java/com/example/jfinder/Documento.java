@@ -2,6 +2,7 @@ package com.example.jfinder;
 
 import java.util.Date;
 
+
 public class Documento {
 
 
@@ -13,6 +14,10 @@ public class Documento {
     private String dataArquivamento;
     private String descriçãoDocumento;
     private String localCompletoDeArmazenamento;
+
+    public Documento (){
+
+    }
 
     //Construtor que inicializa o objeto Documento
     Documento(String NovoNumeroUnicoReferencia, String NovoTipoDeDocumento, String NovoInteressado, String NovoTipoDeArmazenamento, String NovoDataArquivamento,

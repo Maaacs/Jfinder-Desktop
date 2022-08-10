@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.RelatorioUsuarioView">
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.RelatorioUsuarioController">
    <children>
       <BorderPane prefHeight="510.0" prefWidth="810.0">
          <top>
@@ -129,19 +129,20 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <TableView layoutX="-5.0" layoutY="-6.0" prefHeight="315.0" prefWidth="615.0">
+                        <TableView fx:id="tabelaDeUsuarios" layoutX="-5.0" layoutY="-6.0" prefHeight="315.0" prefWidth="615.0">
                            <columns>
-                              <TableColumn prefWidth="159.0" style="-fx-background-color: #B0E0E6;" text="Nome" />
-                              <TableColumn minWidth="0.0" prefWidth="169.0" style="-fx-background-color: #B0E0E6;" text="Sobrenome" />
-                              <TableColumn prefWidth="167.0" style="-fx-background-color: #B0E0E6;" text="CPF" />
-                              <TableColumn prefWidth="119.0" style="-fx-background-color: #B0E0E6;" text="Cargo" />
+                              <TableColumn fx:id="colunaNome" prefWidth="159.0" style="-fx-background-color: #B0E0E6;" text="Nome" />
+                              <TableColumn fx:id="colunaSobrenome" minWidth="0.0" prefWidth="169.0" style="-fx-background-color: #B0E0E6;" text="Sobrenome" />
+                              <TableColumn fx:id="colunaCpf" prefWidth="167.0" style="-fx-background-color: #B0E0E6;" text="CPF" />
+                              <TableColumn fx:id="colunaCargo" prefWidth="119.0" style="-fx-background-color: #B0E0E6;" text="Cargo" />
                            </columns>
                         </TableView>
-                        <JFXButton buttonType="RAISED" layoutX="473.0" layoutY="319.0" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
+                        <JFXButton fx:id="atualizarTabelaUsuarios" buttonType="RAISED" layoutX="473.0" layoutY="319.0" onAction="#atualizarTabelaUsuariosOnAction" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
+                        <Label fx:id="tabelaMessageLabel" alignment="CENTER" layoutX="51.0" layoutY="319.0" prefHeight="17.0" prefWidth="161.0" textFill="#0bbc3a" />
                      </children>
                   </Pane>
                </bottom>

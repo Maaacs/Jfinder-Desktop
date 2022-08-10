@@ -46,6 +46,8 @@ public class CadastrarUsuarioController {
     private TextField cargoUsuarioTextField;
     @FXML
     private Label cadastroMessageLabel;
+    @FXML
+    private Label cadastroUsuarioMessageLabel;
 
     public void voltarOnAction(ActionEvent event){
         Main.changeScreen("usuario-view");
@@ -68,7 +70,7 @@ public class CadastrarUsuarioController {
 
     @FXML
     private void cadastrarUsuarioOnAction(ActionEvent event) {
-        //BancodeDados bd = new BancodeDados("max", "10121114");
+        BancodeDados bd = new BancodeDados();
         //bd.conecta();
         try {
             //Usuario usuario = new Usuario(" ", "", "", "");
@@ -76,13 +78,21 @@ public class CadastrarUsuarioController {
             String sobrenome = sobrenomeUsuarioTextField.getText();
             String cpf = cpfUsuarioTextField.getText();
             String cargo = cargoUsuarioTextField.getText();
-           // System.out.println(nome);
 
             Usuario usuario = new Usuario(nome, sobrenome, cpf, cargo);
             System.out.println(usuario.getPrimeiroNome());
-            System.out.println("Novo usuário cadastrado!");
-            BancodeDados.adicionarUsuario(usuario);
-            //System.out.println("foi!");
+            System.out.println("1");
+
+            //bd.adicionarUsuario(usuario);
+            System.out.println("2");
+
+            if (bd.adicionarUsuario(usuario)){
+                System.out.println("Novo usuário cadastrado com sucesso!");
+                cadastroUsuarioMessageLabel.setText("Cadastro realizado com sucesso!");
+            }else {
+                System.out.println("Usuário não cadastrado!");
+                cadastroMessageLabel.setText("Insira os dados!");
+            }
         }catch (NumberFormatException e){
             cadastroMessageLabel.setText("");
             cadastroMessageLabel.setText("Entrada Inválida!");

@@ -56,4 +56,11 @@ public class Usuario {
 
         this.cargo = cargo;
     }
+
+    public void mostraUsuario(){
+        System.out.println("Nome :" + getPrimeiroNome());
+        System.out.println("Sobrenome :" + getUltimoNome());
+        System.out.println("CPF :" + getCPF());
+        System.out.println("Cargo :" + getCargo());
+    }
 }
