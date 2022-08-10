@@ -9,7 +9,10 @@ public class Usuario {
     private String cargo;
 
     //construtores
-    Usuario(String NovoPrimeiroNome, String NovoUltimoNome, String novoCPF, String NovoCargo){
+    public Usuario (){
+
+    }
+    public Usuario(String NovoPrimeiroNome, String NovoUltimoNome, String novoCPF, String NovoCargo){
         this.setPrimeiroNome(NovoPrimeiroNome);
         this.setUltimoNome(NovoUltimoNome);
         this.setCPF(novoCPF);
@@ -18,34 +21,39 @@ public class Usuario {
 
     //Get Set dos atributos
     public String getPrimeiroNome() {
-        return primeiroNome;
-    }
 
+        return this.primeiroNome;
+    }
     public void setPrimeiroNome(String primeiroNome) {
+
         this.primeiroNome = primeiroNome;
     }
 
     public String getUltimoNome() {
-        return ultimoNome;
+
+        return this.ultimoNome;
     }
 
     public void setUltimoNome(String ultimoNome) {
+
         this.ultimoNome = ultimoNome;
     }
 
     public String getCPF() {
-        return CPF;
+        return this.CPF;
     }
-
     public void setCPF(String CPF) {
+
         this.CPF = CPF;
     }
 
     public String getCargo() {
-        return cargo;
+
+        return this.cargo;
     }
 
     public void setCargo(String cargo) {
+
         this.cargo = cargo;
     }
 }

@@ -24,6 +24,7 @@ public class LoginController{
 
     public String texto;
 
+
     public void sairOnAction(ActionEvent event){
         Stage stage = (Stage) sair.getScene().getWindow();
         stage.close();

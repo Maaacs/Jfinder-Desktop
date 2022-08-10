@@ -123,31 +123,31 @@
                     <bottom>
                         <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TextField fx:id="nomeCadastroUsuario" layoutX="124.0" layoutY="54.0" prefHeight="29.0" prefWidth="347.0" />
+                        <TextField fx:id="nomeUsuarioTextField" layoutX="124.0" layoutY="54.0" prefHeight="29.0" prefWidth="347.0" />
                         <Label layoutX="124.0" layoutY="36.0" prefHeight="18.0" prefWidth="53.0" text="Nome:">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="sobrenomeCadastroUsuario" layoutX="124.0" layoutY="117.0" prefHeight="29.0" prefWidth="347.0" />
+                        <TextField fx:id="sobrenomeUsuarioTextField" layoutX="124.0" layoutY="117.0" prefHeight="29.0" prefWidth="347.0" />
                         <Label layoutX="124.0" layoutY="99.0" prefHeight="18.0" prefWidth="85.0" text="Sobrenome:">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="cpfCadastroUsuario" layoutX="124.0" layoutY="180.0" prefHeight="29.0" prefWidth="347.0" />
+                        <TextField fx:id="cpfUsuarioTextField" layoutX="124.0" layoutY="180.0" prefHeight="29.0" prefWidth="347.0" />
                         <Label layoutX="124.0" layoutY="162.0" prefHeight="18.0" prefWidth="61.0" text="CPF:">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="cargoCadastroUsuario" layoutX="124.0" layoutY="243.0" prefHeight="29.0" prefWidth="347.0" />
+                        <TextField fx:id="cargoUsuarioTextField" layoutX="124.0" layoutY="243.0" prefHeight="29.0" prefWidth="347.0" />
                         <Label layoutX="124.0" layoutY="225.0" prefHeight="18.0" prefWidth="61.0" text="Cargo:">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <JFXButton fx:id="confirmarCadastroUsuario" buttonType="RAISED" layoutX="502.0" layoutY="331.0" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar" textFill="WHITE">
+                        <JFXButton fx:id="cadastrarUsuario" buttonType="RAISED" layoutX="502.0" layoutY="331.0" onAction="#cadastrarUsuarioOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Cadastrar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -157,6 +157,7 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
+                        <Label fx:id="cadastroMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="286.0" prefHeight="17.0" prefWidth="160.0" textFill="RED" />
                      </children>
                         </Pane>
                     </bottom>
