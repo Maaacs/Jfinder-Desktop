@@ -68,8 +68,8 @@ public class CadastrarUsuarioController {
 
     @FXML
     private void cadastrarUsuarioOnAction(ActionEvent event) {
-        BancodeDados bd = new BancodeDados("max", "10121114");
-        bd.conecta();
+        //BancodeDados bd = new BancodeDados("max", "10121114");
+        //bd.conecta();
         try {
             //Usuario usuario = new Usuario(" ", "", "", "");
             String nome = nomeUsuarioTextField.getText();
@@ -80,8 +80,9 @@ public class CadastrarUsuarioController {
 
             Usuario usuario = new Usuario(nome, sobrenome, cpf, cargo);
             System.out.println(usuario.getPrimeiroNome());
+            System.out.println("Novo usuário cadastrado!");
             BancodeDados.adicionarUsuario(usuario);
-            System.out.println("foi!");
+            //System.out.println("foi!");
         }catch (NumberFormatException e){
             cadastroMessageLabel.setText("");
             cadastroMessageLabel.setText("Entrada Inválida!");

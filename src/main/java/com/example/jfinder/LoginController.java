@@ -10,19 +10,14 @@ import javafx.stage.Stage;
 
 public class LoginController{
 
-
-    @FXML
-    private TextField loginTextField;
-    @FXML
-    private PasswordField idAcessoTextField;
-    @FXML
-    private JFXButton entrar;
     @FXML
     private JFXButton sair;
     @FXML
     private Label loginMessageLabel;
-
-    public String texto;
+    @FXML
+    private TextField usuarioTextField;
+    @FXML
+    private PasswordField senhaTextField;
 
 
     public void sairOnAction(ActionEvent event){
@@ -30,20 +25,28 @@ public class LoginController{
         stage.close();
     }
 
-    /*public void entrarOnAction(ActionEvent event){
-        Main.changeScreen("usuario-view");
-    }*/
+    public boolean verificarLogin() {
+        BancodeDados bd = new BancodeDados(usuarioTextField.getText(), senhaTextField.getText());
+        //bd.conecta();
+        if(bd.conecta()) {
+            return true;
+        }else {
+            return false;
+        }
+    }
 
     public void entrarOnAction(ActionEvent event){
-        if(idAcessoTextField.getText().isBlank() == false){
-            int id = Integer.parseInt(idAcessoTextField.getText());
-            if(id == 123){//id cadastrado
+        if(usuarioTextField.getText().isBlank() == false && senhaTextField.getText().isBlank() == false){
+            if(verificarLogin()){
                 Main.changeScreen("usuario-view");
+                System.out.println("Estou no servidor :)");
             } else{
-                loginMessageLabel.setText("ID de acesso incorreto!");
+                System.out.println("Não obtive permissão para me conectar ao servidor :(");
+                loginMessageLabel.setText("Usuário ou senha incorreto!");
             }
         } else{
-            loginMessageLabel.setText("Insira o ID");
+            System.out.println("Não obtive permissão para me conectar ao servidor :(");
+            loginMessageLabel.setText("Insira os dados!");
         }
     }
 

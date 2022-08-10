@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -21,7 +22,6 @@
       </AnchorPane>
       <AnchorPane layoutX="400.0" prefHeight="500.0" prefWidth="400.0" style="-fx-background-color: white;">
          <children>
-            <PasswordField fx:id="idAcessoTextField" layoutX="94.0" layoutY="250.0" prefHeight="26.0" prefWidth="211.0" />
             <Label layoutX="137.0" layoutY="62.0" text="Acesse sua conta">
                <font>
                   <Font size="17.0" />
@@ -32,12 +32,12 @@
                   <Font size="28.0" />
                </font>
             </Label>
-            <JFXButton fx:id="entrar" buttonType="RAISED" layoutX="133.0" layoutY="323.0" onAction="#entrarOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Entrar" textFill="WHITE">
+            <JFXButton fx:id="entrar" buttonType="RAISED" layoutX="133.0" layoutY="331.0" onAction="#entrarOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Entrar" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
             </JFXButton>
-            <JFXButton fx:id="sair" buttonType="RAISED" layoutX="133.0" layoutY="382.0" onAction="#sairOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Sair" textFill="WHITE">
+            <JFXButton fx:id="sair" buttonType="RAISED" layoutX="133.0" layoutY="390.0" onAction="#sairOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Sair" textFill="WHITE">
                <font>
                   <Font size="14.0" />
                </font>
@@ -57,8 +57,9 @@
                   <Image url="@icons/box3.png" />
                </image>
             </ImageView>
-            <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="290.0" prefHeight="17.0" prefWidth="160.0" textFill="RED" />
-            <Label layoutX="94.0" layoutY="226.0" text="ID de acesso:" />
+            <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="298.0" prefHeight="17.0" prefWidth="160.0" textFill="RED" />
+            <PasswordField fx:id="senhaTextField" layoutX="94.0" layoutY="266.0" prefHeight="26.0" prefWidth="211.0" promptText="Senha" />
+            <TextField fx:id="usuarioTextField" layoutX="94.0" layoutY="231.0" prefHeight="26.0" prefWidth="211.0" promptText="Usuário" />
          </children></AnchorPane>
    </children>
 </AnchorPane>
