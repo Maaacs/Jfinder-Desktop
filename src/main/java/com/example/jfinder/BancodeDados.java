@@ -57,4 +57,18 @@ public class BancodeDados {
         }
     }
 
+    public static boolean adicionarDocumento(Documento documento) {
+        try {
+            System.out.println("Inserindo...");
+            Statement st = getConexao().createStatement();
+            //ResultSet rs = st.executeQuery("INSERT INTO usuarios VALUES ('" + usuario.getPrimeiroNome() + "', '" + usuario.getUltimoNome() + "', '"+ usuario.getCPF() +"', '"+ usuario.getCargo()+" ') ");
+            //System.out.println(rs);
+            st.executeUpdate("INSERT INTO documentos VALUES ('" + documento.getNumeroUnicoReferencia() + "', '" + documento.getTipoDeDocumento() + "', '"+ documento.getInteressado() +"', '"+ documento.getTipoDeArmazenamento() +"', '"+ documento.getDataArquivamento() +"', '"+ documento.getDescriçãoDocumento()+ "', '"+ documento.getLocalCompletoDeArmazenamento()+" ') ");
+            System.out.println("Acabei de inserir o novo documento em nosso banco de dados!");
+            return true;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
 }

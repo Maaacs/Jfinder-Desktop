@@ -1,19 +1,22 @@
 package com.example.jfinder;
 
+import java.util.Date;
+
 public class Documento {
+
 
     //atributos
     private String numeroUnicoReferencia;
-    private String dataArquivamento;
-    private String interessado;
     private String tipoDeDocumento;
-    private String descriçãoDocumento;
+    private String interessado;
     private String tipoDeArmazenamento;
+    private String dataArquivamento;
+    private String descriçãoDocumento;
     private String localCompletoDeArmazenamento;
 
     //Construtor que inicializa o objeto Documento
-    Documento(String NovoNumeroUnicoReferencia, String NovoDataArquivamento, String NovoInteressado, String NovoTipoDeDocumento,
-              String NovoDescriçãoDocumento, String NovoTipoDeArmazenamento, String NovoLocalCompletoDeArmazenamento){
+    Documento(String NovoNumeroUnicoReferencia, String NovoTipoDeDocumento, String NovoInteressado, String NovoTipoDeArmazenamento, String NovoDataArquivamento,
+              String NovoDescriçãoDocumento, String NovoLocalCompletoDeArmazenamento){
         this.setNumeroUnicoReferencia(NovoNumeroUnicoReferencia);
         this.setDataArquivamento(NovoDataArquivamento);
         this.setInteressado(NovoInteressado);

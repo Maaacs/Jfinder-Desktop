@@ -27,7 +27,7 @@ public class LoginController{
 
     public boolean verificarLogin() {
         BancodeDados bd = new BancodeDados(usuarioTextField.getText(), senhaTextField.getText());
-        //bd.conecta();
+        bd.conecta();
         if(bd.conecta()) {
             return true;
         }else {

@@ -137,8 +137,6 @@ public class Main extends Application {
     }
     public static void main(String[] args) {
         launch(args);
-        //Usuario usuario = new Usuario("spider", "man", "sdads", "sdasda");
-        //BancodeDados.adicionarUsuario(usuario);
 
     }
 }
