@@ -129,10 +129,17 @@ public class BancodeDados {
         return documentos;
     }
 
+    public boolean removerUsuario(String cpf){
+        try {
+            Statement st = BancodeDados.getConexao().createStatement();
+            st.executeUpdate("DELETE FROM usuarios WHERE " + "cpf='" + cpf + "'");
+            return true;
 
-
-
-
+        }catch (SQLException e){
+            System.out.println(e.getMessage());
+            return false;
+        }
+    }
 
 
 }

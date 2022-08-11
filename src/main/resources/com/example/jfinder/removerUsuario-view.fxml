@@ -125,25 +125,26 @@
                <bottom>
                   <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TableView layoutX="-5.0" layoutY="62.0" prefHeight="100.0" prefWidth="605.0">
+                        <TableView fx:id="tabelaUsuarios" blendMode="MULTIPLY" layoutX="-5.0" layoutY="62.0" prefHeight="182.0" prefWidth="605.0">
                            <columns>
-                              <TableColumn prefWidth="177.0" style="-fx-background-color: #B0E0E6;" text="Nome" />
-                              <TableColumn minWidth="0.0" prefWidth="210.0" style="-fx-background-color: #B0E0E6;" text="Sobrenome" />
-                              <TableColumn prefWidth="227.0" style="-fx-background-color: #B0E0E6;" text="Cargo" />
+                              <TableColumn fx:id="colunaNome" prefWidth="170.0" style="-fx-background-color: #B0E0E6;" text="Nome" />
+                              <TableColumn fx:id="colunaSobrenome" minWidth="0.0" prefWidth="188.0" style="-fx-background-color: #B0E0E6;" text="Sobrenome" />
+                              <TableColumn fx:id="colunaCargo" minWidth="0.0" prefWidth="151.0" style="-fx-background-color: #B0E0E6;" text="Cargo" />
+                              <TableColumn minWidth="0.0" prefWidth="94.0" style="-fx-background-color: #B0E0E6;" text="Ação" />
                            </columns>
                         </TableView>
-                        <JFXButton fx:id="removerUsuario" buttonType="RAISED" layoutX="371.0" layoutY="319.0" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Remover" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" layoutX="371.0" layoutY="319.0" onAction="#removerUsuarioOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Remover" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <TextField fx:id="cpfAlterarUsuario" layoutX="86.0" layoutY="14.0" prefHeight="30.0" prefWidth="169.0" promptText="CPF" />
-                        <JFXButton fx:id="buscarUsuario" buttonType="RAISED" layoutX="8.0" layoutY="15.0" prefHeight="16.0" prefWidth="66.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                        <TextField fx:id="cpfBuscarMessageLabel" layoutX="86.0" layoutY="14.0" onKeyReleased="#buscarUsuarioButtoOnAction" prefHeight="30.0" prefWidth="169.0" promptText="CPF" />
+                        <JFXButton buttonType="RAISED" layoutX="8.0" layoutY="15.0" onAction="#buscarUsuarioButtoOnAction" prefHeight="16.0" prefWidth="66.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="atualizarBuscarUsuario" buttonType="RAISED" layoutX="473.0" layoutY="319.0" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
+                        <JFXButton fx:id="atualizarTabela" buttonType="RAISED" layoutX="473.0" layoutY="319.0" onAction="#atualizarTabelaUsuariosOnAction" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -153,6 +154,8 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
+                        <Label fx:id="tabelaMessageLabel" alignment="CENTER" layoutX="32.0" layoutY="324.0" prefHeight="17.0" prefWidth="187.0" textFill="#28c32d" />
+                        <Label fx:id="nome" alignment="CENTER" layoutX="300.0" layoutY="266.0" prefHeight="17.0" prefWidth="138.0" textFill="#49ae42" />
                      </children>
                   </Pane>
                </bottom>

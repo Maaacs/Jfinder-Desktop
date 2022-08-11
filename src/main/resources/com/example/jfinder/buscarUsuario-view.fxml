@@ -125,7 +125,7 @@
                <bottom>
                   <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
-                        <JFXButton fx:id="buscarUsuario" buttonType="RAISED" layoutX="4.0" layoutY="9.0" prefHeight="16.0" prefWidth="66.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                        <JFXButton fx:id="buscarUsuarioButtoOnAction" buttonType="RAISED" layoutX="4.0" layoutY="9.0" prefHeight="16.0" prefWidth="66.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -135,11 +135,11 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <TableView layoutX="-5.0" layoutY="50.0" prefHeight="101.0" prefWidth="615.0">
+                        <TableView fx:id="tabelaUsuarios" layoutX="-5.0" layoutY="50.0" prefHeight="101.0" prefWidth="615.0">
                            <columns>
-                              <TableColumn prefWidth="177.0" style="-fx-background-color: #B0E0E6;" text="Nome" />
-                              <TableColumn minWidth="0.0" prefWidth="210.0" style="-fx-background-color: #B0E0E6;" text="Sobrenome" />
-                              <TableColumn prefWidth="227.0" style="-fx-background-color: #B0E0E6;" text="Cargo" />
+                              <TableColumn fx:id="colunaNome" prefWidth="177.0" style="-fx-background-color: #B0E0E6;" text="Nome" />
+                              <TableColumn fx:id="colunaSobrenome" minWidth="0.0" prefWidth="210.0" style="-fx-background-color: #B0E0E6;" text="Sobrenome" />
+                              <TableColumn fx:id="colunaCargo" prefWidth="227.0" style="-fx-background-color: #B0E0E6;" text="Cargo" />
                            </columns>
                         </TableView>
                         <JFXButton fx:id="atualizarBuscarUsuario" buttonType="RAISED" layoutX="473.0" layoutY="319.0" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
@@ -147,7 +147,8 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <TextField layoutX="83.0" layoutY="8.0" prefHeight="30.0" prefWidth="160.0" promptText="CPF" />
+                        <TextField fx:id="cpfBuscarMessageLabel" layoutX="83.0" layoutY="8.0" onKeyReleased="#buscarUsuarioButtoOnAction" prefHeight="30.0" prefWidth="160.0" promptText="CPF" />
+                        <Label fx:id="resultadoMessageLabel" layoutX="189.0" layoutY="237.0" prefHeight="27.0" prefWidth="265.0" textFill="#3eb236" />
                      </children>
                   </Pane>
                </bottom>
