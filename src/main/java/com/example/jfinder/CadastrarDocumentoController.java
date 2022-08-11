@@ -74,8 +74,8 @@ public class CadastrarDocumentoController {
 
 
             Documento documento = new Documento(numeroReferencia, tipoDocumento, interessado, tipoArmazenamento, dataArquivamento, descricao, localArmazenamento);
-            System.out.println(documento.getNumeroUnicoReferencia());
-            System.out.println("Novo documento cadastrado!");
+            //System.out.println(documento.getNumeroUnicoReferencia());
+            System.out.println("Novo está sendo cadastrado!");
             BancodeDados.adicionarDocumento(documento);
             cadastroMessageLabel.setText("Documento cadastrado com sucesso!");
             //System.out.println("foi!");

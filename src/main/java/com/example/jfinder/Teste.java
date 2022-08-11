@@ -9,7 +9,7 @@ public class Teste {
         BancodeDados bd = new BancodeDados("max","10121114");
         bd.conecta();
         //Usuario usr = new Usuario();
-        List<Usuario> usuarios = new BancodeDados().getList();
+        List<Usuario> usuarios = new BancodeDados().getListUsuarios();
 
         if (usuarios != null){
             for (int i = 0; i < usuarios.size(); i++){

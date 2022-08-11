@@ -98,4 +98,15 @@ public class Documento {
     public void setLocalCompletoDeArmazenamento(String localCompletoDeArmazenamento) {
         this.localCompletoDeArmazenamento = localCompletoDeArmazenamento;
     }
+
+    public void mostraDocumento(){
+        System.out.println("Numero de Referência :" + getNumeroUnicoReferencia());
+        System.out.println("Tipo de documento :" + getTipoDeDocumento());
+        System.out.println("Interessado :" + getInteressado());
+        System.out.println("Tipo de armazenamento :" + getTipoDeArmazenamento());
+        System.out.println("Data de arquivamento :" + getDataArquivamento());
+        System.out.println("Descrição :" + getDescriçãoDocumento());
+        System.out.println("Local de armazenamento :" + getLocalCompletoDeArmazenamento());
+
+    }
 }

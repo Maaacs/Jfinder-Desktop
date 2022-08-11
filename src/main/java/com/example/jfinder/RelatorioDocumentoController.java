@@ -7,37 +7,23 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 
 public class RelatorioDocumentoController implements Initializable {
-    @FXML
-    private Button Usuarios;
-    @FXML
-    private Button Documentos;
-    @FXML
-    private Button Relatorios;
-    @FXML
-    private Button encerrarSessao;
-    @FXML
-    private JFXButton voltarRelatorioDocumento;
-    @FXML
-    private TableView<Documento> tabelaDocumentos;
-    @FXML
-    private TableColumn<Documento, String> colunaNumReferencia;
-    @FXML
-    private TableColumn<Documento, String> colunaTipoDocumento;
-    @FXML
-    private TableColumn<Documento, String> colunaInteressadoDocumento;
-    @FXML
-    private TableColumn<Documento, String> ColunaDescricaoDocumento;
-    @FXML
-    private JFXButton atualizarTabela;
+    @FXML private TableView<Documento> tabelaDocumentos;
+    @FXML private TableColumn<Documento, String> colunaNumReferencia;
+    @FXML private TableColumn<Documento, String> colunaTipoDocumento;
+    @FXML private TableColumn<Documento, String> colunaInteressadoDocumento;
+    @FXML private TableColumn<Documento, String> ColunaDescricaoDocumento;
+    @FXML private Label RelatorioDocumentoLabelMessage;
 
     public void encerrarSessaoOnAction(ActionEvent event){
         Main.changeScreen("login-view");
@@ -64,7 +50,7 @@ public class RelatorioDocumentoController implements Initializable {
         initTable();
     }
 
-    public void initTable(){
+    public void initTable(){//inicializa a tebela com os valores atuais do DB
         colunaNumReferencia.setCellValueFactory(new PropertyValueFactory("numeroUnicoReferencia"));//exatamente como está escrito no tipo Documento
         colunaTipoDocumento.setCellValueFactory(new PropertyValueFactory("tipoDeDocumento"));
         colunaInteressadoDocumento.setCellValueFactory(new PropertyValueFactory("interessado"));
@@ -72,24 +58,22 @@ public class RelatorioDocumentoController implements Initializable {
         tabelaDocumentos.setItems(atualizaTabela());
     }
 
-    public ObservableList<Documento> atualizaTabela(){
+    public ObservableList<Documento> atualizaTabela(){ //serve para retornar a tabela com os valores atuais do Jfinder
         BancodeDados dao = new BancodeDados();
         return FXCollections.observableArrayList(dao.getListDocumentos());
     }
 
 
-    @FXML
-    private void atualizarTabelaOnAction(ActionEvent event) {
-        BancodeDados bd = new BancodeDados();
-        List<Documento> documentos = new BancodeDados().getListDocumentos();
-        atualizaTabela();
+    @FXML private void atualizarTabelaOnAction(ActionEvent event) {
+        initTable();
+        //atualizaTabela();
         System.out.println("Atualizei os documentos");
         // para testar no terminal
-       /* try {
-            if (usuarios != null){
-                for (int i = 0; i < usuarios.size(); i++){
-                    usuarios.get(i).mostraUsuario();
-
+        List<Documento> documentos = new BancodeDados().getListDocumentos();
+       try {
+            if (documentos != null){
+                for (int i = 0; i < documentos.size(); i++){
+                    documentos.get(i).mostraDocumento();
                     System.out.println("------------");
                 }
             }else{
@@ -98,7 +82,7 @@ public class RelatorioDocumentoController implements Initializable {
             }
 
         }catch (NumberFormatException e){
-            tabelaMessageLabel.setText("Lista é nula!");
-        }*/
+           RelatorioDocumentoLabelMessage.setText("Tabela está vazia!");
+        }
     }
 }

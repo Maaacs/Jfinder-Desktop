@@ -30,7 +30,7 @@ public class BancodeDados {
         System.out.println("Estou tentando conectar ao servidor...");
         try {
             BancodeDados.conexao = DriverManager.getConnection(url, userBD, pass);
-            System.out.println("Estou quase conseguindo conexão!");
+            System.out.println("Valide seu usuário para que eu possa me conectar!");
             return true;
         }
         catch (SQLException e){
@@ -76,7 +76,7 @@ public class BancodeDados {
         }
     }
 
-    public List<Usuario> getList(){
+    public List<Usuario> getListUsuarios(){// Seleciona a lista de usuarios do DB
         List<Usuario> usuarios = new ArrayList<>();
         try{
             Statement st = conexao.createStatement();
@@ -103,7 +103,7 @@ public class BancodeDados {
     }
 
 
-    public List<Documento> getListDocumentos(){
+    public List<Documento> getListDocumentos(){ // Seleciona a lista de documentos do DB
         List<Documento> documentos = new ArrayList<>();
         try{
             Statement st = conexao.createStatement();
@@ -134,58 +134,5 @@ public class BancodeDados {
 
 
 
-
-
-
-
-    /*public void relatorioUsuarios() {
-        RelatorioUsuarioController usuario = new RelatorioUsuarioController();
-        usuario.s
-        String query = "SELECT nome FROM Pessoas WHERE Usuarios=?";
-        try {
-            Connection conn = null;
-            PreparedStatement ps = conn.prepareStatement(query);
-            ps.setString(1, String.valueOf(usuario));
-            ResultSet rs = ps.executeQuery();
-            String nomes = "";
-            while (rs.next()) {
-                nomes += rs.getString("Nome") + "\t";
-            }
-            return nomes;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }*/
-    /*public static ResultSet relatorioUsuarios() throws SQLException {
-            //String nomes = " ";
-            System.out.println("coletando...");
-            Statement st = getConexao().createStatement();
-            ResultSet rs = st.executeQuery("SELECT * FROM usuarios");
-
-            /*while(rs.next()){
-                System.out.println(rs);
-                //nomes += rs.getString("nomes") + "\t";
-            }
-            System.out.println("Acabei de listar os usuarios do nosso banco de dados!");
-            //System.out.println(nomes);
-        return rs;
-    }*/
-
-    /*public static Usuario relatorioUsuarios(Usuario usuario) {
-        String query = "SELECT nome FROM Pessoas WHERE Usuarios=?";
-        try {
-            Connection conn = null;
-            PreparedStatement ps = conn.prepareStatement(query);
-            ps.setString(1, String.valueOf(usuario));
-            ResultSet rs = ps.executeQuery();
-            String nomes = "";
-            while (rs.next()) {
-                nomes += rs.getString("Nome") + "\t";
-            }
-            return nomes;
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }*/
 
 }

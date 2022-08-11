@@ -142,6 +142,7 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
+                        <Label fx:id="RelatorioDocumentoLabelMessage" alignment="CENTER" layoutX="149.0" layoutY="325.0" prefHeight="17.0" prefWidth="116.0" textFill="#18b518" />
                      </children>
                   </Pane>
                </bottom>

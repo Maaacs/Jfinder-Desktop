@@ -1,12 +1,10 @@
 package com.example.jfinder;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -16,20 +14,7 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class RelatorioUsuarioController implements Initializable {
-    @FXML
-    private Button Usuarios;
-    @FXML
-    private Button Documentos;
-    @FXML
-    private Button Relatorios;
-    @FXML
-    private Button encerrarSessao;
-    @FXML
-    private JFXButton voltarRelatorioUsuario;
-    @FXML
-    private JFXButton atualizarTabelaUsuarios;
-    @FXML
-    private Label tabelaMessageLabel;
+    @FXML private Label tabelaMessageLabel;
     @FXML private TableView<Usuario> tabelaDeUsuarios;
     @FXML private TableColumn<Usuario, String> colunaNome;
     @FXML private TableColumn<Usuario, String> colunaSobrenome;
@@ -62,51 +47,24 @@ public class RelatorioUsuarioController implements Initializable {
     }
 
 
-    public void initTable(){
+    public void initTable(){//inicializa a tebela com os valores atuais do DB
         colunaNome.setCellValueFactory(new PropertyValueFactory("primeiroNome"));
         colunaSobrenome.setCellValueFactory(new PropertyValueFactory("ultimoNome"));
         colunaCpf.setCellValueFactory(new PropertyValueFactory("CPF"));
         colunaCargo.setCellValueFactory(new PropertyValueFactory("cargo"));
         tabelaDeUsuarios.setItems(atualizaTabela());
     }
-    public ObservableList<Usuario> atualizaTabela(){
+    public ObservableList<Usuario> atualizaTabela(){ //serve para retornar a tabela com os valores atuais do Jfinder
         BancodeDados dao = new BancodeDados();
-        return FXCollections.observableArrayList(dao.getList());
+        return FXCollections.observableArrayList(dao.getListUsuarios());
     }
-    /*@FXML private void atualizarTabelaUsuariosOnAction(ActionEvent event) {
-
-        try {
-            List<Usuario> usuarios = (List<Usuario>) BancodeDados.relatorioUsuarios;
-
-            TableView<Usuario> tabela = new TableView<>();
-            TableColumn<Usuario, String> colunaNome = new TableColumn<>("Nome");
-            TableColumn<Usuario, String> colunaSobrenome = new TableColumn<>("Sobrenome");
-            TableColumn<Usuario, String> colunaCPF = new TableColumn<>("CPF");
-            TableColumn<Usuario, String> colunaCargo = new TableColumn<>("Cargo");
-
-
-
-            tabela.setItems(FXCollections.observableArrayList(usuarios));
-            tabela.getColumns().addAll(colunaNome,colunaSobrenome,colunaCPF,colunaCargo);
-            Usuario usuario = new Usuario(nome, sobrenome, cpf, cargo);
-            System.out.println(usuario.getPrimeiroNome());
-            System.out.println("Novo usuário cadastrado!");
-            BancodeDados.adicionarUsuario(usuario);
-            //BancodeDados.relatorioUsuarios();
-            //System.out.println("foi!");
-        }catch (NumberFormatException e){
-            tabelaMessageLabel.setText("Lista atualizada!");
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        }
-    }*/
 
     @FXML private void atualizarTabelaUsuariosOnAction(ActionEvent event) {
-        BancodeDados bd = new BancodeDados();
-        List<Usuario> usuarios = new BancodeDados().getList();
-        atualizaTabela();
-        System.out.println("Atualizei");
+        initTable();
+        //atualizaTabela();
+        System.out.println("Atualizei os usuarios");
         // para testar no terminal
+        List<Usuario> usuarios = new BancodeDados().getListUsuarios();
         try {
             if (usuarios != null){
                 for (int i = 0; i < usuarios.size(); i++){
