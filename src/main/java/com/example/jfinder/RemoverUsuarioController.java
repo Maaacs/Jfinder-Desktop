@@ -33,6 +33,8 @@ public class RemoverUsuarioController implements Initializable{
     private Label nome;
     @FXML
     private JFXButton removerUsuario;
+    @FXML
+    private TableColumn colunaCpf;
 
 
     public void voltarOnAction(ActionEvent event){
@@ -60,6 +62,7 @@ public class RemoverUsuarioController implements Initializable{
     public void initTable(){//inicializa a tebela com os valores atuais do DB
         colunaNome.setCellValueFactory(new PropertyValueFactory("primeiroNome"));//exatamente como está escrito no tipo Usuario
         colunaSobrenome.setCellValueFactory(new PropertyValueFactory("ultimoNome"));
+        colunaCpf.setCellValueFactory(new PropertyValueFactory("CPF"));
         colunaCargo.setCellValueFactory(new PropertyValueFactory("cargo"));
 
         tabelaUsuarios.setItems(atualizaTabela());
@@ -70,24 +73,9 @@ public class RemoverUsuarioController implements Initializable{
         return FXCollections.observableArrayList(dao.getListUsuarios());
     }
 
-
-    @FXML
-    private void buscarUsuarioButtoOnAction(){
-        Usuario usr = new Usuario();
-        Usuario dados = new Usuario();
-        String cpf = cpfBuscarMessageLabel.getText();
-        usr = usr.buscarCPF(cpf);
-
-        if (usr == null){
-            System.out.println("Nao encontrado");
-            nome.setText("Tente novamente");
-
-        }else{
-            System.out.println("Encontrei o fulano");
-            nome.setText(dados.getPrimeiroNome());
-        }
+    @FXML private void atualizarTabelaUsuariosOnAction(ActionEvent event) {
+        initTable();
     }
-
 
     @FXML
     private void removerUsuarioOnAction(ActionEvent event) {
@@ -98,18 +86,11 @@ public class RemoverUsuarioController implements Initializable{
 
         if (u == true){
             System.out.println("OK");
+            tabelaMessageLabel.setText("Usuário removido com sucesso!");
         }else{
             System.out.println("Erro");
         }
     }
 
-
-
-
-
-
-    @FXML private void atualizarTabelaUsuariosOnAction(ActionEvent event) {
-        initTable();
-    }
 
 }

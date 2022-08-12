@@ -64,9 +64,26 @@
     -fx-border-radius: 50px;
 }
 
+.tabela
+{
+    -fx-background-color:linear-gradient(to bottom right,rgba(220, 220, 220, 0.9), rgba(220, 220, 220, 0.9));
+}
+
+.tabela:hover
+{
+    -fx-background-color:linear-gradient(to bottom right, rgb(118, 39, 238), rgba(70, 200, 239, 2.2));
+}
 
 
+.tabela2
+{
+    -fx-background-color:linear-gradient(to bottom right,rgba(175, 238, 238, 0.9), rgba(175, 238, 238, 0.9));
+}
 
+.tabela2:hover
+{
+    -fx-background-color:linear-gradient(to bottom right, rgb(118, 39, 238), rgba(70, 200, 239, 2.2));
+}
 
 
 /*.table-view .column-header,

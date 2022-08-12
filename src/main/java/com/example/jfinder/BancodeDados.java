@@ -129,17 +129,80 @@ public class BancodeDados {
         return documentos;
     }
 
-    public boolean removerUsuario(String cpf){
+        public boolean removerUsuario(String cpf) {
+            try {
+                Statement st = BancodeDados.getConexao().createStatement();
+                st.executeUpdate("DELETE FROM usuarios WHERE " + "cpf='" + cpf + "'");
+                return true;
+
+            } catch (SQLException e) {
+                System.out.println(e.getMessage());
+                return false;
+            }
+        }
+
+
+
+    public boolean alterarUsuario(Usuario usuario) {
+
+        String sql = "UPDATE usuarios SET nome = ? , sobrenome = ? ,  cargo = ? WHERE cpf = ?";
         try {
-            Statement st = BancodeDados.getConexao().createStatement();
-            st.executeUpdate("DELETE FROM usuarios WHERE " + "cpf='" + cpf + "'");
+            System.out.println("Alterando dados...");
+            PreparedStatement stmt = BancodeDados.getConexao().prepareStatement(sql);
+            stmt.setString(1,usuario.getPrimeiroNome());
+            stmt.setString(2,usuario.getUltimoNome());
+            stmt.setString(3,usuario.getCargo());
+            stmt.setString(4,usuario.getCPF());
+
+            stmt.execute();
             return true;
 
-        }catch (SQLException e){
-            System.out.println(e.getMessage());
+        } catch (SQLException e) {
+            System.out.println(e);
             return false;
         }
     }
+
+
+
+
+
+       /* public static boolean mudarNomeUsuario(String nome, String sobrenome, String cpf) {
+            try {
+                Statement st = getConexao().createStatement();
+                st.executeUpdate("UPDATE usuarios SET nome='" + nome + "' WHERE cpf='" + cpf +"'");
+                return true;
+            } catch (SQLException e) {
+                return false;
+            }
+        }
+
+        public static boolean mudarSobrenomeUsuario(String nome, String sobrenome, String cpf) {
+            try {
+                Statement st = getConexao().createStatement();
+                st.executeUpdate("UPDATE usuarios SET sobrenome='" + sobrenome + "' WHERE cpf='" + cpf +"'");
+                return true;
+            } catch (SQLException e) {
+                return false;
+            }
+        }
+
+        public static boolean mudarCargoUsuario(String nome, String sobrenome, String cpf) {
+            try {
+                Statement st = getConexao().createStatement();
+                st.executeUpdate("UPDATE usuarios SET cargo='" + cargo + "' WHERE cpf='" + cpf +"'");
+                return true;
+            } catch (SQLException e) {
+                return false;
+            }
+        }
+
+        public static void alterarUsuarios(String nome, String sobrenome, String cargo) {
+            mudarNomeUsuario(nome, sobrenome, cargo);
+            mudarSobrenomeUsuario(nome, nome, cargo);
+            mudarCargoUsuario(nome,sobrenome,cargo);
+        }*/
+
 
 
 }

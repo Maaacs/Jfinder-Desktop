@@ -125,37 +125,34 @@
                <bottom>
                   <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TableView fx:id="tabelaUsuarios" blendMode="MULTIPLY" layoutX="-5.0" layoutY="62.0" prefHeight="182.0" prefWidth="605.0">
+                        <TableView fx:id="tabelaUsuarios" blendMode="MULTIPLY" layoutX="-5.0" layoutY="14.0" prefHeight="223.0" prefWidth="605.0">
                            <columns>
                               <TableColumn fx:id="colunaNome" prefWidth="170.0" style="-fx-background-color: #B0E0E6;" text="Nome" />
                               <TableColumn fx:id="colunaSobrenome" minWidth="0.0" prefWidth="188.0" style="-fx-background-color: #B0E0E6;" text="Sobrenome" />
-                              <TableColumn fx:id="colunaCargo" minWidth="0.0" prefWidth="151.0" style="-fx-background-color: #B0E0E6;" text="Cargo" />
-                              <TableColumn minWidth="0.0" prefWidth="94.0" style="-fx-background-color: #B0E0E6;" text="Ação" />
+                              <TableColumn fx:id="colunaCpf" minWidth="0.0" prefWidth="130.0" style="-fx-background-color: #B0E0E6;" text="CPF" />
+                              <TableColumn fx:id="colunaCargo" minWidth="0.0" prefWidth="115.0" style="-fx-background-color: #B0E0E6;" text="Cargo" />
                            </columns>
                         </TableView>
-                        <JFXButton buttonType="RAISED" layoutX="371.0" layoutY="319.0" onAction="#removerUsuarioOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Remover" textFill="WHITE">
+                        <JFXButton buttonType="RAISED" layoutX="499.0" layoutY="248.0" onAction="#removerUsuarioOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Remover" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <TextField fx:id="cpfBuscarMessageLabel" layoutX="86.0" layoutY="14.0" onKeyReleased="#buscarUsuarioButtoOnAction" prefHeight="30.0" prefWidth="169.0" promptText="CPF" />
-                        <JFXButton buttonType="RAISED" layoutX="8.0" layoutY="15.0" onAction="#buscarUsuarioButtoOnAction" prefHeight="16.0" prefWidth="66.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                        <TextField fx:id="cpfBuscarMessageLabel" layoutX="320.0" layoutY="247.0" prefHeight="30.0" prefWidth="169.0" promptText="CPF" />
+                        <JFXButton fx:id="atualizarTabela" buttonType="RAISED" layoutX="5.0" layoutY="248.0" onAction="#atualizarTabelaUsuariosOnAction" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="atualizarTabela" buttonType="RAISED" layoutX="473.0" layoutY="319.0" onAction="#atualizarTabelaUsuariosOnAction" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
+                        <JFXButton fx:id="voltarCadastroUsuario1" buttonType="RAISED" layoutX="499.0" layoutY="327.0" onAction="#voltarOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Voltar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <JFXButton fx:id="voltarCadastroUsuario1" buttonType="RAISED" layoutX="271.0" layoutY="319.0" onAction="#voltarOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Voltar" textFill="WHITE">
+                        <Label fx:id="tabelaMessageLabel" layoutX="5.0" layoutY="297.0" prefHeight="17.0" prefWidth="202.0" textFill="#28c32d">
                            <font>
                               <Font size="14.0" />
-                           </font>
-                        </JFXButton>
-                        <Label fx:id="tabelaMessageLabel" alignment="CENTER" layoutX="32.0" layoutY="324.0" prefHeight="17.0" prefWidth="187.0" textFill="#28c32d" />
-                        <Label fx:id="nome" alignment="CENTER" layoutX="300.0" layoutY="266.0" prefHeight="17.0" prefWidth="138.0" textFill="#49ae42" />
+                           </font></Label>
                      </children>
                   </Pane>
                </bottom>

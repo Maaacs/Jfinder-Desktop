@@ -8,18 +8,20 @@ public class Teste {
     public static void main (String[] args){
         BancodeDados bd = new BancodeDados("max","10121114");
         bd.conecta();
-        //Usuario usr = new Usuario();
-        List<Usuario> usuarios = new BancodeDados().getListUsuarios();
 
-        if (usuarios != null){
-            for (int i = 0; i < usuarios.size(); i++){
-                usuarios.get(i).mostraUsuario();
+        Usuario p = new Usuario();
 
-                System.out.println("------------");
-            }
-        }else{
-            System.out.println("Teste: Lista nula");
+        p.setCPF("9");
+        p.setPrimeiroNome("joao");
+        p.setUltimoNome("Barroso");
+        p.setCargo("Professor");
 
+
+        if (bd.alterarUsuario(p)){
+            System.out.println("alterado");
+        }
+        else{
+            System.out.println("nao alterado");
         }
     }
 

@@ -123,19 +123,19 @@
                <bottom>
                   <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TextField fx:id="cpfAlterarUsuario" layoutX="350.0" layoutY="14.0" prefHeight="28.0" prefWidth="169.0" promptText="CPF" />
-                        <JFXButton fx:id="okAlterarUsuario" buttonType="RAISED" layoutX="526.0" layoutY="14.0" prefHeight="13.0" prefWidth="60.0" styleClass="navbutton" stylesheets="@css/style.css" text="Ok" textFill="WHITE">
+                        <TextField fx:id="cpfTextField" layoutX="350.0" layoutY="14.0" prefHeight="28.0" prefWidth="169.0" promptText="CPF" />
+                        <JFXButton fx:id="buscarUsuario" buttonType="RAISED" layoutX="526.0" layoutY="14.0" onAction="#buscarOnAction" prefHeight="13.0" prefWidth="60.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <TextField fx:id="nomeAlterarUsuario" layoutX="127.0" layoutY="101.0" prefHeight="29.0" prefWidth="347.0" promptText="Novo Nome" />
-                        <TextField fx:id="sobrenomeAlterarUsuario" layoutX="127.0" layoutY="175.0" prefHeight="29.0" prefWidth="347.0" promptText="Novo Sobrenome" />
-                        <TextField fx:id="cargoAlterarUsuario" layoutX="127.0" layoutY="242.0" prefHeight="29.0" prefWidth="347.0" promptText="Novo Cargo" />
-                        <Label layoutX="127.0" layoutY="76.0" prefHeight="17.0" prefWidth="185.0" text="Nome" />
-                        <Label layoutX="127.0" layoutY="150.0" prefHeight="17.0" prefWidth="138.0" text="Sobrenome" />
-                        <Label layoutX="128.0" layoutY="219.0" prefHeight="17.0" prefWidth="129.0" text="Cargo" />
-                        <JFXButton fx:id="confirmarAlteracaoUsuario" buttonType="RAISED" layoutX="450.0" layoutY="326.0" prefHeight="27.0" prefWidth="137.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar Alteração" textFill="WHITE">
+                        <TextField fx:id="nomeAlterarUsuario" layoutX="127.0" layoutY="101.0" prefHeight="29.0" prefWidth="347.0" promptText="Nome" />
+                        <TextField fx:id="sobrenomeAlterarUsuario" layoutX="127.0" layoutY="175.0" prefHeight="29.0" prefWidth="347.0" promptText="Sobrenome" />
+                        <TextField fx:id="cargoAlterarUsuario" layoutX="127.0" layoutY="242.0" prefHeight="29.0" prefWidth="347.0" promptText="Cargo" />
+                        <Label layoutX="127.0" layoutY="76.0" prefHeight="17.0" prefWidth="185.0" text="Novo nome:" />
+                        <Label layoutX="127.0" layoutY="150.0" prefHeight="17.0" prefWidth="138.0" text="Novo sobrenome:" />
+                        <Label layoutX="128.0" layoutY="219.0" prefHeight="17.0" prefWidth="129.0" text="Novo cargo:" />
+                        <JFXButton fx:id="confirmarAlteracaoUsuario" buttonType="RAISED" layoutX="450.0" layoutY="326.0" onAction="#alteracaoOnAction" prefHeight="27.0" prefWidth="137.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar Alteração" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -145,6 +145,8 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
+                        <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutX="110.0" layoutY="20.0" prefHeight="17.0" prefWidth="233.0" textFill="#dd2d2d" />
+                        <Label fx:id="alterarLabelMessage" alignment="CENTER" layoutX="210.0" layoutY="289.0" prefHeight="17.0" prefWidth="181.0" textFill="#29c63e" />
                      </children>
                   </Pane>
                </bottom>
