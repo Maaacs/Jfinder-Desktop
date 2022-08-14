@@ -1,6 +1,11 @@
 package com.example.jfinder;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.Date;
+
+import static com.example.jfinder.BancodeDados.conexao;
 
 
 public class Documento {
@@ -97,6 +102,30 @@ public class Documento {
 
     public void setLocalCompletoDeArmazenamento(String localCompletoDeArmazenamento) {
         this.localCompletoDeArmazenamento = localCompletoDeArmazenamento;
+    }
+
+
+    public Documento buscarPorNumeroReferencia(String numeroDeReferencia){// Seleciona a lista de usuarios do DB
+        Documento docs = new Documento();
+        try{
+            Statement st = conexao.createStatement();
+            System.out.println("Tentando recuperar informações...");
+            ResultSet rs = st.executeQuery("SELECT * FROM documentos WHERE " + "numeroReferencia='" + numeroDeReferencia + "'");
+            System.out.println("Aguarde um pouco...");
+
+            if(rs.next()){ //enquanto tiver uma posicao na array preenchida
+
+                return new Documento(rs.getString("numeroReferencia"), rs.getString("tipo"), rs.getString("interessado"), rs.getString("tipoArmazenamento"), rs.getString("dataArquivamento"), rs.getString("descricao"), rs.getString("localCompletoArmazenamento"));
+
+            }else{
+                System.out.println("infelizmente nao encontrei o documento");
+                return null;
+            }
+
+        }catch (SQLException ex){
+            System.out.println("Lista não retornada");
+            return null;
+        }
     }
 
     public void mostraDocumento(){

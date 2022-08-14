@@ -9,18 +9,6 @@ import javafx.scene.control.TextField;
 
 public class AlterarUsuarioController {
     @FXML
-    private Button Usuarios;
-    @FXML
-    private Button Documentos;
-    @FXML
-    private Button Relatorios;
-    @FXML
-    private Button encerrarSessao;
-    @FXML
-    private TextField cpfAlterarUsuario;
-    @FXML
-    private JFXButton okAlterarUsuario;
-    @FXML
     private TextField nomeAlterarUsuario;
     @FXML
     private TextField sobrenomeAlterarUsuario;

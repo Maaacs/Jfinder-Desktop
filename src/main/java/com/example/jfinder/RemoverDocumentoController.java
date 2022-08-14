@@ -1,21 +1,67 @@
 package com.example.jfinder;
 
 import com.jfoenix.controls.JFXButton;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
+import javafx.fxml.Initializable;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 
-public class RemoverDocumentoController {
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class RemoverDocumentoController implements Initializable {
+
+    @FXML private JFXButton voltarDocumento;
+    @FXML private TableView tabelaDocumentos;
+    @FXML private TableColumn colunaNumeroReferenciaDocumento;
+    @FXML private TableColumn colunaTipoDocumento;
+    @FXML private TableColumn colunaInteressadoDocumento;
+    @FXML private TableColumn colunaArquivamentoDocumento;
     @FXML
-    private Button Usuarios;
+    private TextField documentoRemoverMessageLabel;
     @FXML
-    private Button Documentos;
+    private Label documentoMessageLabel;
+
+    @Override
+    public void initialize (URL url, ResourceBundle rb){
+        initTable();
+    }
+
+    public void initTable(){//inicializa a tebela com os valores atuais do DB
+        colunaNumeroReferenciaDocumento.setCellValueFactory(new PropertyValueFactory("numeroUnicoReferencia"));
+        colunaTipoDocumento.setCellValueFactory(new PropertyValueFactory("tipoDeDocumento"));
+        colunaInteressadoDocumento.setCellValueFactory(new PropertyValueFactory("interessado"));
+        colunaArquivamentoDocumento.setCellValueFactory(new PropertyValueFactory("dataArquivamento"));
+
+        tabelaDocumentos.setItems(atualizaTabela());
+    }
+
+    public ObservableList<Documento> atualizaTabela(){ //serve para retornar a tabela com os valores atuais do Jfinder
+        BancodeDados dao = new BancodeDados();
+        return FXCollections.observableArrayList(dao.getListDocumentos());
+    }
     @FXML
-    private Button Relatorios;
+    private void atualizarTabelaDocumentosOnAction(ActionEvent event) {
+        initTable();
+    }
     @FXML
-    private Button encerrarSessao;
-    @FXML
-    private JFXButton voltarDocumento;
+    private void removerDocumentoOnAction(ActionEvent event) {
+        BancodeDados doc = new BancodeDados();
+
+        String numeroReferencia = documentoRemoverMessageLabel.getText();
+        boolean d = doc.removerDocumento(numeroReferencia);
+
+        if (d == true){
+            System.out.println("OK");
+            documentoMessageLabel.setText("Documento removido com sucesso!");
+        }else{
+            System.out.println("Erro");
+        }
+    }
+
 
     public void encerrarSessaoOnAction(ActionEvent event){
         Main.changeScreen("login-view");

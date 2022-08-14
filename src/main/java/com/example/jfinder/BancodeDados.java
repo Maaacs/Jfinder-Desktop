@@ -116,7 +116,12 @@ public class BancodeDados {
                 doc.setNumeroUnicoReferencia(rs.getString("numeroReferencia"));//string nome da coluna do banco
                 doc.setTipoDeDocumento(rs.getString("tipo"));//string nome da coluna do banco
                 doc.setInteressado(rs.getString("interessado"));//string nome da coluna do banco
+                doc.setTipoDeArmazenamento(rs.getString("tipoArmazenamento"));
+                doc.setDataArquivamento(rs.getString("dataArquivamento"));
                 doc.setDescriçãoDocumento(rs.getString("descricao"));//string nome da coluna do banco
+                doc.setLocalCompletoDeArmazenamento(rs.getString("localCompletoArmazenamento"));
+
+
 
                 documentos.add(doc);
             }
@@ -141,6 +146,18 @@ public class BancodeDados {
             }
         }
 
+    public boolean removerDocumento(String numeroReferencia) {
+        try {
+            Statement st = BancodeDados.getConexao().createStatement();
+            st.executeUpdate("DELETE FROM documentos WHERE " + "numeroReferencia='" + numeroReferencia + "'");
+            return true;
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+    }
+
 
 
     public boolean alterarUsuario(Usuario usuario) {
@@ -163,45 +180,29 @@ public class BancodeDados {
         }
     }
 
+    public boolean alterarDocumento(Documento documento) {
 
+        String sql = "UPDATE documentos SET tipo = ? ,  interessado = ? , tipoArmazenamento = ? , dataArquivamento = ? , descricao = ? , localCompletoArmazenamento = ? WHERE numeroReferencia = ?";
+        try {
+            System.out.println("Alterando dados...");
+            PreparedStatement stmt = BancodeDados.getConexao().prepareStatement(sql);
+            stmt.setString(1,documento.getTipoDeDocumento());
+            stmt.setString(2,documento.getInteressado());
+            stmt.setString(3,documento.getTipoDeArmazenamento());
+            stmt.setString(4,documento.getDataArquivamento());
+            stmt.setString(5,documento.getDescriçãoDocumento());
+            stmt.setString(6,documento.getLocalCompletoDeArmazenamento());
+            stmt.setString(7,documento.getNumeroUnicoReferencia());
 
+            stmt.execute();
+            return true;
 
-
-       /* public static boolean mudarNomeUsuario(String nome, String sobrenome, String cpf) {
-            try {
-                Statement st = getConexao().createStatement();
-                st.executeUpdate("UPDATE usuarios SET nome='" + nome + "' WHERE cpf='" + cpf +"'");
-                return true;
-            } catch (SQLException e) {
-                return false;
-            }
+        } catch (SQLException e) {
+            System.out.println(e);
+            return false;
         }
+    }
 
-        public static boolean mudarSobrenomeUsuario(String nome, String sobrenome, String cpf) {
-            try {
-                Statement st = getConexao().createStatement();
-                st.executeUpdate("UPDATE usuarios SET sobrenome='" + sobrenome + "' WHERE cpf='" + cpf +"'");
-                return true;
-            } catch (SQLException e) {
-                return false;
-            }
-        }
-
-        public static boolean mudarCargoUsuario(String nome, String sobrenome, String cpf) {
-            try {
-                Statement st = getConexao().createStatement();
-                st.executeUpdate("UPDATE usuarios SET cargo='" + cargo + "' WHERE cpf='" + cpf +"'");
-                return true;
-            } catch (SQLException e) {
-                return false;
-            }
-        }
-
-        public static void alterarUsuarios(String nome, String sobrenome, String cargo) {
-            mudarNomeUsuario(nome, sobrenome, cargo);
-            mudarSobrenomeUsuario(nome, nome, cargo);
-            mudarCargoUsuario(nome,sobrenome,cargo);
-        }*/
 
 
 

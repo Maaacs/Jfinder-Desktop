@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXRadioButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -15,7 +13,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.jfinder.AlterarDocumentoController">
@@ -121,15 +118,15 @@
                               <Font size="17.0" />
                            </font>
                         </Label>
+                        <Label fx:id="resultadoMessageLabel" layoutX="351.0" layoutY="55.0" prefHeight="17.0" prefWidth="231.0" textFill="#3db231" />
                      </children>
                   </Pane>
                </top>
                <bottom>
                   <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TextField layoutX="14.0" layoutY="74.0" prefHeight="29.0" prefWidth="192.0" promptText="Novo interessado" />
-                        <Label layoutX="15.0" layoutY="51.0" prefHeight="17.0" prefWidth="77.0" text="Interessado:" />
-                        <JFXButton fx:id="confirmarAlteracaoUsuario" buttonType="RAISED" layoutX="450.0" layoutY="326.0" prefHeight="27.0" prefWidth="137.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar Alteração" textFill="WHITE">
+                        <TextField fx:id="interessadoTextField" layoutX="14.0" layoutY="92.0" prefHeight="29.0" prefWidth="192.0" />
+                        <JFXButton fx:id="confirmarAlteracaoUsuario" buttonType="RAISED" layoutX="450.0" layoutY="326.0" onAction="#confirmarAlteracaoOnAction" prefHeight="27.0" prefWidth="137.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar Alteração" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -139,37 +136,26 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <JFXRadioButton layoutX="391.0" layoutY="139.0" stylesheets="@css/style.css" text="Físico">
-                           <unSelectedColor>
-                              <Color red="0.3294117748737335" green="0.0470588244497776" blue="0.7254902124404907" />
-                           </unSelectedColor>
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </JFXRadioButton>
-                        <JFXRadioButton layoutX="461.0" layoutY="139.0" text="Virtual">
-                           <unSelectedColor>
-                              <Color red="0.3294117748737335" green="0.0470588244497776" blue="0.7254902124404907" />
-                           </unSelectedColor>
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </JFXRadioButton>
-                        <Label layoutX="378.0" layoutY="107.0" prefHeight="18.0" prefWidth="185.0" text="Novo tipo de armazenamento:">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </Label>
-                        <DatePicker layoutX="14.0" layoutY="128.0" prefHeight="29.0" prefWidth="192.0" promptText="Nova data de arquivamento" />
-                        <TextArea layoutX="356.0" layoutY="184.0" prefHeight="122.0" prefWidth="229.0" promptText="Nova descrição do documento" />
-                        <TextField layoutX="351.0" layoutY="6.0" prefHeight="28.0" prefWidth="169.0" promptText="Numero de referência" />
-                        <JFXButton buttonType="RAISED" layoutX="527.0" layoutY="6.0" prefHeight="13.0" prefWidth="60.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                        <TextArea fx:id="descricaoTextField" layoutX="285.0" layoutY="131.0" prefHeight="177.0" prefWidth="300.0" />
+                        <TextField fx:id="numeroReferenciaTextField" layoutX="351.0" layoutY="6.0" prefHeight="28.0" prefWidth="169.0" promptText="Nº de referência" />
+                        <JFXButton fx:id="buscarDocumento" buttonType="RAISED" layoutX="527.0" layoutY="6.0" onAction="#buscarDocumentoOnAction" prefHeight="13.0" prefWidth="60.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <TextArea layoutX="14.0" layoutY="184.0" prefHeight="122.0" prefWidth="192.0" promptText="Novo local completo de armazenamento" />
-                        <Label layoutX="95.0" layoutY="51.0" text="nome" />
+                        <TextArea fx:id="localArmazenamentoTextField" layoutX="14.0" layoutY="251.0" prefHeight="56.0" prefWidth="192.0" />
+                        <TextField fx:id="tipoDocumentoTextField" layoutX="13.0" layoutY="39.0" prefHeight="29.0" prefWidth="192.0" />
+                        <TextField fx:id="tipoArmazenamentoTextField" layoutX="14.0" layoutY="147.0" prefHeight="29.0" prefWidth="192.0" />
+                        <TextField fx:id="dataArquivamentoTextField" layoutX="14.0" layoutY="200.0" prefHeight="29.0" prefWidth="192.0" />
+                        <Label layoutX="13.0" layoutY="22.0" text="Novo tipo de documento:" />
+                        <Label layoutX="13.0" layoutY="75.0" text="Novo interessado:" />
+                        <Label layoutX="14.0" layoutY="129.0" text="Novo tipo de armazenamento:" />
+                        <Label layoutX="14.0" layoutY="183.0" text="Nova data de arquivamento:" />
+                        <Label layoutX="15.0" layoutY="235.0" text="Novo local de armazenamento:" />
+                        <Label layoutX="285.0" layoutY="114.0" text="Nova descrição:" />
+                        <Label fx:id="resultado2MessageLabel" layoutX="285.0" layoutY="68.0" prefHeight="17.0" prefWidth="231.0" textFill="#e14747" />
+                        <Label fx:id="resultado3MessageLabel" layoutX="285.0" layoutY="92.0" prefHeight="17.0" prefWidth="232.0" textFill="#dd4040" />
+                        <Label fx:id="resultado4LabelMessage" alignment="CENTER" layoutX="194.0" layoutY="331.0" prefHeight="17.0" prefWidth="242.0" textFill="#36ae2d" />
                      </children>
                   </Pane>
                </bottom>
