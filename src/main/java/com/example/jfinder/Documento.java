@@ -1,5 +1,6 @@
 package com.example.jfinder;
 
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -130,27 +131,33 @@ public class Documento {
         }
     }
 
-    public Documento buscarPorInteressado(String interessado){// Seleciona a lista de usuarios do DB
-        Documento docs = new Documento();
+    public List<Documento> buscarPorInteressado(String interessado){// Seleciona a lista de usuarios do DB
+        List<Documento> docs = new ArrayList<>();
         try{
             Statement st = conexao.createStatement();
-            System.out.println("Tentando recuperar informações...");
             ResultSet rs = st.executeQuery("SELECT * FROM documentos WHERE " + "interessado='" + interessado + "'");
-            System.out.println("Aguarde um pouco...");
+            System.out.println("Buscando...");
 
-            if(rs.next()){ //enquanto tiver uma posicao na array preenchida
+            while(rs.next()){ //enquanto tiver uma posicao na array preenchida
 
-                return new Documento(rs.getString("numeroReferencia"), rs.getString("tipo"), rs.getString("interessado"), rs.getString("tipoArmazenamento"), rs.getString("dataArquivamento"), rs.getString("descricao"), rs.getString("localCompletoArmazenamento"));
+                Documento doc = new Documento();
+                doc.setNumeroUnicoReferencia(rs.getString("numeroReferencia"));//string nome da coluna do banco
+                doc.setTipoDeDocumento(rs.getString("tipo"));//string nome da coluna do banco
+                doc.setInteressado(rs.getString("interessado"));//string nome da coluna do banco
+                doc.setTipoDeArmazenamento(rs.getString("tipoArmazenamento"));
+                doc.setDataArquivamento(rs.getString("dataArquivamento"));
+                doc.setDescriçãoDocumento(rs.getString("descricao"));//string nome da coluna do banco
+                doc.setLocalCompletoDeArmazenamento(rs.getString("localCompletoArmazenamento"));
 
-            }else{
-                System.out.println("infelizmente nao encontrei o documento");
-                return null;
+                docs.add(doc);
             }
+            rs.close();
 
         }catch (SQLException ex){
-            System.out.println("Lista não retornada");
+            System.out.println("Infelizmente nao encontrei o documento com esse interessado");
             return null;
         }
+        return docs;
     }
 
 
@@ -158,13 +165,11 @@ public class Documento {
         List<Documento> documentos = new ArrayList<>();
         try{
             Statement st = conexao.createStatement();
-            System.out.println("Tentando recuperar informações...");
             ResultSet rs = st.executeQuery("SELECT * FROM documentos WHERE " + "tipo='" + tipoDocumento + "'");
-            System.out.println("Aguarde um pouco...");
+            System.out.println("Buscando...");
 
             while(rs.next()){
                  //enquanto tiver uma posicao na array preenchida
-
                     Documento doc = new Documento();
                     doc.setNumeroUnicoReferencia(rs.getString("numeroReferencia"));//string nome da coluna do banco
                     doc.setTipoDeDocumento(rs.getString("tipo"));//string nome da coluna do banco
@@ -175,19 +180,54 @@ public class Documento {
                     doc.setLocalCompletoDeArmazenamento(rs.getString("localCompletoArmazenamento"));
 
                     documentos.add(doc);
-
             }
             rs.close();
 
         }catch (SQLException ex){
-            System.out.println("infelizmente nao encontrei o documento");
+            System.out.println("Infelizmente nao encontrei esse tipo de documento");
+            return null;
+        }
+        return documentos;
+    }
+
+    public List<Documento> buscarPorPalavraChave(String palavraChave){// Seleciona a lista de usuarios do DB
+        List<Documento> documentos = new ArrayList<>();
+
+        try{
+            Statement st = conexao.createStatement();
+            String sql = "SELECT * FROM documentos WHERE descricao LIKE ?";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, "%" + palavraChave + "%");
+            ResultSet rs = stmt.executeQuery();
+            System.out.println("Buscando...");
+
+            while(rs.next()){
+                //enquanto tiver uma posicao na array preenchida
+                Documento doc = new Documento();
+                doc.setNumeroUnicoReferencia(rs.getString("numeroReferencia"));//string nome da coluna do banco
+                doc.setTipoDeDocumento(rs.getString("tipo"));//string nome da coluna do banco
+                doc.setInteressado(rs.getString("interessado"));//string nome da coluna do banco
+                doc.setTipoDeArmazenamento(rs.getString("tipoArmazenamento"));
+                doc.setDataArquivamento(rs.getString("dataArquivamento"));
+                doc.setDescriçãoDocumento(rs.getString("descricao"));//string nome da coluna do banco
+                doc.setLocalCompletoDeArmazenamento(rs.getString("localCompletoArmazenamento"));
+
+                documentos.add(doc);
+
+            }
+            rs.close();
+        }
+        catch (SQLException ex){
+            System.out.println("Infelizmente nao encontrei o documento com essa palavra-chave");
             return null;
         }
         return documentos;
     }
 
 
-    public void mostraDocumento(){
+
+
+    public void mostraDocumento(){// Apenas para o terminal
         System.out.println("Numero de Referência :" + getNumeroUnicoReferencia());
         System.out.println("Tipo de documento :" + getTipoDeDocumento());
         System.out.println("Interessado :" + getInteressado());
