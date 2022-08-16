@@ -40,7 +40,7 @@ public class AlterarDocumentoController {
 
             Documento tabelaNReferencia = new Documento();
             Documento doc = new Documento();
-            String numeroDeReferencia = numeroReferenciaTextField.getText();
+            int numeroDeReferencia = Integer.parseInt(numeroReferenciaTextField.getText());
             doc = doc.buscarPorNumeroReferencia(numeroDeReferencia);
 
             if (doc == null){
@@ -66,7 +66,7 @@ public class AlterarDocumentoController {
 
     public void atualiza(){
         BancodeDados dao = new BancodeDados();
-        String numeroDeReferencia = numeroReferenciaTextField.getText();
+        int numeroDeReferencia = Integer.parseInt(numeroReferenciaTextField.getText());
         String tipoDeDoumento = tipoArmazenamentoTextField.getText();
         String interessadoDocumento = interessadoTextField.getText();
         String tipoArmazenamentoDocumento = tipoArmazenamentoTextField.getText();

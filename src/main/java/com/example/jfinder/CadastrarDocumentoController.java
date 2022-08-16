@@ -63,7 +63,7 @@ public class CadastrarDocumentoController {
         //bd.conecta();
         try {
             //Usuario usuario = new Usuario(" ", "", "", "");
-            String numeroReferencia = numeroReferenciaTextField.getText();
+            int numeroReferencia = Integer.parseInt(numeroReferenciaTextField.getText());
             String tipoDocumento = tipoDocumentoTextField.getText();
             String interessado = interessadoTextField.getText();
             String tipoArmazenamento = tipoArmazenamentoTextField.getText();

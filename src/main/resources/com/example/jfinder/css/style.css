@@ -100,8 +100,3 @@
     -fx-background-color:linear-gradient(to bottom right, rgb(121, 190, 239, 0.9), rgba(121, 1, 255, 0.9));
 }
 
-
-/*.table-view .column-header,
-.table-view .column-header-background .filter{
-    -fx-cell-size : 20;
-    -fx-background-color: #7156DD;*/

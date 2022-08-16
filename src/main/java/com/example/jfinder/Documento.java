@@ -15,7 +15,7 @@ public class Documento {
 
 
     //atributos
-    private String numeroUnicoReferencia;
+    private int numeroUnicoReferencia;
     private String tipoDeDocumento;
     private String interessado;
     private String tipoDeArmazenamento;
@@ -28,7 +28,7 @@ public class Documento {
     }
 
     //Construtor que inicializa o objeto Documento
-    Documento(String NovoNumeroUnicoReferencia, String NovoTipoDeDocumento, String NovoInteressado, String NovoTipoDeArmazenamento, String NovoDataArquivamento,
+    Documento(int NovoNumeroUnicoReferencia, String NovoTipoDeDocumento, String NovoInteressado, String NovoTipoDeArmazenamento, String NovoDataArquivamento,
               String NovoDescriçãoDocumento, String NovoLocalCompletoDeArmazenamento){
         this.setNumeroUnicoReferencia(NovoNumeroUnicoReferencia);
         this.setDataArquivamento(NovoDataArquivamento);
@@ -41,11 +41,11 @@ public class Documento {
 
     //Get Set dos atributos
 
-    public String getNumeroUnicoReferencia() {
+    public int getNumeroUnicoReferencia() {
 
         return numeroUnicoReferencia;
     }
-    public void setNumeroUnicoReferencia(String numeroUnicoReferencia) {
+    public void setNumeroUnicoReferencia(int numeroUnicoReferencia) {
         this.numeroUnicoReferencia = numeroUnicoReferencia;
     }
 
@@ -108,7 +108,7 @@ public class Documento {
     }
 
 
-    public Documento buscarPorNumeroReferencia(String numeroDeReferencia){// Seleciona a lista de usuarios do DB
+    public Documento buscarPorNumeroReferencia(int numeroDeReferencia){// Seleciona a lista de usuarios do DB
         Documento docs = new Documento();
         try{
             Statement st = conexao.createStatement();
@@ -118,7 +118,7 @@ public class Documento {
 
             if(rs.next()){ //enquanto tiver uma posicao na array preenchida
 
-                return new Documento(rs.getString("numeroReferencia"), rs.getString("tipo"), rs.getString("interessado"), rs.getString("tipoArmazenamento"), rs.getString("dataArquivamento"), rs.getString("descricao"), rs.getString("localCompletoArmazenamento"));
+                return new Documento(rs.getInt("numeroReferencia"), rs.getString("tipo"), rs.getString("interessado"), rs.getString("tipoArmazenamento"), rs.getString("dataArquivamento"), rs.getString("descricao"), rs.getString("localCompletoArmazenamento"));
 
             }else{
                 System.out.println("infelizmente nao encontrei o documento");
@@ -141,7 +141,7 @@ public class Documento {
             while(rs.next()){ //enquanto tiver uma posicao na array preenchida
 
                 Documento doc = new Documento();
-                doc.setNumeroUnicoReferencia(rs.getString("numeroReferencia"));//string nome da coluna do banco
+                doc.setNumeroUnicoReferencia(rs.getInt("numeroReferencia"));//string nome da coluna do banco
                 doc.setTipoDeDocumento(rs.getString("tipo"));//string nome da coluna do banco
                 doc.setInteressado(rs.getString("interessado"));//string nome da coluna do banco
                 doc.setTipoDeArmazenamento(rs.getString("tipoArmazenamento"));
@@ -171,7 +171,7 @@ public class Documento {
             while(rs.next()){
                  //enquanto tiver uma posicao na array preenchida
                     Documento doc = new Documento();
-                    doc.setNumeroUnicoReferencia(rs.getString("numeroReferencia"));//string nome da coluna do banco
+                    doc.setNumeroUnicoReferencia(rs.getInt("numeroReferencia"));//string nome da coluna do banco
                     doc.setTipoDeDocumento(rs.getString("tipo"));//string nome da coluna do banco
                     doc.setInteressado(rs.getString("interessado"));//string nome da coluna do banco
                     doc.setTipoDeArmazenamento(rs.getString("tipoArmazenamento"));
@@ -204,7 +204,7 @@ public class Documento {
             while(rs.next()){
                 //enquanto tiver uma posicao na array preenchida
                 Documento doc = new Documento();
-                doc.setNumeroUnicoReferencia(rs.getString("numeroReferencia"));//string nome da coluna do banco
+                doc.setNumeroUnicoReferencia(rs.getInt("numeroReferencia"));//string nome da coluna do banco
                 doc.setTipoDeDocumento(rs.getString("tipo"));//string nome da coluna do banco
                 doc.setInteressado(rs.getString("interessado"));//string nome da coluna do banco
                 doc.setTipoDeArmazenamento(rs.getString("tipoArmazenamento"));

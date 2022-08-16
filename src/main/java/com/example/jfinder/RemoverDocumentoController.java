@@ -51,7 +51,7 @@ public class RemoverDocumentoController implements Initializable {
     private void removerDocumentoOnAction(ActionEvent event) {
         BancodeDados doc = new BancodeDados();
 
-        String numeroReferencia = documentoRemoverMessageLabel.getText();
+        int numeroReferencia = Integer.parseInt(documentoRemoverMessageLabel.getText());
         boolean d = doc.removerDocumento(numeroReferencia);
 
         if (d == true){

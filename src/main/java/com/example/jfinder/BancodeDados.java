@@ -10,21 +10,25 @@ import java.util.List;
 
 
 public class BancodeDados {
-    String user;
-
     private static String url = "jdbc:mysql://localhost:3306/JfinderDB";
     String userBD = "max";
     String pass = "10121114";
     protected static Connection conexao = null;
 
-    public BancodeDados() {
 
+
+
+
+
+    public BancodeDados() {
         if (conexao == null) conecta();
     }
+
     public BancodeDados(String userBD, String pass) {
         this.userBD = userBD;
         this.pass = pass;
     }
+
     public boolean conecta() {
         System.out.println("Estou tentando conectar ao servidor...");
         try {
@@ -36,13 +40,13 @@ public class BancodeDados {
                 System.out.println("Erro na conexão com o Banco: "+e.getMessage());
                 return false;
         }
-
     }
 
     public static Connection getConexao() {
         System.out.println("Método banco conexao");
         return BancodeDados.conexao;
     }
+
 
     public boolean adicionarUsuario(Usuario usuario) {
 
@@ -65,28 +69,10 @@ public class BancodeDados {
     }
 
 
-    /*public boolean adicionarUsuario(Usuario usuario) { // outra forma de fazer
-        try {
-            System.out.println("Inserindo...");
-            Statement st = getConexao().createStatement();
-            //ResultSet rs = st.executeQuery("INSERT INTO usuarios VALUES ('" + usuario.getPrimeiroNome() + "', '" + usuario.getUltimoNome() + "', '"+ usuario.getCPF() +"', '"+ usuario.getCargo()+" ') ");
-            //System.out.println(rs);
-            st.executeUpdate("INSERT INTO usuarios VALUES ('" + usuario.getPrimeiroNome() + "', '" + usuario.getUltimoNome() + "', '"+ usuario.getCPF() +"', '"+ usuario.getCargo()+" ') ");
-            System.out.println("Acabei de inserir o novo usuário em nosso banco de dados!");
-            return true;
-
-        } catch (SQLException e) {
-            System.out.println("Tenho que retornar false");
-            return false;
-        }
-    }*/
-
     public static boolean adicionarDocumento(Documento documento) {
         try {
             System.out.println("Inserindo...");
             Statement st = getConexao().createStatement();
-            //ResultSet rs = st.executeQuery("INSERT INTO usuarios VALUES ('" + usuario.getPrimeiroNome() + "', '" + usuario.getUltimoNome() + "', '"+ usuario.getCPF() +"', '"+ usuario.getCargo()+" ') ");
-            //System.out.println(rs);
             st.executeUpdate("INSERT INTO documentos VALUES ('" + documento.getNumeroUnicoReferencia() + "', '" + documento.getTipoDeDocumento() + "', '"+ documento.getInteressado() +"', '"+ documento.getTipoDeArmazenamento() +"', '"+ documento.getDataArquivamento() +"', '"+ documento.getDescriçãoDocumento()+ "', '"+ documento.getLocalCompletoDeArmazenamento()+" ') ");
             System.out.println("Acabei de inserir o novo documento em nosso banco de dados!");
             return true;
@@ -95,7 +81,7 @@ public class BancodeDados {
         }
     }
 
-    public List<Usuario> getListUsuarios(){// Seleciona a lista de usuarios do DB
+    public List<Usuario> getListUsuarios(){// Seleciona toda a lista de usuarios do DB
         List<Usuario> usuarios = new ArrayList<>();
         try{
             Statement st = conexao.createStatement();
@@ -122,7 +108,7 @@ public class BancodeDados {
     }
 
 
-    public List<Documento> getListDocumentos(){ // Seleciona a lista de documentos do DB
+    public List<Documento> getListDocumentos(){ // Seleciona toda a lista de documentos do DB
         List<Documento> documentos = new ArrayList<>();
         try{
             Statement st = conexao.createStatement();
@@ -132,15 +118,13 @@ public class BancodeDados {
 
             while(rs.next()){ //enquanto tiver uma posicao na array preenchida
                 Documento doc = new Documento();
-                doc.setNumeroUnicoReferencia(rs.getString("numeroReferencia"));//string nome da coluna do banco
+                doc.setNumeroUnicoReferencia(rs.getInt("numeroReferencia"));//string nome da coluna do banco
                 doc.setTipoDeDocumento(rs.getString("tipo"));//string nome da coluna do banco
                 doc.setInteressado(rs.getString("interessado"));//string nome da coluna do banco
                 doc.setTipoDeArmazenamento(rs.getString("tipoArmazenamento"));
                 doc.setDataArquivamento(rs.getString("dataArquivamento"));
                 doc.setDescriçãoDocumento(rs.getString("descricao"));//string nome da coluna do banco
                 doc.setLocalCompletoDeArmazenamento(rs.getString("localCompletoArmazenamento"));
-
-
 
                 documentos.add(doc);
             }
@@ -165,7 +149,7 @@ public class BancodeDados {
             }
         }
 
-    public boolean removerDocumento(String numeroReferencia) {
+    public boolean removerDocumento(int numeroReferencia) {
         try {
             Statement st = BancodeDados.getConexao().createStatement();
             st.executeUpdate("DELETE FROM documentos WHERE " + "numeroReferencia='" + numeroReferencia + "'");
@@ -211,7 +195,7 @@ public class BancodeDados {
             stmt.setString(4,documento.getDataArquivamento());
             stmt.setString(5,documento.getDescriçãoDocumento());
             stmt.setString(6,documento.getLocalCompletoDeArmazenamento());
-            stmt.setString(7,documento.getNumeroUnicoReferencia());
+            stmt.setInt(7,documento.getNumeroUnicoReferencia());
 
             stmt.execute();
             return true;
@@ -222,5 +206,38 @@ public class BancodeDados {
         }
     }
 
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*public boolean adicionarUsuario(Usuario usuario) { // outra forma de fazer
+        try {
+            System.out.println("Inserindo...");
+            Statement st = getConexao().createStatement();
+            //ResultSet rs = st.executeQuery("INSERT INTO usuarios VALUES ('" + usuario.getPrimeiroNome() + "', '" + usuario.getUltimoNome() + "', '"+ usuario.getCPF() +"', '"+ usuario.getCargo()+" ') ");
+            //System.out.println(rs);
+            st.executeUpdate("INSERT INTO usuarios VALUES ('" + usuario.getPrimeiroNome() + "', '" + usuario.getUltimoNome() + "', '"+ usuario.getCPF() +"', '"+ usuario.getCargo()+" ') ");
+            System.out.println("Acabei de inserir o novo usuário em nosso banco de dados!");
+            return true;
+
+        } catch (SQLException e) {
+            System.out.println("Tenho que retornar false");
+            return false;
+        }
+    }*/

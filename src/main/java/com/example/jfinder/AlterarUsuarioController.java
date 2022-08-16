@@ -1,9 +1,7 @@
 package com.example.jfinder;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -14,42 +12,11 @@ public class AlterarUsuarioController {
     private TextField sobrenomeAlterarUsuario;
     @FXML
     private TextField cargoAlterarUsuario;
-    @FXML
-    private JFXButton confirmarAlteracaoUsuario;
-    @FXML
-    private JFXButton voltarAlteracaoUsuario;
-    @FXML
-    private JFXButton buscarUsuario;
-    @FXML
-    private TextField cpfTextField;
-    @FXML
-    private Label resultadoMessageLabel;
-    @FXML
-    private Label confrmaAlteracaoMessageLabel;
-    @FXML
-    private Label lbid;
-    @FXML
-    private Label alterarLabelMessage;
+    @FXML private TextField cpfTextField;
+    @FXML private Label resultadoMessageLabel;
+    @FXML private Label alterarLabelMessage;
 
 
-    public void voltarOnAction(ActionEvent event){
-        Main.changeScreen("usuario-view");
-    }
-
-    public void encerrarSessaoOnAction(ActionEvent event){
-        Main.changeScreen("login-view");
-    }
-    public void UsuariosOnAction(ActionEvent event) {
-        Main.changeScreen("usuario-view");
-    }
-
-    public void DocumentosOnAction(ActionEvent event) {
-        Main.changeScreen("documento-view");
-    }
-
-    public void RelatoriosOnAction(ActionEvent event) {
-        Main.changeScreen("relatorio-view");
-    }
 
     @FXML
     private void buscarOnAction(ActionEvent event) {
@@ -80,6 +47,63 @@ public class AlterarUsuarioController {
         }
     }
 
+    @FXML private void alteracaoOnAction(ActionEvent event) {
+        atualiza();
+    }
+
+    public void atualiza(){
+        BancodeDados dao = new BancodeDados();
+        int cpf = Integer.parseInt(cpfTextField.getText());
+        String nome = nomeAlterarUsuario.getText();
+        String sobrenome = sobrenomeAlterarUsuario.getText();
+        String cargo = cargoAlterarUsuario.getText();
+
+        Usuario p = new Usuario(nome, sobrenome, cpf, cargo);
+
+        if (dao.alterarUsuario(p)){
+            System.out.println("usuário atualizado!");
+            alterarLabelMessage.setText("Usuário alterado com sucesso!");
+        }else{
+            System.out.println("Alteração não realizada!");
+        }
+    }
+
+
+
+    public void voltarOnAction(ActionEvent event){
+        Main.changeScreen("usuario-view");
+    }
+
+    public void encerrarSessaoOnAction(ActionEvent event){
+        Main.changeScreen("login-view");
+    }
+    public void UsuariosOnAction(ActionEvent event) {
+        Main.changeScreen("usuario-view");
+    }
+
+    public void DocumentosOnAction(ActionEvent event) {
+        Main.changeScreen("documento-view");
+    }
+
+    public void RelatoriosOnAction(ActionEvent event) {
+        Main.changeScreen("relatorio-view");
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    /* @FXML
     private void alteracaoOnAction(ActionEvent event) { // apenas adiciona um novo
 
@@ -106,27 +130,3 @@ public class AlterarUsuarioController {
             confirmarAlteracaoUsuario.setText("Entrada Inválida!");
         }
     }*/
-
-
-    public void atualiza(){
-        BancodeDados dao = new BancodeDados();
-        int cpf = Integer.parseInt(cpfTextField.getText());
-        String nome = nomeAlterarUsuario.getText();
-        String sobrenome = sobrenomeAlterarUsuario.getText();
-        String cargo = cargoAlterarUsuario.getText();
-
-        Usuario p = new Usuario(nome, sobrenome, cpf, cargo);
-
-        if (dao.alterarUsuario(p)){
-            System.out.println("usuário atualizado!");
-            alterarLabelMessage.setText("Usuário alterado com sucesso!");
-        }else{
-            System.out.println("Alteração não realizada!");
-        }
-    }
-
-    @FXML
-    private void alteracaoOnAction(ActionEvent event) {
-        atualiza();
-    }
-}

@@ -24,7 +24,7 @@ public class BuscarDocumentoController {
     private void buscarDocumentOnAction(ActionEvent event) {
         Documento bancoPorNreferencia= new Documento();
         Documento doc = new Documento();
-        String nReferencia = numeroReferencia.getText();
+        int nReferencia = Integer.parseInt(numeroReferencia.getText());
         doc = doc.buscarPorNumeroReferencia(nReferencia);
 
         if (doc == null){
