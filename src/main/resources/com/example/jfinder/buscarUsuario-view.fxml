@@ -176,36 +176,36 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Pane layoutX="-5.0" layoutY="124.0" prefHeight="43.0" prefWidth="168.0" styleClass="menubutton" stylesheets="@css/style.css">
+                        <Pane layoutX="-5.0" layoutY="124.0" prefHeight="36.0" prefWidth="168.0" styleClass="menubutton" stylesheets="@css/style.css">
                            <children>
-                              <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutY="5.0" prefHeight="34.0" prefWidth="168.0">
+                              <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutY="2.0" prefHeight="34.0" prefWidth="168.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
                            </children>
                         </Pane>
-                        <Pane layoutX="163.0" layoutY="124.0" prefHeight="43.0" prefWidth="168.0" styleClass="tabela" stylesheets="@css/style.css">
+                        <Pane layoutX="163.0" layoutY="124.0" prefHeight="36.0" prefWidth="168.0" styleClass="tabela" stylesheets="@css/style.css">
                            <children>
-                              <Label fx:id="resultado3MessageLabel" alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="34.0" prefWidth="171.0">
+                              <Label fx:id="resultado3MessageLabel" alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="34.0" prefWidth="171.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
                            </children>
                         </Pane>
-                        <Pane layoutX="330.0" layoutY="124.0" prefHeight="43.0" prefWidth="160.0" styleClass="menubutton" stylesheets="@css/style.css">
+                        <Pane layoutX="330.0" layoutY="124.0" prefHeight="36.0" prefWidth="160.0" styleClass="menubutton" stylesheets="@css/style.css">
                            <children>
-                              <Label fx:id="resultado4MessageLabel" alignment="CENTER" layoutX="-2.0" layoutY="5.0" prefHeight="34.0" prefWidth="163.0">
+                              <Label fx:id="resultado4MessageLabel" alignment="CENTER" layoutX="-2.0" layoutY="2.0" prefHeight="34.0" prefWidth="163.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
                            </children>
                         </Pane>
-                        <Pane layoutX="489.0" layoutY="124.0" prefHeight="43.0" prefWidth="121.0" styleClass="tabela" stylesheets="@css/style.css">
+                        <Pane layoutX="489.0" layoutY="124.0" prefHeight="36.0" prefWidth="121.0" styleClass="tabela" stylesheets="@css/style.css">
                            <children>
-                              <Label fx:id="resultado5MessageLabel" alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="34.0" prefWidth="123.0">
+                              <Label fx:id="resultado5MessageLabel" alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="34.0" prefWidth="123.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

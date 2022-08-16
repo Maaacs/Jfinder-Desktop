@@ -162,28 +162,28 @@
                            </font>
                         </JFXButton>
                         <TextField fx:id="numeroReferencia" layoutX="83.0" layoutY="8.0" prefHeight="30.0" prefWidth="160.0" promptText="Nº de referência" />
-                        <TextArea fx:id="resultado5MessageLabel" layoutX="4.0" layoutY="209.0" prefHeight="135.0" prefWidth="310.0" styleClass="navbutton" stylesheets="@css/style.css" />
-                        <Pane layoutX="-5.0" layoutY="77.0" prefHeight="43.0" prefWidth="125.0" styleClass="menubutton" stylesheets="@css/style.css">
+                        <TextArea fx:id="resultado5MessageLabel" layoutX="4.0" layoutY="209.0" prefHeight="135.0" prefWidth="353.0" styleClass="navbutton" stylesheets="@css/style.css" />
+                        <Pane layoutX="-5.0" layoutY="77.0" prefHeight="36.0" prefWidth="125.0" styleClass="menubutton" stylesheets="@css/style.css">
                            <children>
-                              <Label fx:id="resultado2MessageLabel" alignment="CENTER" layoutY="5.0" prefHeight="34.0" prefWidth="124.0">
+                              <Label fx:id="resultado2MessageLabel" alignment="CENTER" layoutY="2.0" prefHeight="34.0" prefWidth="124.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
                            </children>
                         </Pane>
-                        <Pane layoutX="120.0" layoutY="77.0" prefHeight="43.0" prefWidth="154.0" styleClass="tabela" stylesheets="@css/style.css">
+                        <Pane layoutX="120.0" layoutY="77.0" prefHeight="36.0" prefWidth="154.0" styleClass="tabela" stylesheets="@css/style.css">
                            <children>
-                              <Label fx:id="resultado3MessageLabel" alignment="CENTER" layoutX="-1.0" layoutY="5.0" prefHeight="34.0" prefWidth="157.0">
+                              <Label fx:id="resultado3MessageLabel" alignment="CENTER" layoutX="-1.0" layoutY="2.0" prefHeight="34.0" prefWidth="157.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>
                               </Label>
                            </children>
                         </Pane>
-                        <Pane layoutX="274.0" layoutY="77.0" prefHeight="43.0" prefWidth="336.0" styleClass="menubutton" stylesheets="@css/style.css">
+                        <Pane layoutX="274.0" layoutY="77.0" prefHeight="36.0" prefWidth="336.0" styleClass="menubutton" stylesheets="@css/style.css">
                            <children>
-                              <Label fx:id="resultado4MessageLabel" alignment="CENTER" layoutX="-2.0" layoutY="5.0" prefHeight="34.0" prefWidth="335.0">
+                              <Label fx:id="resultado4MessageLabel" alignment="CENTER" layoutX="-2.0" layoutY="2.0" prefHeight="34.0" prefWidth="335.0">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

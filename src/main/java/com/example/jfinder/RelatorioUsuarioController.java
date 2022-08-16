@@ -60,42 +60,39 @@ public class RelatorioUsuarioController implements Initializable {
 
                 tabelaDeUsuarios.setItems(atualizaTabelaPorNome());
             }
-        }else{
-            System.out.println("nao");
         }
-       /* else if(selecionador == "Tipo"){ //Botao 2
-            if(usr.buscarPorTipoDeDocumento(itemAserBuscado) == null){
+       else if(selecionador == "Sobrenome"){ //Botao 2
+            if(usr.buscarPorSobrenome(itemAserBuscado) == null){
                 System.out.println("Não encontrado");
             }else{
 
-                System.out.println("Encontrei o tipo de documento!");
+                System.out.println("Encontrei o usuario com esse sobrenome!");
 
                 //Inicializa a tabela com os valores recebidos do BuscarPorTipo
-                colunaNumReferencia.setCellValueFactory(new PropertyValueFactory("numeroUnicoReferencia"));//exatamente como está escrito no tipo Documento
-                colunaTipoDocumento.setCellValueFactory(new PropertyValueFactory("tipoDeDocumento"));
-                colunaInteressado.setCellValueFactory(new PropertyValueFactory("interessado"));
-                colunaArmazenamento.setCellValueFactory(new PropertyValueFactory("tipoDeArmazenamento"));
-                colunaArquivamento.setCellValueFactory(new PropertyValueFactory("dataArquivamento"));
-                tabelaDocumentos.setItems(atualizaTabelaTipodeDocumento());
+                colunaNome.setCellValueFactory(new PropertyValueFactory("primeiroNome"));//exatamente como está escrito no tipo Usuario
+                colunaSobrenome.setCellValueFactory(new PropertyValueFactory("ultimoNome"));
+                colunaCpf.setCellValueFactory(new PropertyValueFactory("CPF"));
+                colunaCargo.setCellValueFactory(new PropertyValueFactory("cargo"));
+
+                tabelaDeUsuarios.setItems(atualizaTabelaPorSobrenome());
             }
         }
-        else if(selecionador == "Palavra-chave"){ //Botao 3
-            if(usr.buscarPorTipoDeDocumento(itemAserBuscado) == null){
+        else if(selecionador == "Cargo"){ //Botao 3
+            if(usr.buscaPorCargo(itemAserBuscado) == null){
                 System.out.println("Não encontrado");
             }else{
 
-                System.out.println("Encontrei a palavra-chave!");
+                System.out.println("Encontrei o usuario com esse sobrenome!");
 
-                //Inicializa a tabela com os valores recebidos do BuscarPorPalavraChave
-                colunaNumReferencia.setCellValueFactory(new PropertyValueFactory("numeroUnicoReferencia"));//exatamente como está escrito no tipo Documento
-                colunaTipoDocumento.setCellValueFactory(new PropertyValueFactory("tipoDeDocumento"));
-                colunaInteressado.setCellValueFactory(new PropertyValueFactory("interessado"));
-                colunaArmazenamento.setCellValueFactory(new PropertyValueFactory("tipoDeArmazenamento"));
-                colunaArquivamento.setCellValueFactory(new PropertyValueFactory("dataArquivamento"));
-                tabelaDocumentos.setItems(atualizaTabelaPalavraChave());
+                //Inicializa a tabela com os valores recebidos do BuscarPorTipo
+                colunaNome.setCellValueFactory(new PropertyValueFactory("primeiroNome"));//exatamente como está escrito no tipo Usuario
+                colunaSobrenome.setCellValueFactory(new PropertyValueFactory("ultimoNome"));
+                colunaCpf.setCellValueFactory(new PropertyValueFactory("CPF"));
+                colunaCargo.setCellValueFactory(new PropertyValueFactory("cargo"));
+
+                tabelaDeUsuarios.setItems(atualizaTabelaPorCargo());
             }
-        }*/
-
+        }
     }
 
 
@@ -104,6 +101,20 @@ public class RelatorioUsuarioController implements Initializable {
         String itemAserBuscado = itemMessageLabel.getText();
         return FXCollections.observableArrayList(dao.buscarPorNome(itemAserBuscado));
     }
+
+    public ObservableList<Usuario> atualizaTabelaPorSobrenome(){ //serve para retornar a tabela com os valores atuais do Jfinder
+        Usuario dao = new Usuario();
+        String itemAserBuscado = itemMessageLabel.getText();
+        return FXCollections.observableArrayList(dao.buscarPorSobrenome(itemAserBuscado));
+    }
+
+    public ObservableList<Usuario> atualizaTabelaPorCargo(){ //serve para retornar a tabela com os valores atuais do Jfinder
+        Usuario dao = new Usuario();
+        String itemAserBuscado = itemMessageLabel.getText();
+        return FXCollections.observableArrayList(dao.buscaPorCargo(itemAserBuscado));
+    }
+
+
 
 
 
