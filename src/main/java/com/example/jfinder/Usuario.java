@@ -108,6 +108,32 @@ public class Usuario {
         }
     }
 
+    public List<Usuario> buscarPorNome(String nome){// Seleciona a lista de usuarios do DB
+        List<Usuario> usr = new ArrayList<>();
+        try{
+            Statement st = conexao.createStatement();
+            ResultSet rs = st.executeQuery("SELECT * FROM usuarios WHERE " + "nome='" + nome + "'");
+            System.out.println("Buscando...");
+
+            while(rs.next()){ //enquanto tiver uma posicao na array preenchida
+
+                Usuario usuario = new Usuario();
+                usuario.setPrimeiroNome(rs.getString("nome"));//string nome da coluna do banco
+                usuario.setUltimoNome(rs.getString("sobrenome"));//string nome da coluna do banco
+                usuario.setCPF(rs.getString("cpf"));//string nome da coluna do banco
+                usuario.setCargo(rs.getString("cargo"));
+
+                usr.add(usuario);
+            }
+            rs.close();
+
+        }catch (SQLException ex){
+            System.out.println("Infelizmente nao encontrei o usuario com esse nome");
+            return null;
+        }
+        return usr;
+    }
+
 
     public void mostraUsuario(){
         System.out.println("Nome :" + getPrimeiroNome());

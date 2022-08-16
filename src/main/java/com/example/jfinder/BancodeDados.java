@@ -45,8 +45,28 @@ public class BancodeDados {
         return BancodeDados.conexao;
     }
 
-
     public boolean adicionarUsuario(Usuario usuario) {
+
+        String sql = "INSERT  INTO usuarios (nome , sobrenome , cpf , cargo) VALUES (?,?,?,?);";
+        try {
+            System.out.println("Inserindo dados...");
+            PreparedStatement stmt = BancodeDados.getConexao().prepareStatement(sql);
+            stmt.setString(1,usuario.getPrimeiroNome());
+            stmt.setString(2,usuario.getUltimoNome());
+            stmt.setString(3,usuario.getCPF());
+            stmt.setString(4,usuario.getCargo());
+
+            stmt.execute();
+            return true;
+
+        } catch (SQLException e) {
+            System.out.println("Tenho que retornar false");
+            return false;
+        }
+    }
+
+
+    /*public boolean adicionarUsuario(Usuario usuario) { // outra forma de fazer
         try {
             System.out.println("Inserindo...");
             Statement st = getConexao().createStatement();
@@ -60,7 +80,7 @@ public class BancodeDados {
             System.out.println("Tenho que retornar false");
             return false;
         }
-    }
+    }*/
 
     public static boolean adicionarDocumento(Documento documento) {
         try {

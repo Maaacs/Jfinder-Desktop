@@ -170,8 +170,8 @@
                            </font>
                         </JFXButton>
                         <Label fx:id="RelatorioDocumentoLabelMessage" alignment="CENTER" layoutX="149.0" layoutY="325.0" prefHeight="17.0" prefWidth="116.0" textFill="#18b518" />
-                        <ChoiceBox fx:id="choiceButton" layoutX="221.0" layoutY="3.0" prefWidth="150.0" styleClass="tabela" stylesheets="@css/style.css" />
-                        <TextField fx:id="itemMessageLabel" layoutX="14.0" layoutY="3.0" prefHeight="26.0" prefWidth="194.0" promptText="Pesquisar" styleClass="menubutton" stylesheets="@css/style.css" />
+                        <ChoiceBox fx:id="choiceButton" layoutX="221.0" layoutY="3.0" prefWidth="150.0" styleClass="opacoGradiente" stylesheets="@css/style.css" />
+                        <TextField fx:id="itemMessageLabel" layoutX="14.0" layoutY="3.0" prefHeight="26.0" prefWidth="194.0" promptText="Pesquisar" styleClass="opaco" stylesheets="@css/style.css" />
                         <JFXButton fx:id="buscarButton" buttonType="RAISED" layoutX="384.0" layoutY="3.0" onAction="#consultaPorDiferentesEntradas" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />

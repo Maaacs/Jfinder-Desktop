@@ -3,10 +3,11 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.image.Image?>
@@ -128,12 +129,12 @@
                <bottom>
                   <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
-                        <JFXButton fx:id="voltarRelatorioUsuario" buttonType="RAISED" layoutX="371.0" layoutY="319.0" onAction="#voltarOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Voltar" textFill="WHITE">
+                        <JFXButton fx:id="voltarRelatorioUsuario" buttonType="RAISED" layoutX="505.0" layoutY="321.0" onAction="#voltarOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Voltar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <TableView fx:id="tabelaDeUsuarios" layoutX="-5.0" layoutY="3.0" prefHeight="306.0" prefWidth="615.0">
+                        <TableView fx:id="tabelaDeUsuarios" layoutX="-5.0" layoutY="43.0" prefHeight="231.0" prefWidth="615.0">
                            <columns>
                               <TableColumn fx:id="colunaNome" prefWidth="159.0" style="-fx-background-color: #F5F5F5;" />
                               <TableColumn fx:id="colunaSobrenome" minWidth="0.0" prefWidth="169.0" style="-fx-background-color: #DCDCDC;" />
@@ -141,40 +142,39 @@
                               <TableColumn fx:id="colunaCargo" prefWidth="119.0" style="-fx-background-color: #DCDCDC;" />
                            </columns>
                         </TableView>
-                        <JFXButton fx:id="atualizarTabelaUsuarios" buttonType="RAISED" layoutX="473.0" layoutY="319.0" onAction="#atualizarTabelaUsuariosOnAction" prefHeight="27.0" prefWidth="121.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar Tabela" textFill="WHITE">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </JFXButton>
-                        <Label fx:id="tabelaMessageLabel" alignment="CENTER" layoutX="51.0" layoutY="319.0" prefHeight="17.0" prefWidth="161.0" textFill="#0bbc3a" />
-                        <Pane layoutX="-5.0" layoutY="4.0" prefHeight="25.0" prefWidth="616.0" styleClass="navbutton" stylesheets="@css/style.css">
+                        <Pane layoutX="-5.0" layoutY="44.0" prefHeight="25.0" prefWidth="616.0" styleClass="navbutton" stylesheets="@css/style.css">
                            <effect>
                               <Lighting>
                                  <bumpInput>
                                     <Shadow />
                                  </bumpInput>
-                                 <light>
-                                    <Light.Distant />
-                                 </light>
                               </Lighting>
                            </effect>
                         </Pane>
-                        <Text fill="WHITE" layoutX="56.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER" wrappingWidth="41.09033203125">
+                        <Text fill="WHITE" layoutX="56.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER" wrappingWidth="41.09033203125">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="203.0" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome" textAlignment="CENTER" wrappingWidth="78.09033203125">
+                        <Text fill="WHITE" layoutX="203.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome" textAlignment="CENTER" wrappingWidth="78.09033203125">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="372.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" textAlignment="CENTER" wrappingWidth="78.09033203125" />
-                        <Text fill="WHITE" layoutX="521.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" textAlignment="CENTER" wrappingWidth="62.09033203125">
+                        <Text fill="WHITE" layoutX="372.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" textAlignment="CENTER" wrappingWidth="78.09033203125" />
+                        <Text fill="WHITE" layoutX="521.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" textAlignment="CENTER" wrappingWidth="62.09033203125">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
+                        <Label fx:id="tabelaMessageLabel" alignment="CENTER" layoutX="51.0" layoutY="319.0" prefHeight="17.0" prefWidth="161.0" textFill="#0bbc3a" />
+                        <ChoiceBox fx:id="choiceButton" layoutX="228.0" layoutY="2.0" prefWidth="150.0" styleClass="opacoGradiente" stylesheets="@css/style.css" />
+                        <TextField fx:id="itemMessageLabel" layoutX="16.0" layoutY="2.0" prefHeight="26.0" prefWidth="194.0" promptText="Pesquisar" styleClass="opaco" stylesheets="@css/style.css" />
+                        <JFXButton fx:id="buscarButton" buttonType="RAISED" layoutX="392.0" onAction="#consultaPorDiferentesEntradas" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </JFXButton>
                      </children>
                   </Pane>
                </bottom>

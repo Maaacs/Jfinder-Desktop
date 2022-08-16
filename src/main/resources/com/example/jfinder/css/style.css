@@ -85,6 +85,21 @@
     -fx-background-color:linear-gradient(to bottom right, rgb(118, 39, 238), rgba(70, 200, 239, 2.2));
 }
 
+.opaco
+{
+    -fx-background-color:linear-gradient(to bottom right,rgba(235, 235, 235, 0.9), rgba(235, 235, 235, 0.9));
+}
+
+.opacoGradiente
+{
+    -fx-background-color:linear-gradient(to bottom right,rgba(235, 235, 235, 0.9), rgba(235, 235, 235, 0.9));
+}
+
+.opacoGradiente:hover
+{
+    -fx-background-color:linear-gradient(to bottom right, rgb(121, 190, 239, 0.9), rgba(121, 1, 255, 0.9));
+}
+
 
 /*.table-view .column-header,
 .table-view .column-header-background .filter{
