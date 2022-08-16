@@ -57,7 +57,7 @@ public class AlterarUsuarioController {
 
             Usuario tabelaCpf = new Usuario();
             Usuario usr = new Usuario();
-            String cpf = cpfTextField.getText();
+            int cpf = Integer.parseInt(cpfTextField.getText());
             usr = usr.buscarCPF(cpf);
 
             if (usr == null){
@@ -110,7 +110,7 @@ public class AlterarUsuarioController {
 
     public void atualiza(){
         BancodeDados dao = new BancodeDados();
-        String cpf = cpfTextField.getText();
+        int cpf = Integer.parseInt(cpfTextField.getText());
         String nome = nomeAlterarUsuario.getText();
         String sobrenome = sobrenomeAlterarUsuario.getText();
         String cargo = cargoAlterarUsuario.getText();

@@ -11,7 +11,7 @@ public class Teste {
 
         Usuario p = new Usuario();
 
-        p.setCPF("9");
+        //p.setCPF("9");
         p.setPrimeiroNome("joao");
         p.setUltimoNome("Barroso");
         p.setCargo("Professor");

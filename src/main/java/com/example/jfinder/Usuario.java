@@ -5,7 +5,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
-
 import static com.example.jfinder.BancodeDados.conexao;
 
 public class Usuario {
@@ -13,14 +12,14 @@ public class Usuario {
     //atributos
     private String primeiroNome;
     private String ultimoNome;
-    private String CPF;
+    private int  CPF;
     private String cargo;
 
     //construtores
     public Usuario (){
 
     }
-    public Usuario(String NovoPrimeiroNome, String NovoUltimoNome, String novoCPF, String NovoCargo){
+    public Usuario(String NovoPrimeiroNome, String NovoUltimoNome, int novoCPF, String NovoCargo){
         this.setPrimeiroNome(NovoPrimeiroNome);
         this.setUltimoNome(NovoUltimoNome);
         this.setCPF(novoCPF);
@@ -47,10 +46,10 @@ public class Usuario {
         this.ultimoNome = ultimoNome;
     }
 
-    public String getCPF() {
+    public int getCPF() {
         return this.CPF;
     }
-    public void setCPF(String CPF) {
+    public void setCPF(int CPF) {
 
         this.CPF = CPF;
     }
@@ -66,26 +65,7 @@ public class Usuario {
     }
 
 
-
-   /* public Usuario buscarCPF(String cpf){
-        try{
-            Statement st = BancodeDados.conexao.createStatement();
-            System.out.println("estebeleci conexao");
-            ResultSet rs = st.executeQuery("SELECT * FROM usuarios WHERE " + "cpf='" + cpf + "'");
-            if(rs.next()){
-                System.out.println("encontrei ele!!");
-                return new Usuario (rs.getString(2), rs.getString(3), rs.getString(4), (rs.getString(5)));
-            }
-            else{
-                System.out.println("infelizmente nao o encontrei");
-                return null;
-            }
-        } catch (SQLException e){
-            return null;
-        }
-    }*/
-
-    public Usuario buscarCPF(String cpf){// Seleciona a lista de usuarios do DB
+    public Usuario buscarCPF(int cpf){// Seleciona a lista de usuarios do DB
         Usuario usuarios = new Usuario();
         try{
             Statement st = conexao.createStatement();
@@ -95,7 +75,7 @@ public class Usuario {
 
             if(rs.next()){ //enquanto tiver uma posicao na array preenchida
 
-                return new Usuario(rs.getString("nome"), rs.getString("sobrenome"), rs.getString("cpf"), rs.getString("cargo"));
+                return new Usuario(rs.getString("nome"), rs.getString("sobrenome"), rs.getInt("cpf"), rs.getString("cargo"));
 
             }else{
                 System.out.println("infelizmente nao o encontrei");
@@ -120,7 +100,7 @@ public class Usuario {
                 Usuario usuario = new Usuario();
                 usuario.setPrimeiroNome(rs.getString("nome"));//string nome da coluna do banco
                 usuario.setUltimoNome(rs.getString("sobrenome"));//string nome da coluna do banco
-                usuario.setCPF(rs.getString("cpf"));//string nome da coluna do banco
+                usuario.setCPF(rs.getInt("cpf"));//string nome da coluna do banco
                 usuario.setCargo(rs.getString("cargo"));
 
                 usr.add(usuario);
@@ -146,7 +126,7 @@ public class Usuario {
                 Usuario usuario = new Usuario();
                 usuario.setPrimeiroNome(rs.getString("nome"));//string nome da coluna do banco
                 usuario.setUltimoNome(rs.getString("sobrenome"));//string nome da coluna do banco
-                usuario.setCPF(rs.getString("cpf"));//string nome da coluna do banco
+                usuario.setCPF(rs.getInt("cpf"));//string nome da coluna do banco
                 usuario.setCargo(rs.getString("cargo"));
 
                 usr.add(usuario);
@@ -172,7 +152,7 @@ public class Usuario {
                 Usuario usuario = new Usuario();
                 usuario.setPrimeiroNome(rs.getString("nome"));//string nome da coluna do banco
                 usuario.setUltimoNome(rs.getString("sobrenome"));//string nome da coluna do banco
-                usuario.setCPF(rs.getString("cpf"));//string nome da coluna do banco
+                usuario.setCPF(rs.getInt("cpf"));//string nome da coluna do banco
                 usuario.setCargo(rs.getString("cargo"));
 
                 usr.add(usuario);
@@ -187,7 +167,7 @@ public class Usuario {
     }
 
 
-    public void mostraUsuario(){
+    public void mostraUsuario(){// apenas para terminal
         System.out.println("Nome :" + getPrimeiroNome());
         System.out.println("Sobrenome :" + getUltimoNome());
         System.out.println("CPF :" + getCPF());

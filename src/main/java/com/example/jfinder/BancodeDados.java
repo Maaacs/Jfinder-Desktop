@@ -1,5 +1,4 @@
 package com.example.jfinder;
-//import java.sql.*;
 
 import java.sql.*;
 import java.sql.Connection;
@@ -53,7 +52,7 @@ public class BancodeDados {
             PreparedStatement stmt = BancodeDados.getConexao().prepareStatement(sql);
             stmt.setString(1,usuario.getPrimeiroNome());
             stmt.setString(2,usuario.getUltimoNome());
-            stmt.setString(3,usuario.getCPF());
+            stmt.setInt(3,usuario.getCPF());
             stmt.setString(4,usuario.getCargo());
 
             stmt.execute();
@@ -108,7 +107,7 @@ public class BancodeDados {
                 Usuario usr = new Usuario();
                 usr.setPrimeiroNome(rs.getString("nome"));//string nome da coluna do banco
                 usr.setUltimoNome(rs.getString("sobrenome"));//string nome da coluna do banco
-                usr.setCPF(rs.getString("cpf"));//string nome da coluna do banco
+                usr.setCPF(rs.getInt("cpf"));//string nome da coluna do banco
                 usr.setCargo(rs.getString("cargo"));//string nome da coluna do banco
 
                 usuarios.add(usr);
@@ -189,7 +188,7 @@ public class BancodeDados {
             stmt.setString(1,usuario.getPrimeiroNome());
             stmt.setString(2,usuario.getUltimoNome());
             stmt.setString(3,usuario.getCargo());
-            stmt.setString(4,usuario.getCPF());
+            stmt.setInt(4,usuario.getCPF());
 
             stmt.execute();
             return true;
@@ -222,8 +221,6 @@ public class BancodeDados {
             return false;
         }
     }
-
-
 
 
 }

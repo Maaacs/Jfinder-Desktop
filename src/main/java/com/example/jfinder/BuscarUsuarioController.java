@@ -81,7 +81,7 @@ public class BuscarUsuarioController{
     private void buscarOnAction() {
         Usuario bancoPorCPF = new Usuario();
         Usuario usr = new Usuario();
-        String cpf = cpfBuscarMessageLabel.getText();
+        int cpf = Integer.parseInt(cpfBuscarMessageLabel.getText());
         usr = usr.buscarCPF(cpf);
 
         if (usr == null){
@@ -95,7 +95,7 @@ public class BuscarUsuarioController{
             resultado2MessageLabel.setText("Resultados encontrados (1)");
             resultadoMessageLabel.setText(bancoPorCPF.getPrimeiroNome());
             resultado3MessageLabel.setText(bancoPorCPF.getUltimoNome());
-            resultado4MessageLabel.setText(bancoPorCPF.getCPF());
+            resultado4MessageLabel.setText(Integer.toString(bancoPorCPF.getCPF()));
             resultado5MessageLabel.setText(bancoPorCPF.getCargo());
         }
     }
