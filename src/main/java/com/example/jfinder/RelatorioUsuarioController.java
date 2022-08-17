@@ -28,6 +28,8 @@ public class RelatorioUsuarioController implements Initializable {
     private JFXButton buscarButton;
 
     private String[]consultas = new String[]{"Nome", "Sobrenome", "Cargo"};
+    @FXML
+    private Label resultadoMessageLabel;
 
 
     @Override
@@ -47,10 +49,9 @@ public class RelatorioUsuarioController implements Initializable {
         if (selecionador == "Nome"){//Botao 1
             if(usr.buscarPorNome(itemAserBuscado) == null){
                 System.out.println("Não encontrado");
+                resultadoMessageLabel.setText("Não encontrei resultados!");
 
             }else{
-                System.out.println("Encontrei o usuario com esse nome!");
-
                 //Inicializa a tabela com os valores recebidos do BuscaPorNome
                 colunaNome.setCellValueFactory(new PropertyValueFactory("primeiroNome"));//exatamente como está escrito no tipo Usuario
                 colunaSobrenome.setCellValueFactory(new PropertyValueFactory("ultimoNome"));
@@ -63,6 +64,7 @@ public class RelatorioUsuarioController implements Initializable {
        else if(selecionador == "Sobrenome"){ //Botao 2
             if(usr.buscarPorSobrenome(itemAserBuscado) == null){
                 System.out.println("Não encontrado");
+                resultadoMessageLabel.setText("Não encontrei resultados!");
             }else{
 
                 System.out.println("Encontrei o usuario com esse sobrenome!");
@@ -79,6 +81,7 @@ public class RelatorioUsuarioController implements Initializable {
         else if(selecionador == "Cargo"){ //Botao 3
             if(usr.buscaPorCargo(itemAserBuscado) == null){
                 System.out.println("Não encontrado");
+                resultadoMessageLabel.setText("Não encontrei resultados!");
             }else{
 
                 System.out.println("Encontrei o usuario com esse sobrenome!");

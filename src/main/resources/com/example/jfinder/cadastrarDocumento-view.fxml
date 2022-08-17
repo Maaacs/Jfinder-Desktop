@@ -95,15 +95,11 @@
                         <Font size="17.0" />
                      </font>
                   </Label>
-                  <Label fx:id="cadastroMessageLabel" alignment="CENTER" layoutX="349.0" layoutY="43.0" prefHeight="18.0" prefWidth="244.0" textFill="GREEN">
-                     <font>
-                        <Font size="14.0" />
-                     </font></Label>
                </Pane>
             </top>
             <bottom>
                <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-                  <TextField fx:id="numeroReferenciaTextField" layoutX="14.0" layoutY="54.0" prefHeight="29.0" prefWidth="194.0" promptText="Numero de referência" />
+                  <TextField fx:id="numeroReferenciaTextField" layoutX="14.0" layoutY="54.0" prefHeight="29.0" prefWidth="194.0" promptText="Nº de referência" />
                   <TextField fx:id="tipoDocumentoTextField" layoutX="14.0" layoutY="99.0" prefHeight="29.0" prefWidth="194.0" promptText="Tipo de documento" />
                   <TextField fx:id="interessadoTextField" layoutX="14.0" layoutY="145.0" prefHeight="29.0" prefWidth="194.0" promptText="Interessado" />
                   <JFXButton fx:id="cadastrarDocumento" buttonType="RAISED" layoutX="502.0" layoutY="331.0" onAction="#cadastrarDocumentoOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Cadastrar" textFill="WHITE">
@@ -116,11 +112,19 @@
                         <Font size="14.0" />
                      </font>
                   </JFXButton>
-                  <DatePicker layoutX="14.0" layoutY="232.0" prefWidth="194.0" promptText="Data de arquivamento" />
+                  <DatePicker fx:id="dataArquivamentoDatePicker" layoutX="14.0" layoutY="234.0" prefWidth="194.0" promptText="Data de arquivamento" />
                   <TextArea fx:id="descricaoDocumentoTextField" layoutX="282.0" layoutY="54.0" prefHeight="165.0" prefWidth="305.0" promptText="Breve descrição do documento" />
                   <TextArea fx:id="localArmazenamentoTextField" layoutX="282.0" layoutY="226.0" prefHeight="59.0" prefWidth="305.0" promptText="Local completo de armazenamento" />
                   <TextField fx:id="tipoArmazenamentoTextField" layoutX="14.0" layoutY="189.0" prefHeight="29.0" prefWidth="194.0" promptText="Armazenamento Físico ou Virtual" />
-                  <TextField fx:id="dataArquivamento2TextField" layoutX="14.0" layoutY="271.0" prefHeight="29.0" prefWidth="194.0" promptText="Data de arquivamento" />
+                  <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutX="2.0" layoutY="336.0" prefHeight="18.0" prefWidth="236.0" textFill="#cd3e1d">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Label>
+                  <Label fx:id="resultado2MessageLabel" alignment="CENTER" layoutX="-4.0" layoutY="336.0" prefHeight="18.0" prefWidth="233.0" textFill="#53ae17">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
                </Pane>
             </bottom>
          </BorderPane>

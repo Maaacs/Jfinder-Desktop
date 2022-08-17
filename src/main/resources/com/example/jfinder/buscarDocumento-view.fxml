@@ -162,7 +162,7 @@
                            </font>
                         </JFXButton>
                         <TextField fx:id="numeroReferencia" layoutX="83.0" layoutY="8.0" prefHeight="30.0" prefWidth="160.0" promptText="Nº de referência" />
-                        <TextArea fx:id="resultado5MessageLabel" layoutX="4.0" layoutY="209.0" prefHeight="135.0" prefWidth="353.0" styleClass="navbutton" stylesheets="@css/style.css" />
+                        <TextArea fx:id="resultado5MessageLabel" layoutX="4.0" layoutY="167.0" prefHeight="135.0" prefWidth="353.0" styleClass="navbutton" stylesheets="@css/style.css" />
                         <Pane layoutX="-5.0" layoutY="77.0" prefHeight="36.0" prefWidth="125.0" styleClass="menubutton" stylesheets="@css/style.css">
                            <children>
                               <Label fx:id="resultado2MessageLabel" alignment="CENTER" layoutY="2.0" prefHeight="34.0" prefWidth="124.0">
@@ -190,9 +190,12 @@
                               </Label>
                            </children>
                         </Pane>
-                        <Label fx:id="resultadoMessageLabel" layoutX="249.0" layoutY="15.0" prefHeight="17.0" prefWidth="224.0" textFill="#39c64c" />
-                        <Label layoutX="5.0" layoutY="184.0" text="Descrição:" />
-                        <Label fx:id="resultado6MessageLabel" alignment="CENTER" layoutX="371.0" layoutY="286.0" prefHeight="17.0" prefWidth="223.0" textFill="#da3131" />
+                        <Label fx:id="resultadoMessageLabel" layoutX="259.0" layoutY="15.0" prefHeight="17.0" prefWidth="224.0" textFill="#b9442d">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label layoutX="5.0" layoutY="142.0" text="Descrição:" />
+                        <Label layoutX="5.0" layoutY="324.0" onMouseClicked="#buscaAvancadaOnAction" text="Não encontrou o que procurava?" textFill="#28a49c" underline="true" />
                      </children>
                   </Pane>
                </bottom>

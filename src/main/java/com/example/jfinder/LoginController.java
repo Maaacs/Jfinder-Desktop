@@ -20,11 +20,11 @@ public class LoginController{
     private PasswordField senhaTextField;
 
 
-    public void sairOnAction(ActionEvent event){
-        Stage stage = (Stage) sair.getScene().getWindow();
-        stage.close();
-    }
 
+    public void limparCampos(){
+        usuarioTextField.setText("");
+        //senhaTextField.setText(" ");
+    }
     public boolean verificarLogin() {
         BancodeDados bd = new BancodeDados(usuarioTextField.getText(), senhaTextField.getText());
         bd.conecta();
@@ -39,6 +39,9 @@ public class LoginController{
         if(usuarioTextField.getText().isBlank() == false && senhaTextField.getText().isBlank() == false){
             if(verificarLogin()){
                 Main.changeScreen("usuario-view");
+                usuarioTextField.setText("");
+                senhaTextField.setText("");
+                loginMessageLabel.setText("");
                 System.out.println("Estou no servidor :)");
             } else{
                 System.out.println("Não obtive permissão para me conectar ao servidor :(");
@@ -50,7 +53,15 @@ public class LoginController{
         }
     }
 
-    public void RelatoriosOnAction(ActionEvent event) {
-        Main.changeScreen("relatorio-view");
+    public void sairOnAction(ActionEvent event){
+        BancodeDados bd = new BancodeDados();
+        bd.desconecta();
+        Stage stage = (Stage) sair.getScene().getWindow();
+        stage.close();
     }
+
+
+    /*public void RelatoriosOnAction(ActionEvent event) {
+        Main.changeScreen("relatorio-view");
+    }*/
 }

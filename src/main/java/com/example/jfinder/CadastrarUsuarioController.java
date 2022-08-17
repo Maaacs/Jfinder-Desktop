@@ -20,25 +20,34 @@ public class CadastrarUsuarioController {
     private void cadastrarUsuarioOnAction(ActionEvent event) {
         BancodeDados bd = new BancodeDados();
         try {
-            String nome = nomeUsuarioTextField.getText();
-            String sobrenome = sobrenomeUsuarioTextField.getText();
-            int cpf = Integer.parseInt(cpfUsuarioTextField.getText());
-            String cargo = cargoUsuarioTextField.getText();
 
-            Usuario usuario = new Usuario(nome, sobrenome, cpf, cargo);
-            System.out.println(usuario.getPrimeiroNome());
+            if(nomeUsuarioTextField.getText().isBlank() == false && sobrenomeUsuarioTextField.getText().isBlank() == false && cpfUsuarioTextField.getText().isBlank() == false && cargoUsuarioTextField.getText().isBlank() == false) {//campo nao for vazio
+                String nome = nomeUsuarioTextField.getText();
+                String sobrenome = sobrenomeUsuarioTextField.getText();
+                int cpf = Integer.parseInt(cpfUsuarioTextField.getText());
+                String cargo = cargoUsuarioTextField.getText();
 
+                Usuario usuario = new Usuario(nome, sobrenome, cpf, cargo);
 
-            if (bd.adicionarUsuario(usuario)){
-                System.out.println("Novo usuário cadastrado com sucesso!");
-                cadastroUsuarioMessageLabel.setText("Cadastro realizado com sucesso!");
-            }else {
-                System.out.println("Usuário não cadastrado!");
+                if (bd.adicionarUsuario(usuario)){
+                    System.out.println("Novo usuário cadastrado com sucesso!");//apenas terminal
+                    cadastroMessageLabel.setText("");
+                    nomeUsuarioTextField.setText("");
+                    sobrenomeUsuarioTextField.setText("");
+                    cpfUsuarioTextField.setText("");
+                    cargoUsuarioTextField.setText("");
+                    cadastroUsuarioMessageLabel.setText("Cadastro realizado com sucesso!");
+                }else {
+                    System.out.println("Usuário não cadastrado!");
+                    cadastroMessageLabel.setText("Este CPF já está cadastrado!");
+                }
+
+            }else{
                 cadastroMessageLabel.setText("Insira os dados!");
             }
+
         }catch (NumberFormatException e){
-            cadastroMessageLabel.setText("");
-            cadastroMessageLabel.setText("Entrada Inválida!");
+            cadastroMessageLabel.setText("Dados incorretos!");
         }
     }
 

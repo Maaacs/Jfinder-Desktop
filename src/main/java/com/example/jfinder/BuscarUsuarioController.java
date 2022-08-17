@@ -3,15 +3,52 @@ package com.example.jfinder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
+
+
+
 
 public class BuscarUsuarioController{
     @FXML private TextField cpfBuscarMessageLabel;
     @FXML private Label resultadoMessageLabel;
-    @FXML private Label resultado2MessageLabel;
     @FXML private Label resultado3MessageLabel;
     @FXML private Label resultado4MessageLabel;
     @FXML private Label resultado5MessageLabel;
     @FXML private Label resultado6MessageLabel;
+
+    @FXML
+    private void buscarOnAction() {
+        Usuario bancoPorCPF = new Usuario();
+        Usuario usr = new Usuario();
+
+        try{
+            if(cpfBuscarMessageLabel.getText().isBlank() == false){//campo nao for vazio
+                int cpf = Integer.parseInt(cpfBuscarMessageLabel.getText());
+                usr = usr.buscarCPF(cpf);
+
+                if (usr == null){ //usuario nao encontrado
+                    System.out.println("Nao encontrado");
+                    resultado6MessageLabel.setText("Usuario não encontrado!");
+                }
+                else{
+                    resultado6MessageLabel.setText("");
+                    bancoPorCPF = usr.buscarCPF(cpf);
+                    resultadoMessageLabel.setText(bancoPorCPF.getPrimeiroNome());
+                    resultado3MessageLabel.setText(bancoPorCPF.getUltimoNome());
+                    resultado4MessageLabel.setText(Integer.toString(bancoPorCPF.getCPF()));
+                    resultado5MessageLabel.setText(bancoPorCPF.getCargo());
+                }
+
+            }
+            else{ // campo vazio solicita para preencher com o CPF
+                resultado6MessageLabel.setText("Insira o CPF!");
+            }
+
+        }catch (NumberFormatException e){ // Caso insira outro tipo que nao seja INT CPF
+            resultado6MessageLabel.setText("CPF incorreto!");
+        }
+    }
+
 
     public void voltarBuscarOnAction(ActionEvent event){
         Main.changeScreen("usuario-view");
@@ -22,38 +59,16 @@ public class BuscarUsuarioController{
     public void UsuariosOnAction(ActionEvent event) {
         Main.changeScreen("usuario-view");
     }
-
     public void DocumentosOnAction(ActionEvent event) {
         Main.changeScreen("documento-view");
     }
-
     public void RelatoriosOnAction(ActionEvent event) {
         Main.changeScreen("relatorio-view");
     }
 
-
-
     @FXML
-    private void buscarOnAction() {
-        Usuario bancoPorCPF = new Usuario();
-        Usuario usr = new Usuario();
-        int cpf = Integer.parseInt(cpfBuscarMessageLabel.getText());
-        usr = usr.buscarCPF(cpf);
-
-        if (usr == null){
-            System.out.println("Nao encontrado");
-            resultado6MessageLabel.setText("Resultados encontrados (0)");
-
-        }else{
-            System.out.println("Encontrei o fulano");
-            bancoPorCPF = usr.buscarCPF(cpf);
-
-            resultado2MessageLabel.setText("Resultados encontrados (1)");
-            resultadoMessageLabel.setText(bancoPorCPF.getPrimeiroNome());
-            resultado3MessageLabel.setText(bancoPorCPF.getUltimoNome());
-            resultado4MessageLabel.setText(Integer.toString(bancoPorCPF.getCPF()));
-            resultado5MessageLabel.setText(bancoPorCPF.getCargo());
-        }
+    private void buscaAvancadaOnaction(MouseEvent mouseEvent) {
+        Main.changeScreen("relatorioUsuario-view");
     }
 }
 

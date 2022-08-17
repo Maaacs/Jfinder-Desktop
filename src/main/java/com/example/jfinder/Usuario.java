@@ -67,6 +67,8 @@ public class Usuario {
 
     public Usuario buscarCPF(int cpf){// Seleciona a lista de usuarios do DB
         Usuario usuarios = new Usuario();
+
+        // verificar se a entrada nao esta vazia
         try{
             Statement st = conexao.createStatement();
             System.out.println("Tentando recuperar informações...");

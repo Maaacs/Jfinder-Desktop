@@ -183,10 +183,15 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <Label fx:id="tabelaMessageLabel" layoutX="5.0" layoutY="297.0" prefHeight="17.0" prefWidth="202.0" textFill="#28c32d">
+                        <Label fx:id="tabelaMessageLabel" layoutX="319.0" layoutY="288.0" prefHeight="18.0" prefWidth="198.0" textFill="#28c32d">
                            <font>
                               <Font size="14.0" />
                            </font></Label>
+                        <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutX="319.0" layoutY="288.0" prefHeight="18.0" prefWidth="171.0" textFill="#d3492d">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
                      </children>
                   </Pane>
                </bottom>

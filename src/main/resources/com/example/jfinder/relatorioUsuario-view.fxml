@@ -118,7 +118,7 @@
                               <Image url="@icons/usuarios2.png" />
                            </image>
                         </ImageView>
-                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="160.0" text="Relatório Usuários" textFill="#631eda">
+                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="160.0" text="Relatório de Usuários" textFill="#631eda">
                            <font>
                               <Font size="17.0" />
                            </font>
@@ -175,6 +175,7 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
+                        <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutX="202.0" layoutY="295.0" prefHeight="17.0" prefWidth="206.0" textFill="#c32f2f" />
                      </children>
                   </Pane>
                </bottom>

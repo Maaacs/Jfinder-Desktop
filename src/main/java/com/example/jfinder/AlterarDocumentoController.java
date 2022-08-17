@@ -8,6 +8,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 
+import java.util.Date;
+
 public class AlterarDocumentoController {
 
     @FXML
@@ -36,31 +38,49 @@ public class AlterarDocumentoController {
 
     @FXML
     private void buscarDocumentoOnAction(ActionEvent event) {
-        if(numeroReferenciaTextField.getText().isBlank() == false){
+        tipoDocumentoTextField.setText("");
+        interessadoTextField.setText("");
+        tipoArmazenamentoTextField.setText("");
+        dataArquivamentoTextField.setText("");
+        localArmazenamentoTextField.setText("");
+        descricaoTextField.setText("");
 
-            Documento tabelaNReferencia = new Documento();
-            Documento doc = new Documento();
-            int numeroDeReferencia = Integer.parseInt(numeroReferenciaTextField.getText());
-            doc = doc.buscarPorNumeroReferencia(numeroDeReferencia);
+        try{
 
-            if (doc == null){
-                System.out.println("Documento encontrado");
-                resultado2MessageLabel.setText("Documento informado não encontrado!");
+            if(numeroReferenciaTextField.getText().isBlank() == false){
 
-            }else{
-                tabelaNReferencia = doc.buscarPorNumeroReferencia(numeroDeReferencia);
-                tipoDocumentoTextField.setText(tabelaNReferencia.getTipoDeDocumento());
-                interessadoTextField.setText(tabelaNReferencia.getInteressado());
-                tipoArmazenamentoTextField.setText(tabelaNReferencia.getTipoDeArmazenamento());
-                dataArquivamentoTextField.setText(tabelaNReferencia.getDataArquivamento());
-                localArmazenamentoTextField.setText(tabelaNReferencia.getLocalCompletoDeArmazenamento());
-                descricaoTextField.setText(tabelaNReferencia.getDescriçãoDocumento());
-                resultadoMessageLabel.setText("Resultados encontrados (1)");
+                Documento tabelaNReferencia = new Documento();
+                Documento doc = new Documento();
+                int numeroDeReferencia = Integer.parseInt(numeroReferenciaTextField.getText());
+                doc = doc.buscarPorNumeroReferencia(numeroDeReferencia);
+
+                if (doc == null){
+                    System.out.println("Documento encontrado");
+                    resultado4LabelMessage.setText("");
+                    resultado3MessageLabel.setText("Documento informado não encontrado!");
+
+                }else{
+                    resultado4LabelMessage.setText("");
+                    resultado3MessageLabel.setText("");
+                    tabelaNReferencia = doc.buscarPorNumeroReferencia(numeroDeReferencia);
+                    tipoDocumentoTextField.setText(tabelaNReferencia.getTipoDeDocumento());
+                    interessadoTextField.setText(tabelaNReferencia.getInteressado());
+                    tipoArmazenamentoTextField.setText(tabelaNReferencia.getTipoDeArmazenamento());
+                    dataArquivamentoTextField.setText(tabelaNReferencia.getDataArquivamento());
+                    localArmazenamentoTextField.setText(tabelaNReferencia.getLocalCompletoDeArmazenamento());
+                    descricaoTextField.setText(tabelaNReferencia.getDescriçãoDocumento());
+                }
             }
+            else{
+                resultado4LabelMessage.setText("");
+                resultado3MessageLabel.setText("Insira o nº de referência!");
+            }
+
+        }catch (NumberFormatException e){
+            resultado3MessageLabel.setText("Insira o nº de referência corretamente!");
+            resultado4LabelMessage.setText("");
         }
-        else{
-            resultado3MessageLabel.setText("Insira o número de referência!");
-        }
+
     }
 
 

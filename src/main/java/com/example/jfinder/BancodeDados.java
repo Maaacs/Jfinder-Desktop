@@ -37,8 +37,20 @@ public class BancodeDados {
             return true;
         }
         catch (SQLException e){
-                System.out.println("Erro na conexão com o Banco: "+e.getMessage());
+                System.out.println("Falha na conexão com o servidor: "+e.getMessage());
                 return false;
+        }
+    }
+
+    public boolean desconecta() {
+        try {
+            conexao.close();
+            System.out.println("Estou desconectando do servidor...");
+            return true;
+        }
+        catch (SQLException e){
+            System.out.println("Falha em me desconectar do servidor: "+e.getMessage());
+            return false;
         }
     }
 

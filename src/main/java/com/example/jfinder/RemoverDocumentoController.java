@@ -24,6 +24,8 @@ public class RemoverDocumentoController implements Initializable {
     private TextField documentoRemoverMessageLabel;
     @FXML
     private Label documentoMessageLabel;
+    @FXML
+    private Label tabelaMessageLabel;
 
     @Override
     public void initialize (URL url, ResourceBundle rb){
@@ -45,20 +47,36 @@ public class RemoverDocumentoController implements Initializable {
     }
     @FXML
     private void atualizarTabelaDocumentosOnAction(ActionEvent event) {
+        tabelaMessageLabel.setText("");
+        documentoMessageLabel.setText("");
         initTable();
     }
     @FXML
     private void removerDocumentoOnAction(ActionEvent event) {
         BancodeDados doc = new BancodeDados();
+        Documento busca = new Documento();
 
-        int numeroReferencia = Integer.parseInt(documentoRemoverMessageLabel.getText());
-        boolean d = doc.removerDocumento(numeroReferencia);
+        try{
 
-        if (d == true){
-            System.out.println("OK");
-            documentoMessageLabel.setText("Documento removido com sucesso!");
-        }else{
-            System.out.println("Erro");
+            if(documentoRemoverMessageLabel.getText().isBlank() == false){
+                int numeroReferencia = Integer.parseInt(documentoRemoverMessageLabel.getText());
+
+                if (busca.buscarPorNumeroReferencia(numeroReferencia) != null){
+                    doc.removerDocumento(numeroReferencia);
+                    tabelaMessageLabel.setText("");
+                    documentoMessageLabel.setText("Documento removido com sucesso!");
+                }else{
+                    documentoMessageLabel.setText("");
+                    tabelaMessageLabel.setText("Documento não encontrado!");
+                }
+            }else{
+                documentoMessageLabel.setText("");
+                tabelaMessageLabel.setText("Insira o nº de Referencia!");
+            }
+
+        }catch (NumberFormatException e){
+            documentoMessageLabel.setText("");
+            tabelaMessageLabel.setText("Nº de Referencia incorreto!");
         }
     }
 
@@ -81,5 +99,7 @@ public class RemoverDocumentoController implements Initializable {
 
     public void voltarOnAction(ActionEvent event){
         Main.changeScreen("documento-view");
+        tabelaMessageLabel.setText("");
+        documentoMessageLabel.setText("");
     }
 }

@@ -129,12 +129,12 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <TextField fx:id="nomeAlterarUsuario" layoutX="116.0" layoutY="99.0" prefHeight="29.0" prefWidth="347.0" promptText="Nome" />
-                        <TextField fx:id="sobrenomeAlterarUsuario" layoutX="116.0" layoutY="170.0" prefHeight="29.0" prefWidth="347.0" promptText="Sobrenome" />
-                        <TextField fx:id="cargoAlterarUsuario" layoutX="116.0" layoutY="237.0" prefHeight="29.0" prefWidth="347.0" promptText="Cargo" />
-                        <Label layoutX="116.0" layoutY="74.0" prefHeight="17.0" prefWidth="185.0" text="Novo nome:" />
-                        <Label layoutX="116.0" layoutY="145.0" prefHeight="17.0" prefWidth="138.0" text="Novo sobrenome:" />
-                        <Label layoutX="117.0" layoutY="214.0" prefHeight="17.0" prefWidth="129.0" text="Novo cargo:" />
+                        <TextField fx:id="nomeAlterarUsuario" layoutX="109.0" layoutY="93.0" prefHeight="29.0" prefWidth="347.0" promptText="Nome" />
+                        <TextField fx:id="sobrenomeAlterarUsuario" layoutX="109.0" layoutY="164.0" prefHeight="29.0" prefWidth="347.0" promptText="Sobrenome" />
+                        <TextField fx:id="cargoAlterarUsuario" layoutX="109.0" layoutY="231.0" prefHeight="29.0" prefWidth="347.0" promptText="Cargo" />
+                        <Label layoutX="109.0" layoutY="68.0" prefHeight="17.0" prefWidth="185.0" text="Novo nome:" />
+                        <Label layoutX="109.0" layoutY="139.0" prefHeight="17.0" prefWidth="138.0" text="Novo sobrenome:" />
+                        <Label layoutX="110.0" layoutY="208.0" prefHeight="17.0" prefWidth="129.0" text="Novo cargo:" />
                         <JFXButton fx:id="confirmarAlteracaoUsuario" buttonType="RAISED" layoutX="450.0" layoutY="326.0" onAction="#alteracaoOnAction" prefHeight="27.0" prefWidth="137.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar Alteração" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
@@ -145,8 +145,8 @@
                               <Font size="14.0" />
                            </font>
                         </JFXButton>
-                        <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutX="110.0" layoutY="20.0" prefHeight="17.0" prefWidth="233.0" textFill="#dd2d2d" />
-                        <Label fx:id="alterarLabelMessage" alignment="CENTER" layoutX="210.0" layoutY="289.0" prefHeight="17.0" prefWidth="181.0" textFill="#29c63e" />
+                        <Label fx:id="resultadoMessageLabel" layoutX="353.0" layoutY="51.0" prefHeight="17.0" prefWidth="212.0" textFill="#dd2d2d" />
+                        <Label fx:id="alterarLabelMessage" alignment="CENTER" layoutX="190.0" layoutY="285.0" prefHeight="17.0" prefWidth="186.0" textFill="#29c63e" />
                      </children>
                   </Pane>
                </bottom>

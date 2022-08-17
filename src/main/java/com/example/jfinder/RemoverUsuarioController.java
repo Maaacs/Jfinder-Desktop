@@ -1,6 +1,5 @@
 package com.example.jfinder;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -8,11 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-
 import java.net.URL;
-import java.sql.SQLException;
-import java.sql.Statement;
-import java.util.List;
 import java.util.ResourceBundle;
 
 public class RemoverUsuarioController implements Initializable{
@@ -22,38 +17,12 @@ public class RemoverUsuarioController implements Initializable{
     @FXML private TableColumn<Usuario, String> colunaNome;
     @FXML private TableColumn<Usuario, String> colunaSobrenome;
     @FXML private TableColumn<Usuario, String> colunaCargo;
-    @FXML private JFXButton voltarCadastroUsuario;
-    @FXML
-    private Label tabelaMessageLabel;
-    @FXML
-    private JFXButton buscarUsuarioButton;
-    @FXML
-    private TextField cpfBuscarMessageLabel;
-    @FXML
-    private Label nome;
-    @FXML
-    private JFXButton removerUsuario;
-    @FXML
-    private TableColumn colunaCpf;
+    @FXML private Label tabelaMessageLabel;
+    @FXML private TextField cpfBuscarMessageLabel;
+    @FXML private TableColumn colunaCpf;
+    @FXML private Label resultadoMessageLabel;
 
 
-    public void voltarOnAction(ActionEvent event){
-        Main.changeScreen("usuario-view");
-    }
-    public void encerrarSessaoOnAction(ActionEvent event){
-        Main.changeScreen("login-view");
-    }
-    public void UsuariosOnAction(ActionEvent event) {
-        Main.changeScreen("usuario-view");
-    }
-
-    public void DocumentosOnAction(ActionEvent event) {
-        Main.changeScreen("documento-view");
-    }
-
-    public void RelatoriosOnAction(ActionEvent event) {
-        Main.changeScreen("relatorio-view");
-    }
 
     public void initialize (URL url, ResourceBundle rb){
         initTable();
@@ -75,21 +44,58 @@ public class RemoverUsuarioController implements Initializable{
 
     @FXML private void atualizarTabelaUsuariosOnAction(ActionEvent event) {
         initTable();
+        tabelaMessageLabel.setText("");
+        resultadoMessageLabel.setText("");
+        cpfBuscarMessageLabel.setText("");
     }
 
     @FXML
     private void removerUsuarioOnAction(ActionEvent event) {
         BancodeDados usr = new BancodeDados();
+        Usuario busca = new Usuario();
 
-        String cpf = cpfBuscarMessageLabel.getText();
-        boolean u = usr.removerUsuario(cpf);
+        try {
 
-        if (u == true){
-            System.out.println("OK");
-            tabelaMessageLabel.setText("Usuário removido com sucesso!");
-        }else{
-            System.out.println("Erro");
+            if(cpfBuscarMessageLabel.getText().isBlank() == false) {//campo nao for vazio
+                int cpf = Integer.parseInt(cpfBuscarMessageLabel.getText());
+
+                if(busca.buscarCPF(cpf) != null){
+                    String cpf2 = cpfBuscarMessageLabel.getText();
+                    usr.removerUsuario(cpf2);
+                    resultadoMessageLabel.setText("");
+                    tabelaMessageLabel.setText("Usuário removido com sucesso!");
+                }else{
+                    tabelaMessageLabel.setText("");
+                    resultadoMessageLabel.setText("Usuário não encontrado!");
+                }
+
+            }else{
+                tabelaMessageLabel.setText("");
+                resultadoMessageLabel.setText("Insira o CPF!");
+            }
+
+        }catch (NumberFormatException e){
+            tabelaMessageLabel.setText("");
+            resultadoMessageLabel.setText("CPF incorreto!");
         }
+
+    }
+
+
+    public void voltarOnAction(ActionEvent event){
+        Main.changeScreen("usuario-view");
+    }
+    public void encerrarSessaoOnAction(ActionEvent event){
+        Main.changeScreen("login-view");
+    }
+    public void UsuariosOnAction(ActionEvent event) {
+        Main.changeScreen("usuario-view");
+    }
+    public void DocumentosOnAction(ActionEvent event) {
+        Main.changeScreen("documento-view");
+    }
+    public void RelatoriosOnAction(ActionEvent event) {
+        Main.changeScreen("relatorio-view");
     }
 
 

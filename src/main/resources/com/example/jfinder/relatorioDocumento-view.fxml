@@ -118,7 +118,7 @@
                               <Image url="@icons/Documentos2.png" />
                            </image>
                         </ImageView>
-                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="160.0" text="Relatório Documentos" textFill="#631eda">
+                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="188.0" text="Relatório de Documentos" textFill="#631eda">
                            <font>
                               <Font size="17.0" />
                            </font>

@@ -3,6 +3,7 @@ package com.example.jfinder;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 
 public class BuscarDocumentoController {
     @FXML
@@ -24,23 +25,31 @@ public class BuscarDocumentoController {
     private void buscarDocumentOnAction(ActionEvent event) {
         Documento bancoPorNreferencia= new Documento();
         Documento doc = new Documento();
-        int nReferencia = Integer.parseInt(numeroReferencia.getText());
-        doc = doc.buscarPorNumeroReferencia(nReferencia);
 
-        if (doc == null){
-            System.out.println("Documento não encontrado!");
-            resultado6MessageLabel.setText("Resultados encontrados (0)");
+        try{
+            if(numeroReferencia.getText().isBlank() == false){
+                int nReferencia = Integer.parseInt(numeroReferencia.getText());
+                doc = doc.buscarPorNumeroReferencia(nReferencia);
 
-        }else{
-            System.out.println("Encontrei o fulano");
-            bancoPorNreferencia = doc.buscarPorNumeroReferencia(nReferencia);
+                if (doc == null){
+                    System.out.println("Documento não encontrado!");
+                    resultadoMessageLabel.setText("Documento não encontrado!");
 
-            resultadoMessageLabel.setText("Resultados encontrados (1)");
-            resultado2MessageLabel.setText(bancoPorNreferencia.getTipoDeDocumento());
-            resultado3MessageLabel.setText(bancoPorNreferencia.getInteressado());
-            resultado4MessageLabel.setText(bancoPorNreferencia.getLocalCompletoDeArmazenamento());
-            resultado5MessageLabel.setText(bancoPorNreferencia.getDescriçãoDocumento());
+                }else{
+                    resultadoMessageLabel.setText("");
+                    bancoPorNreferencia = doc.buscarPorNumeroReferencia(nReferencia);
+                    resultado2MessageLabel.setText(bancoPorNreferencia.getTipoDeDocumento());
+                    resultado3MessageLabel.setText(bancoPorNreferencia.getInteressado());
+                    resultado4MessageLabel.setText(bancoPorNreferencia.getLocalCompletoDeArmazenamento());
+                    resultado5MessageLabel.setText(bancoPorNreferencia.getDescriçãoDocumento());
+                }
+            }else{
+                resultadoMessageLabel.setText("Insira o nº de referência!");
+            }
+        }catch (NumberFormatException e){
+            resultadoMessageLabel.setText("Nº de referência incorreto!");
         }
+
     }
 
     public void encerrarSessaoOnAction(ActionEvent event){
@@ -63,6 +72,8 @@ public class BuscarDocumentoController {
         Main.changeScreen("documento-view");
     }
 
-
-
+    @FXML
+    private void buscaAvancadaOnAction(MouseEvent mouseEvent) {
+        Main.changeScreen("relatorioDocumento-view");
+    }
 }

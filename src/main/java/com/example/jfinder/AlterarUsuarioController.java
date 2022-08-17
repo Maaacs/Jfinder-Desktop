@@ -20,31 +20,44 @@ public class AlterarUsuarioController {
 
     @FXML
     private void buscarOnAction(ActionEvent event) {
-        if(cpfTextField.getText().isBlank() == false){
+        nomeAlterarUsuario.setText("");
+        sobrenomeAlterarUsuario.setText("");
+        cargoAlterarUsuario.setText("");
 
-            Usuario tabelaCpf = new Usuario();
-            Usuario usr = new Usuario();
-            int cpf = Integer.parseInt(cpfTextField.getText());
-            usr = usr.buscarCPF(cpf);
+        try{
 
-            if (usr == null){
-                System.out.println("Nao encontrado");
-                resultadoMessageLabel.setText("CPF informado não encontrado!");
+            if(cpfTextField.getText().isBlank() == false){
 
-            }else{
-                tabelaCpf = usr.buscarCPF(cpf);
+                Usuario tabelaCpf = new Usuario();
+                Usuario usr = new Usuario();
+                int cpf = Integer.parseInt(cpfTextField.getText());
+                usr = usr.buscarCPF(cpf);
 
-                //nomeAlterarUsuario.setText("Resultados encontrados (1)");
-                nomeAlterarUsuario.setText(tabelaCpf.getPrimeiroNome());
-                sobrenomeAlterarUsuario.setText(tabelaCpf.getUltimoNome());
-                cargoAlterarUsuario.setText(tabelaCpf.getCargo());
-                //resultado5MessageLabel.setText(bancoPorCPF.getCargo());
+                if (usr == null){
+                    System.out.println("Nao encontrado");
+                    alterarLabelMessage.setText("");
+                    resultadoMessageLabel.setText("Usuário não encontrado!");
 
+                }else{
+                    alterarLabelMessage.setText("");
+                    resultadoMessageLabel.setText("");
+                    tabelaCpf = usr.buscarCPF(cpf);
+                    nomeAlterarUsuario.setText(tabelaCpf.getPrimeiroNome());
+                    sobrenomeAlterarUsuario.setText(tabelaCpf.getUltimoNome());
+                    cargoAlterarUsuario.setText(tabelaCpf.getCargo());
+
+                }
             }
+            else{
+                alterarLabelMessage.setText("");
+                resultadoMessageLabel.setText("Insira o CPF!");
+            }
+
+        }catch (NumberFormatException e){
+            alterarLabelMessage.setText("");
+            resultadoMessageLabel.setText("Insira os dados corretamente!");
         }
-        else{
-            resultadoMessageLabel.setText("Insira o CPF");
-        }
+
     }
 
     @FXML private void alteracaoOnAction(ActionEvent event) {
@@ -61,7 +74,8 @@ public class AlterarUsuarioController {
         Usuario p = new Usuario(nome, sobrenome, cpf, cargo);
 
         if (dao.alterarUsuario(p)){
-            System.out.println("usuário atualizado!");
+            System.out.println("Usuário atualizado!");// apenas para terminal
+            resultadoMessageLabel.setText("");
             alterarLabelMessage.setText("Usuário alterado com sucesso!");
         }else{
             System.out.println("Alteração não realizada!");
