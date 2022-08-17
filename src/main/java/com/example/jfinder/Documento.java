@@ -225,6 +225,40 @@ public class Documento {
         return documentos;
     }
 
+    public List<Documento> buscarPorAno(String ano){// Seleciona a lista de usuarios do DB
+        List<Documento> documentos = new ArrayList<>();
+
+        try{
+            Statement st = conexao.createStatement();
+            String sql = "SELECT * FROM documentos WHERE dataArquivamento LIKE ?";
+            PreparedStatement stmt = conexao.prepareStatement(sql);
+            stmt.setString(1, "%" + ano + "%");
+            ResultSet rs = stmt.executeQuery();
+            System.out.println("Buscando...");
+
+            while(rs.next()){
+                //enquanto tiver uma posicao na array preenchida
+                Documento doc = new Documento();
+                doc.setNumeroUnicoReferencia(rs.getInt("numeroReferencia"));//string nome da coluna do banco
+                doc.setTipoDeDocumento(rs.getString("tipo"));//string nome da coluna do banco
+                doc.setInteressado(rs.getString("interessado"));//string nome da coluna do banco
+                doc.setTipoDeArmazenamento(rs.getString("tipoArmazenamento"));
+                doc.setDataArquivamento(rs.getString("dataArquivamento"));
+                doc.setDescriçãoDocumento(rs.getString("descricao"));//string nome da coluna do banco
+                doc.setLocalCompletoDeArmazenamento(rs.getString("localCompletoArmazenamento"));
+
+                documentos.add(doc);
+
+            }
+            rs.close();
+        }
+        catch (SQLException ex){
+            System.out.println("Infelizmente nao encontrei o documento com essa palavra-chave");
+            return null;
+        }
+        return documentos;
+    }
+
 
 
 

@@ -21,7 +21,7 @@ public class RelatorioDocumentoController implements Initializable {
     @FXML private Label RelatorioDocumentoLabelMessage;
     @FXML
     private ChoiceBox<String> choiceButton;
-    @FXML private  String[] consultas = new String[]{"Interessado", "Tipo", "Palavra-chave"};
+    @FXML private  String[] consultas = new String[]{"Interessado", "Tipo", "Palavra-chave", "Ano"};
 
 
     private ObservableList<Documento> palavras = FXCollections.observableArrayList();
@@ -74,7 +74,7 @@ public class RelatorioDocumentoController implements Initializable {
             }
         }
         else if(selecionador == "Palavra-chave"){ //Botao 3
-            if(doc.buscarPorTipoDeDocumento(itemAserBuscado) == null){
+            if(doc.buscarPorPalavraChave(itemAserBuscado) == null){
                 System.out.println("Não encontrado");
             }else{
 
@@ -87,6 +87,23 @@ public class RelatorioDocumentoController implements Initializable {
                 colunaArmazenamento.setCellValueFactory(new PropertyValueFactory("tipoDeArmazenamento"));
                 colunaArquivamento.setCellValueFactory(new PropertyValueFactory("dataArquivamento"));
                 tabelaDocumentos.setItems(atualizaTabelaPalavraChave());
+            }
+        }
+
+        else if(selecionador == "Ano"){ //Botao 3
+            if(doc.buscarPorAno(itemAserBuscado) == null){
+                System.out.println("Não encontrado");
+            }else{
+
+                System.out.println("Encontrei!");
+
+                //Inicializa a tabela com os valores recebidos do BuscarPorPalavraChave
+                colunaNumReferencia.setCellValueFactory(new PropertyValueFactory("numeroUnicoReferencia"));//exatamente como está escrito no tipo Documento
+                colunaTipoDocumento.setCellValueFactory(new PropertyValueFactory("tipoDeDocumento"));
+                colunaInteressado.setCellValueFactory(new PropertyValueFactory("interessado"));
+                colunaArmazenamento.setCellValueFactory(new PropertyValueFactory("tipoDeArmazenamento"));
+                colunaArquivamento.setCellValueFactory(new PropertyValueFactory("dataArquivamento"));
+                tabelaDocumentos.setItems(atualizaTabelaAno());
             }
         }
 
@@ -110,6 +127,13 @@ public class RelatorioDocumentoController implements Initializable {
         String itemAserBuscado = itemMessageLabel.getText();
         return FXCollections.observableArrayList(dao.buscarPorPalavraChave(itemAserBuscado));
     }
+
+    public ObservableList<Documento> atualizaTabelaAno(){ //serve para retornar a tabela com os valores atuais do Jfinder
+        Documento dao = new Documento();
+        String itemAserBuscado = itemMessageLabel.getText();
+        return FXCollections.observableArrayList(dao.buscarPorAno(itemAserBuscado));
+    }
+
 
 
 
