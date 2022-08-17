@@ -15,6 +15,10 @@ public class BuscarUsuarioController{
     @FXML private Label resultado4MessageLabel;
     @FXML private Label resultado5MessageLabel;
     @FXML private Label resultado6MessageLabel;
+    @FXML
+    private Button buscarUsuarioButtoOnAction;
+    @FXML
+    private Button voltarBuscarUsuario;
 
     @FXML
     private void buscarOnAction() {
@@ -71,6 +75,14 @@ public class BuscarUsuarioController{
         Main.changeScreen("relatorioUsuario-view");
     }
 }
+
+
+
+
+
+
+
+
 
 
 

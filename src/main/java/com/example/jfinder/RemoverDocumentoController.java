@@ -1,6 +1,5 @@
 package com.example.jfinder;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -14,7 +13,6 @@ import java.util.ResourceBundle;
 
 public class RemoverDocumentoController implements Initializable {
 
-    @FXML private JFXButton voltarDocumento;
     @FXML private TableView tabelaDocumentos;
     @FXML private TableColumn colunaNumeroReferenciaDocumento;
     @FXML private TableColumn colunaTipoDocumento;
@@ -26,6 +24,10 @@ public class RemoverDocumentoController implements Initializable {
     private Label documentoMessageLabel;
     @FXML
     private Label tabelaMessageLabel;
+    @FXML
+    private Button atualizarTabela;
+    @FXML
+    private Button voltarDocumentos;
 
     @Override
     public void initialize (URL url, ResourceBundle rb){

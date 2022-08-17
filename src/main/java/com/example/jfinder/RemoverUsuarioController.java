@@ -21,7 +21,10 @@ public class RemoverUsuarioController implements Initializable{
     @FXML private TextField cpfBuscarMessageLabel;
     @FXML private TableColumn colunaCpf;
     @FXML private Label resultadoMessageLabel;
-
+    @FXML
+    private Button voltarCadastroUsuario1;
+    @FXML
+    private Button atualizarTabela;
 
 
     public void initialize (URL url, ResourceBundle rb){

@@ -2,6 +2,7 @@ package com.example.jfinder;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -15,7 +16,12 @@ public class AlterarUsuarioController {
     @FXML private TextField cpfTextField;
     @FXML private Label resultadoMessageLabel;
     @FXML private Label alterarLabelMessage;
-
+    @FXML
+    private Button voltarAlteracaoUsuario;
+    @FXML
+    private Button buscarUsuario;
+    @FXML
+    private Button confirmarAlteracaoUsuario;
 
 
     @FXML
@@ -103,6 +109,9 @@ public class AlterarUsuarioController {
         Main.changeScreen("relatorio-view");
     }
 }
+
+
+
 
 
 

@@ -1,6 +1,5 @@
 package com.example.jfinder;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -18,18 +17,13 @@ public class RelatorioUsuarioController implements Initializable {
     @FXML private TableColumn<Usuario, String> colunaSobrenome;
     @FXML private TableColumn<Usuario, String> colunaCpf;
     @FXML private TableColumn<Usuario, String> colunaCargo;
-    @FXML
-    private JFXButton voltarRelatorioUsuario;
-    @FXML
-    private ChoiceBox<String> choiceButton;
-    @FXML
-    private TextField itemMessageLabel;
-    @FXML
-    private JFXButton buscarButton;
-
+    @FXML private Button buscarButton;
+    @FXML private Button voltarRelatorioUsuario;
+    @FXML private ChoiceBox<String> choiceButton;
+    @FXML private TextField itemMessageLabel;
     private String[]consultas = new String[]{"Nome", "Sobrenome", "Cargo"};
-    @FXML
-    private Label resultadoMessageLabel;
+    @FXML private Label resultadoMessageLabel;
+
 
 
     @Override

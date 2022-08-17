@@ -1,13 +1,11 @@
 package com.example.jfinder;
 
-import com.jfoenix.controls.JFXButton;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-
 import java.util.Date;
 
 public class AlterarDocumentoController {
@@ -27,13 +25,15 @@ public class AlterarDocumentoController {
     @FXML
     private TextField numeroReferenciaTextField;
     @FXML
-    private Label resultadoMessageLabel;
-    @FXML
-    private Label resultado2MessageLabel;
-    @FXML
     private Label resultado3MessageLabel;
     @FXML
     private Label resultado4LabelMessage;
+    @FXML
+    private Button voltarAlteracaoDocumento;
+    @FXML
+    private Button confirmarAlteracaoUsuario;
+    @FXML
+    private Button buscarDocumento;
 
 
     @FXML

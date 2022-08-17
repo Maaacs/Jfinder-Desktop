@@ -25,12 +25,12 @@
 
 .loginTheme
 {
-    -fx-background-color:linear-gradient(to bottom right,rgba(70, 255, 239, 0.9), rgba(121, 1, 255, 0.9));
+    -fx-background-color:linear-gradient(to bottom right,rgba(121, 1, 255, 2.2), rgba(70, 200, 239, 2.2));
 }
 
 .loginTheme:hover
 {
-    -fx-background-color:linear-gradient(to bottom right,rgba(121, 1, 255, 2.2), rgba(70, 200, 239, 2.2));
+    -fx-background-color:linear-gradient(to bottom right,rgba(70, 200, 255, 0.9), rgba(121, 1, 255, 0.9));
 }
 
 .menubutton

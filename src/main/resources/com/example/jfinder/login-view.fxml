@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -13,9 +13,9 @@
    <children>
       <AnchorPane prefHeight="500.0" prefWidth="400.0" styleClass="loginTheme" stylesheets="@css/style.css">
          <children>
-            <ImageView fitHeight="128.0" fitWidth="116.0" layoutX="130.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="104.0" fitWidth="88.0" layoutX="156.0" layoutY="206.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@icons/box3.png" />
+                  <Image url="@icons/folder.png" />
                </image>
             </ImageView>
          </children>
@@ -24,7 +24,7 @@
          <children>
             <Label layoutX="137.0" layoutY="62.0" text="Acesse sua conta">
                <font>
-                  <Font size="17.0" />
+                  <Font size="16.0" />
                </font>
             </Label>
             <Label layoutX="131.0" layoutY="31.0" text="Bem-vindo!">
@@ -32,34 +32,34 @@
                   <Font size="28.0" />
                </font>
             </Label>
-            <JFXButton fx:id="entrar" buttonType="RAISED" layoutX="133.0" layoutY="331.0" onAction="#entrarOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Entrar" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </JFXButton>
-            <JFXButton fx:id="sair" buttonType="RAISED" layoutX="133.0" layoutY="390.0" onAction="#sairOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Sair" textFill="WHITE">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </JFXButton>
             <ImageView fitHeight="79.0" fitWidth="64.0" layoutX="168.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@icons/user2Login.png" />
                </image>
             </ImageView>
-            <Label layoutX="69.0" layoutY="37.0" prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
+            <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="298.0" prefHeight="17.0" prefWidth="160.0" textFill="RED" />
+            <PasswordField fx:id="senhaTextField" layoutX="94.0" layoutY="266.0" prefHeight="26.0" prefWidth="211.0" promptText="Senha" />
+            <TextField fx:id="usuarioTextField" layoutX="94.0" layoutY="231.0" prefHeight="26.0" prefWidth="211.0" promptText="Usuário" />
+            <Button fx:id="entrar" layoutX="134.0" layoutY="333.0" mnemonicParsing="false" onAction="#entrarOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Entrar" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="sair" layoutX="134.0" layoutY="396.0" mnemonicParsing="false" onAction="#sairOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Sair" textFill="WHITE">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="64.0" fitWidth="79.0" layoutX="5.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@icons/folder.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="64.0" layoutY="37.0" prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
-            <ImageView fitHeight="46.0" fitWidth="50.0" layoutX="26.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@icons/box3.png" />
-               </image>
-            </ImageView>
-            <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="298.0" prefHeight="17.0" prefWidth="160.0" textFill="RED" />
-            <PasswordField fx:id="senhaTextField" layoutX="94.0" layoutY="266.0" prefHeight="26.0" prefWidth="211.0" promptText="Senha" />
-            <TextField fx:id="usuarioTextField" layoutX="94.0" layoutY="231.0" prefHeight="26.0" prefWidth="211.0" promptText="Usuário" />
          </children></AnchorPane>
    </children>
 </AnchorPane>

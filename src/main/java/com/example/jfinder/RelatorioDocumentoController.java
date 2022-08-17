@@ -18,11 +18,9 @@ public class RelatorioDocumentoController implements Initializable {
     @FXML private TableColumn<Documento, String> colunaArmazenamento;
     @FXML private TableColumn<Documento, String> colunaArquivamento;
     @FXML private TextField itemMessageLabel;
-    @FXML private Label RelatorioDocumentoLabelMessage;
     @FXML
     private ChoiceBox<String> choiceButton;
     @FXML private  String[] consultas = new String[]{"Interessado", "Tipo", "Palavra-chave", "Ano"};
-
 
     private ObservableList<Documento> palavras = FXCollections.observableArrayList();
 

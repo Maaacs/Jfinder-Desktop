@@ -21,6 +21,10 @@ public class CadastrarDocumentoController {
     private Label resultadoMessageLabel;
     @FXML
     private Label resultado2MessageLabel;
+    @FXML
+    private Button voltarCadastroDocumento;
+    @FXML
+    private Button cadastrarDocumento;
 
 
     @FXML

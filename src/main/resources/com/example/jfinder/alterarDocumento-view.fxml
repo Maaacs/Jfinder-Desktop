@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -126,23 +125,8 @@
                   <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
                         <TextField fx:id="interessadoTextField" layoutX="14.0" layoutY="92.0" prefHeight="29.0" prefWidth="192.0" />
-                        <JFXButton fx:id="confirmarAlteracaoUsuario" buttonType="RAISED" layoutX="450.0" layoutY="326.0" onAction="#confirmarAlteracaoOnAction" prefHeight="27.0" prefWidth="137.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar Alteração" textFill="WHITE">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </JFXButton>
-                        <JFXButton fx:id="voltarAlteracaoDocumento" buttonType="RAISED" layoutX="8.0" layoutY="326.0" onAction="#voltarOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Voltar" textFill="WHITE">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </JFXButton>
                         <TextArea fx:id="descricaoTextField" layoutX="285.0" layoutY="131.0" prefHeight="177.0" prefWidth="300.0" />
                         <TextField fx:id="numeroReferenciaTextField" layoutX="351.0" layoutY="6.0" prefHeight="28.0" prefWidth="169.0" promptText="Nº de referência" />
-                        <JFXButton fx:id="buscarDocumento" buttonType="RAISED" layoutX="527.0" layoutY="6.0" onAction="#buscarDocumentoOnAction" prefHeight="13.0" prefWidth="60.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
-                           <font>
-                              <Font size="14.0" />
-                           </font>
-                        </JFXButton>
                         <TextArea fx:id="localArmazenamentoTextField" layoutX="14.0" layoutY="251.0" prefHeight="56.0" prefWidth="192.0" />
                         <TextField fx:id="tipoDocumentoTextField" layoutX="13.0" layoutY="39.0" prefHeight="29.0" prefWidth="192.0" />
                         <TextField fx:id="tipoArmazenamentoTextField" layoutX="14.0" layoutY="147.0" prefHeight="29.0" prefWidth="192.0" />
@@ -153,11 +137,26 @@
                         <Label layoutX="14.0" layoutY="183.0" text="Nova data de arquivamento:" />
                         <Label layoutX="15.0" layoutY="235.0" text="Novo local de armazenamento:" />
                         <Label layoutX="285.0" layoutY="114.0" text="Nova descrição:" />
-                        <Label fx:id="resultado3MessageLabel" layoutX="213.0" layoutY="331.0" prefHeight="17.0" prefWidth="232.0" textFill="#dd4040" />
-                        <Label fx:id="resultado4LabelMessage" alignment="CENTER" layoutX="208.0" layoutY="331.0" prefHeight="17.0" prefWidth="242.0" textFill="#36ae2d">
+                        <Label fx:id="resultado3MessageLabel" layoutX="199.0" layoutY="331.0" prefHeight="17.0" prefWidth="232.0" textFill="#dd4040" />
+                        <Label fx:id="resultado4LabelMessage" alignment="CENTER" layoutX="194.0" layoutY="331.0" prefHeight="17.0" prefWidth="242.0" textFill="#36ae2d">
                            <font>
                               <Font size="14.0" />
                            </font></Label>
+                        <Button fx:id="voltarAlteracaoDocumento" layoutX="14.0" layoutY="326.0" mnemonicParsing="false" onAction="#voltarOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Voltar" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="confirmarAlteracaoUsuario" layoutX="440.0" layoutY="326.0" mnemonicParsing="false" onAction="#confirmarAlteracaoOnAction" prefHeight="27.0" prefWidth="138.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar Alteração" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="buscarDocumento" layoutX="526.0" layoutY="6.0" mnemonicParsing="false" onAction="#buscarDocumentoOnAction" prefHeight="13.0" prefWidth="60.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Button>
                      </children>
                   </Pane>
                </bottom>

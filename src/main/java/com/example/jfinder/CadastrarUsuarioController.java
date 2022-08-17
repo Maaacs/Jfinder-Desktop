@@ -2,6 +2,7 @@ package com.example.jfinder;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
@@ -13,7 +14,8 @@ public class CadastrarUsuarioController {
     @FXML private TextField cargoUsuarioTextField;
     @FXML private Label cadastroMessageLabel;
     @FXML private Label cadastroUsuarioMessageLabel;
-
+    @FXML private Button voltarCadastroUsuario;
+    @FXML private Button cadastrarUsuario;
 
 
     @FXML

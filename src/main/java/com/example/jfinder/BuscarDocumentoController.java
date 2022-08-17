@@ -19,7 +19,9 @@ public class BuscarDocumentoController {
     @FXML
     private TextArea resultado5MessageLabel;
     @FXML
-    private Label resultado6MessageLabel;
+    private Button voltarDocumentos;
+    @FXML
+    private Button buscarDocumento;
 
     @FXML
     private void buscarDocumentOnAction(ActionEvent event) {
