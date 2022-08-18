@@ -11,8 +11,8 @@ import java.util.List;
 
 public class BancodeDados {
     private static String url = "jdbc:mysql://localhost:3306/JfinderDB";
-    String userBD = "max";
-    String pass = "10121114";
+    String userBD = "usuario_criado";
+    String pass = "senha_criada";
     protected static Connection conexao = null;
 
 
