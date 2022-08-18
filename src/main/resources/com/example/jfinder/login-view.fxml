@@ -50,12 +50,12 @@
                   <Font size="14.0" />
                </font>
             </Button>
-            <ImageView fitHeight="64.0" fitWidth="79.0" layoutX="5.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="64.0" fitWidth="79.0" layoutX="-3.0" layoutY="18.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@icons/folder.png" />
                </image>
             </ImageView>
-            <Label layoutX="64.0" layoutY="37.0" prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
+            <Label layoutX="56.0" layoutY="37.0" prefHeight="26.0" prefWidth="64.0" text="Jfinder" textFill="#6a05c3">
                <font>
                   <Font size="16.0" />
                </font>
