@@ -19,18 +19,8 @@ public class LoginController{
 
 
 
-    public boolean verificarLogin() {
-        BancodeDados bd = new BancodeDados(usuarioTextField.getText(), senhaTextField.getText());
-        bd.conecta();
-        if(bd.conecta()) {
-            return true;
-        }else {
-            return false;
-        }
-    }
-
     public void entrarOnAction(ActionEvent event){
-        if(usuarioTextField.getText().isBlank() == false && senhaTextField.getText().isBlank() == false){
+        if(usuarioTextField.getText().isBlank() == false && senhaTextField.getText().isBlank() == false){//campo nao esta vazio
             if(verificarLogin()){
                 Main.changeScreen("usuario-view");
                 usuarioTextField.setText("");
@@ -44,6 +34,16 @@ public class LoginController{
         } else{
             System.out.println("Não obtive permissão para me conectar ao servidor :(");
             loginMessageLabel.setText("Insira os dados!");
+        }
+    }
+
+    public boolean verificarLogin() {
+        BancodeDados bd = new BancodeDados(usuarioTextField.getText(), senhaTextField.getText());
+        bd.conecta();
+        if(bd.conecta()) {
+            return true;
+        }else {
+            return false;
         }
     }
 

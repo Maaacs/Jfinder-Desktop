@@ -16,13 +16,13 @@ public class Documento {
 
 
     //atributos
-    private int numeroUnicoReferencia;
-    private String tipoDeDocumento;
-    private String interessado;
+    private int numeroUnicoReferencia; //
+    private String tipoDeDocumento; //
+    private String interessado; //
     private String tipoDeArmazenamento;
     private String dataArquivamento;
-    private String descriçãoDocumento;
-    private String localCompletoDeArmazenamento;
+    private String descriçãoDocumento; //
+    private String localCompletoDeArmazenamento; //
 
     public Documento (){
 

@@ -60,7 +60,7 @@ public class RemoverUsuarioController implements Initializable{
         try {
 
             if(cpfBuscarMessageLabel.getText().isBlank() == false) {//campo nao for vazio
-                int cpf = Integer.parseInt(cpfBuscarMessageLabel.getText());
+                String cpf = cpfBuscarMessageLabel.getText();
 
                 if(busca.buscarCPF(cpf) != null){
                     String cpf2 = cpfBuscarMessageLabel.getText();

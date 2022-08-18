@@ -27,7 +27,7 @@ public class BuscarUsuarioController{
 
         try{
             if(cpfBuscarMessageLabel.getText().isBlank() == false){//campo nao for vazio
-                int cpf = Integer.parseInt(cpfBuscarMessageLabel.getText());
+                String cpf = cpfBuscarMessageLabel.getText();
                 usr = usr.buscarCPF(cpf);
 
                 if (usr == null){ //usuario nao encontrado
@@ -39,7 +39,7 @@ public class BuscarUsuarioController{
                     bancoPorCPF = usr.buscarCPF(cpf);
                     resultadoMessageLabel.setText(bancoPorCPF.getPrimeiroNome());
                     resultado3MessageLabel.setText(bancoPorCPF.getUltimoNome());
-                    resultado4MessageLabel.setText(Integer.toString(bancoPorCPF.getCPF()));
+                    resultado4MessageLabel.setText(bancoPorCPF.getCPF());
                     resultado5MessageLabel.setText(bancoPorCPF.getCargo());
                 }
 

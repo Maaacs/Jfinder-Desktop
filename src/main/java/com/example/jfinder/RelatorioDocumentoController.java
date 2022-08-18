@@ -7,6 +7,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+
+import java.math.BigInteger;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -20,13 +22,16 @@ public class RelatorioDocumentoController implements Initializable {
     @FXML private TextField itemMessageLabel;
     @FXML
     private ChoiceBox<String> choiceButton;
-    @FXML private  String[] consultas = new String[]{"Interessado", "Tipo", "Palavra-chave", "Ano"};
+    @FXML private  String[] consultas = new String[]{"Ano", "Tipo", "Interessado" , "Palavra-chave"};
 
     private ObservableList<Documento> palavras = FXCollections.observableArrayList();
+    @FXML
+    private Button atualizaTabela;
 
 
     @Override
     public void initialize (URL url, ResourceBundle rb){
+        initiTable();
         choiceButton.getItems().addAll(consultas);
         //choiceButton.setOnAction(this::getTipoConsulta);
     }
@@ -107,7 +112,6 @@ public class RelatorioDocumentoController implements Initializable {
 
     }
 
-
     public ObservableList<Documento> atualizaTabelaInteressado(){ //serve para retornar a tabela com os valores atuais do Jfinder
         Documento dao = new Documento();
         String itemAserBuscado = itemMessageLabel.getText();
@@ -133,6 +137,26 @@ public class RelatorioDocumentoController implements Initializable {
     }
 
 
+    @FXML
+    private void atualizaTabelaOnAction(ActionEvent event) {
+        itemMessageLabel.setText("");
+        initiTable();
+    }
+
+    public ObservableList<Documento> atualizaTabela(){ // Pega TODOS os itens do DB e preenche em uma tabela
+        BancodeDados dao = new BancodeDados();
+        return FXCollections.observableArrayList(dao.getListDocumentos());
+    }
+
+    public void initiTable(){
+        colunaNumReferencia.setCellValueFactory(new PropertyValueFactory("numeroUnicoReferencia"));//exatamente como está escrito no tipo Documento
+        colunaTipoDocumento.setCellValueFactory(new PropertyValueFactory("tipoDeDocumento"));
+        colunaInteressado.setCellValueFactory(new PropertyValueFactory("interessado"));
+        colunaArmazenamento.setCellValueFactory(new PropertyValueFactory("tipoDeArmazenamento"));
+        colunaArquivamento.setCellValueFactory(new PropertyValueFactory("dataArquivamento"));
+        tabelaDocumentos.setItems(atualizaTabela());
+    }
+
 
 
     public void encerrarSessaoOnAction(ActionEvent event){
@@ -155,18 +179,23 @@ public class RelatorioDocumentoController implements Initializable {
         Main.changeScreen("relatorio-view");
     }
 
-
-
 }
 
 
-    /*public ObservableList<Documento> atualizaTabela(){ // Pega TODOS os itens do DB e preenche em uma tabela
-        BancodeDados dao = new BancodeDados();
-        palavras = FXCollections.observableArrayList(dao.getListDocumentos());
-        return palavras;
-    }
 
-    @FXML private void atualizarTabelaOnAction(ActionEvent event) {
+
+
+
+
+
+
+
+
+
+
+
+
+    /*@FXML private void atualizarTabelaOnAction(ActionEvent event) {
         //initTable();
         System.out.println("Atualizei os documentos");
         // para testar no terminal

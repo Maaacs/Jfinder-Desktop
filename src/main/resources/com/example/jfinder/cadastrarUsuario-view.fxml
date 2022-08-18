@@ -21,19 +21,16 @@
                     <children>
                         <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="800.0" style="-fx-background-color: #fff;">
                             <children>
-                                <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@icons/box2.png" />
-                                    </image>
-                                </ImageView>
-                                <Label graphicTextGap="10.0" prefHeight="28.0" prefWidth="65.0" text="Jfinder" textFill="#631eda">
-                                    <font>
-                                        <Font size="17.0" />
-                                    </font>
-                                    <HBox.margin>
-                                        <Insets left="4.0" />
-                                    </HBox.margin>
-                                </Label>
+                        <ImageView fitHeight="64.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@icons/folder.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
                             </children>
                             <padding>
                                 <Insets left="30.0" />
@@ -134,7 +131,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <TextField fx:id="cpfUsuarioTextField" layoutX="124.0" layoutY="180.0" prefHeight="29.0" prefWidth="347.0" />
+                        <TextField fx:id="cpfUsuarioTextField" layoutX="124.0" layoutY="180.0" prefHeight="29.0" prefWidth="347.0" promptText="0000000000" />
                         <Label layoutX="124.0" layoutY="162.0" prefHeight="18.0" prefWidth="61.0" text="CPF:">
                            <font>
                               <Font size="14.0" />
@@ -146,7 +143,7 @@
                               <Font size="14.0" />
                            </font>
                         </Label>
-                        <Label fx:id="cadastroMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="220.0" layoutY="286.0" prefHeight="17.0" prefWidth="160.0" textFill="RED" />
+                        <Label fx:id="cadastroMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="162.0" layoutY="286.0" prefHeight="17.0" prefWidth="266.0" textFill="RED" />
                         <Label fx:id="cadastroUsuarioMessageLabel" layoutX="197.0" layoutY="294.0" prefHeight="18.0" prefWidth="201.0" textFill="#1cd034">
                            <font>
                               <Font size="14.0" />

@@ -28,6 +28,7 @@ public class RelatorioUsuarioController implements Initializable {
 
     @Override
     public void initialize (URL url, ResourceBundle rb){
+        initTable();
         choiceButton.getItems().addAll(consultas);
     }
 
@@ -111,16 +112,25 @@ public class RelatorioUsuarioController implements Initializable {
     }
 
 
+    @FXML
+    private void atualizaTabelaOnAction(ActionEvent event) {
+        itemMessageLabel.setText("");
+        initTable();
+    }
+
+    public ObservableList<Usuario> atualizaTabela(){ //serve para retornar a tabela com os valores atuais do Jfinder
+        BancodeDados dao = new BancodeDados();
+        return FXCollections.observableArrayList(dao.getListUsuarios());
+    }
 
 
-
-    /*public void initTable(){//inicializa a tebela com os valores atuais do DB
+    public void initTable(){//inicializa a tebela com os valores atuais do DB
         colunaNome.setCellValueFactory(new PropertyValueFactory("primeiroNome"));
         colunaSobrenome.setCellValueFactory(new PropertyValueFactory("ultimoNome"));
         colunaCpf.setCellValueFactory(new PropertyValueFactory("CPF"));
         colunaCargo.setCellValueFactory(new PropertyValueFactory("cargo"));
         tabelaDeUsuarios.setItems(atualizaTabela());
-    }*/
+    }
 
 
 

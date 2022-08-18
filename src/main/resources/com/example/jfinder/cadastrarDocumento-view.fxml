@@ -23,16 +23,15 @@
                <padding>
                   <Insets left="30.0" />
                </padding>
-               <ImageView fitHeight="41.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
-                  <Image url="@icons/box2.png" />
+               <ImageView fitHeight="64.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@icons/folder.png" />
+                  </image>
                </ImageView>
-               <Label graphicTextGap="10.0" prefHeight="28.0" prefWidth="65.0" text="Jfinder" textFill="#631eda">
+               <Label prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
                   <font>
-                     <Font size="17.0" />
+                     <Font size="16.0" />
                   </font>
-                  <HBox.margin>
-                     <Insets left="4.0" />
-                  </HBox.margin>
                </Label>
             </HBox>
          </Pane>

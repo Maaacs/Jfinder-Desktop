@@ -22,6 +22,10 @@ public class BuscarDocumentoController {
     private Button voltarDocumentos;
     @FXML
     private Button buscarDocumento;
+    @FXML
+    private Label resultado6MessageLabel;
+    @FXML
+    private Label resultado7MessageLabel;
 
     @FXML
     private void buscarDocumentOnAction(ActionEvent event) {
@@ -44,6 +48,8 @@ public class BuscarDocumentoController {
                     resultado3MessageLabel.setText(bancoPorNreferencia.getInteressado());
                     resultado4MessageLabel.setText(bancoPorNreferencia.getLocalCompletoDeArmazenamento());
                     resultado5MessageLabel.setText(bancoPorNreferencia.getDescriçãoDocumento());
+                    resultado6MessageLabel.setText(bancoPorNreferencia.getTipoDeArmazenamento());
+                    resultado7MessageLabel.setText(bancoPorNreferencia.getDataArquivamento());
                 }
             }else{
                 resultadoMessageLabel.setText("Insira o nº de referência!");
