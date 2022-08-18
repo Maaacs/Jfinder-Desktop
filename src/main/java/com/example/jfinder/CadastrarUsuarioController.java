@@ -63,11 +63,13 @@ public class CadastrarUsuarioController {
                 }
 
             }else{
+                cadastroUsuarioMessageLabel.setText("");
                 cadastroMessageLabel.setText("Insira os dados!");
             }
 
         }catch (Exception e){
             System.out.println(e);
+            cadastroUsuarioMessageLabel.setText("");
             cadastroMessageLabel.setText("Dados incorretos!");
         }
     }
