@@ -25,7 +25,7 @@
          <top>
             <Pane prefHeight="56.0" prefWidth="800.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="CENTER_LEFT" prefHeight="58.0" prefWidth="800.0" style="-fx-background-color: #fff;">
+                  <HBox alignment="CENTER_LEFT" layoutX="5.0" layoutY="-4.0" prefHeight="58.0" prefWidth="800.0" style="-fx-background-color: #fff;">
                      <children>
                         <ImageView fitHeight="64.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -142,18 +142,18 @@
                               </Lighting>
                            </effect>
                         </Pane>
-                        <Text fill="WHITE" layoutX="56.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER" wrappingWidth="41.09033203125">
+                        <Text fill="WHITE" layoutX="47.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER" wrappingWidth="70.09033203125">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="203.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome" textAlignment="CENTER" wrappingWidth="101.09033203125">
+                        <Text fill="WHITE" layoutX="189.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome" textAlignment="CENTER" wrappingWidth="101.09033203125">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="372.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" textAlignment="CENTER" wrappingWidth="78.09033203125" />
-                        <Text fill="WHITE" layoutX="521.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" textAlignment="CENTER" wrappingWidth="62.09033203125">
+                        <Text fill="WHITE" layoutX="372.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" textAlignment="CENTER" wrappingWidth="78.09033203125" />
+                        <Text fill="WHITE" layoutX="521.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cargo" textAlignment="CENTER" wrappingWidth="62.09033203125">
                            <font>
                               <Font size="14.0" />
                            </font>
