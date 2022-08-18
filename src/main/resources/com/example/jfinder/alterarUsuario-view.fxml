@@ -26,7 +26,7 @@
                               <Image url="@icons/folder.png" />
                            </image>
                         </ImageView>
-                        <Label prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
+                        <Label prefHeight="26.0" prefWidth="75.0" text="Jfinder" textFill="#6a05c3">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -119,7 +119,7 @@
                <bottom>
                   <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TextField fx:id="cpfTextField" layoutX="350.0" layoutY="14.0" prefHeight="28.0" prefWidth="169.0" promptText="CPF" />
+                        <TextField fx:id="cpfTextField" layoutX="340.0" layoutY="14.0" prefHeight="28.0" prefWidth="169.0" promptText="CPF" />
                         <TextField fx:id="nomeAlterarUsuario" layoutX="109.0" layoutY="93.0" prefHeight="29.0" prefWidth="347.0" promptText="Nome" />
                         <TextField fx:id="sobrenomeAlterarUsuario" layoutX="109.0" layoutY="164.0" prefHeight="29.0" prefWidth="347.0" promptText="Sobrenome" />
                         <TextField fx:id="cargoAlterarUsuario" layoutX="109.0" layoutY="231.0" prefHeight="29.0" prefWidth="347.0" promptText="Cargo" />
@@ -133,12 +133,12 @@
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buscarUsuario" layoutX="526.0" layoutY="14.0" mnemonicParsing="false" onAction="#buscarOnAction" prefHeight="13.0" prefWidth="60.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                        <Button fx:id="buscarUsuario" layoutX="516.0" layoutY="14.0" mnemonicParsing="false" onAction="#buscarOnAction" prefHeight="27.0" prefWidth="74.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="confirmarAlteracaoUsuario" layoutX="444.0" layoutY="326.0" mnemonicParsing="false" onAction="#alteracaoOnAction" prefHeight="27.0" prefWidth="142.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar Alteração" textFill="WHITE">
+                        <Button fx:id="confirmarAlteracaoUsuario" layoutX="411.0" layoutY="326.0" mnemonicParsing="false" onAction="#alteracaoOnAction" prefHeight="27.0" prefWidth="175.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar Alteração" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
