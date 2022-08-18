@@ -1,12 +1,9 @@
 package com.example.jfinder;
-import java.sql.*;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.Statement;
+
 public class TestandoConexao {
 
-    String user = "max";
-    String pass = "10121114";
+    String user = "usuario_criado";
+    String pass = "senha_criada";
 
     TestandoConexao(){
 
