@@ -144,7 +144,7 @@
                            </font>
                         </Label>
                         <Label fx:id="cadastroMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="126.0" layoutY="286.0" prefHeight="17.0" prefWidth="344.0" textFill="RED" />
-                        <Label fx:id="cadastroUsuarioMessageLabel" layoutX="127.0" layoutY="294.0" prefHeight="18.0" prefWidth="342.0" textFill="#1cd034">
+                        <Label fx:id="cadastroUsuarioMessageLabel" alignment="CENTER" layoutX="127.0" layoutY="294.0" prefHeight="18.0" prefWidth="342.0" textFill="#1cd034">
                            <font>
                               <Font size="14.0" />
                            </font>

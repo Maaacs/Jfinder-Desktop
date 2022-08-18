@@ -143,17 +143,17 @@
                               </Lighting>
                            </effect>
                         </Pane>
-                        <Text fill="WHITE" layoutX="55.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER" wrappingWidth="75.09033203125">
+                        <Text fill="WHITE" layoutX="44.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER" wrappingWidth="75.09033203125">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="221.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome" textAlignment="CENTER" wrappingWidth="117.09033203125">
+                        <Text fill="WHITE" layoutX="208.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome" textAlignment="CENTER" wrappingWidth="117.09033203125">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="376.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" textAlignment="CENTER" wrappingWidth="78.09033203125">
+                        <Text fill="WHITE" layoutX="378.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF" textAlignment="CENTER" wrappingWidth="78.09033203125">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -164,11 +164,11 @@
                            </font>
                         </Text>
                         <TextField fx:id="cpfBuscarMessageLabel" layoutX="320.0" layoutY="247.0" prefHeight="30.0" prefWidth="169.0" promptText="CPF" />
-                        <Label fx:id="tabelaMessageLabel" layoutX="319.0" layoutY="288.0" prefHeight="18.0" prefWidth="198.0" textFill="#28c32d">
+                        <Label fx:id="tabelaMessageLabel" layoutX="319.0" layoutY="288.0" prefHeight="18.0" prefWidth="267.0" textFill="#28c32d">
                            <font>
                               <Font size="14.0" />
                            </font></Label>
-                        <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutX="319.0" layoutY="288.0" prefHeight="18.0" prefWidth="171.0" textFill="#d3492d">
+                        <Label fx:id="resultadoMessageLabel" layoutX="319.0" layoutY="288.0" prefHeight="18.0" prefWidth="266.0" textFill="#d3492d">
                            <font>
                               <Font size="14.0" />
                            </font>
