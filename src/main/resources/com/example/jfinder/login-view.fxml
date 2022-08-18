@@ -37,7 +37,7 @@
                   <Image url="@icons/user2Login.png" />
                </image>
             </ImageView>
-            <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="120.0" layoutY="298.0" prefHeight="17.0" prefWidth="160.0" textFill="RED" />
+            <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="99.0" layoutY="298.0" prefHeight="17.0" prefWidth="203.0" textFill="RED" />
             <PasswordField fx:id="senhaTextField" layoutX="94.0" layoutY="266.0" prefHeight="26.0" prefWidth="211.0" promptText="Senha" />
             <TextField fx:id="usuarioTextField" layoutX="94.0" layoutY="231.0" prefHeight="26.0" prefWidth="211.0" promptText="Usuário" />
             <Button fx:id="entrar" layoutX="134.0" layoutY="333.0" mnemonicParsing="false" onAction="#entrarOnAction" prefHeight="46.0" prefWidth="133.0" styleClass="navbutton" stylesheets="@css/style.css" text="Entrar" textFill="WHITE">

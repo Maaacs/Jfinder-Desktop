@@ -31,7 +31,7 @@
                               <Image url="@icons/folder.png" />
                            </image>
                         </ImageView>
-                        <Label prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
+                        <Label prefHeight="26.0" prefWidth="70.0" text="Jfinder" textFill="#6a05c3">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -143,12 +143,12 @@
                               </Lighting>
                            </effect>
                         </Pane>
-                        <Text fill="WHITE" layoutX="55.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER" wrappingWidth="41.09033203125">
+                        <Text fill="WHITE" layoutX="55.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome" textAlignment="CENTER" wrappingWidth="75.09033203125">
                            <font>
                               <Font size="16.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="221.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome" textAlignment="CENTER" wrappingWidth="78.09033203125">
+                        <Text fill="WHITE" layoutX="221.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome" textAlignment="CENTER" wrappingWidth="117.09033203125">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -183,7 +183,7 @@
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="atualizarTabela" layoutX="6.0" layoutY="249.0" mnemonicParsing="false" onAction="#atualizarTabelaUsuariosOnAction" prefHeight="27.0" prefWidth="116.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar tabela" textFill="WHITE">
+                        <Button fx:id="atualizarTabela" layoutX="6.0" layoutY="249.0" mnemonicParsing="false" onAction="#atualizarTabelaUsuariosOnAction" prefHeight="27.0" prefWidth="135.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar tabela" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>

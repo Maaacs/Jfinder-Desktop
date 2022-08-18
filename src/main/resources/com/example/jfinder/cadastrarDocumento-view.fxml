@@ -28,7 +28,7 @@
                      <Image url="@icons/folder.png" />
                   </image>
                </ImageView>
-               <Label prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
+               <Label prefHeight="26.0" prefWidth="77.0" text="Jfinder" textFill="#6a05c3">
                   <font>
                      <Font size="16.0" />
                   </font>
@@ -103,7 +103,10 @@
                   <DatePicker fx:id="dataArquivamentoDatePicker" layoutX="14.0" layoutY="234.0" prefWidth="194.0" promptText="Data de arquivamento" />
                   <TextArea fx:id="descricaoDocumentoTextField" layoutX="282.0" layoutY="54.0" prefHeight="165.0" prefWidth="305.0" promptText="Breve descrição do documento" />
                   <TextArea fx:id="localArmazenamentoTextField" layoutX="282.0" layoutY="226.0" prefHeight="59.0" prefWidth="305.0" promptText="Local completo de armazenamento" />
-                  <TextField fx:id="tipoArmazenamentoTextField" layoutX="14.0" layoutY="189.0" prefHeight="29.0" prefWidth="194.0" promptText="Armazenamento Físico ou Virtual" />
+                  <TextField fx:id="tipoArmazenamentoTextField" layoutX="14.0" layoutY="189.0" prefHeight="29.0" prefWidth="194.0" promptText="Armazenamento Físico ou Virtual">
+                     <font>
+                        <Font size="11.0" />
+                     </font></TextField>
                   <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutX="61.0" layoutY="328.0" prefHeight="18.0" prefWidth="342.0" textFill="#cd3e1d">
                      <font>
                         <Font size="14.0" />
