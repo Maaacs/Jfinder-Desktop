@@ -12,7 +12,7 @@ import java.util.List;
 public class BancodeDados {
     private static String url = "jdbc:mysql://localhost:3306/JfinderDB";
     String userBD = "usuario_criado";
-    String pass = "senha_criada";
+    String pass = "usuario_criado";
     protected static Connection conexao = null;
 
 

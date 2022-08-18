@@ -67,7 +67,12 @@ public class AlterarUsuarioController {
     }
 
     @FXML private void alteracaoOnAction(ActionEvent event) {
-        atualiza();
+        if(nomeAlterarUsuario.getText().isBlank() == false && sobrenomeAlterarUsuario.getText().isBlank() == false && cpfTextField.getText().isBlank() == false && cargoAlterarUsuario.getText().isBlank() == false){
+            atualiza();
+        }else{
+            resultadoMessageLabel.setText("Insira o CPF!");
+        }
+
     }
 
     public void atualiza(){
