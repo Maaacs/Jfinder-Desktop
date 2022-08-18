@@ -87,7 +87,7 @@ public class AlterarDocumentoController {
     public void atualiza(){
         BancodeDados dao = new BancodeDados();
         int numeroDeReferencia = Integer.parseInt(numeroReferenciaTextField.getText());
-        String tipoDeDoumento = tipoArmazenamentoTextField.getText();
+        String tipoDeDoumento = tipoDocumentoTextField.getText();
         String interessadoDocumento = interessadoTextField.getText();
         String tipoArmazenamentoDocumento = tipoArmazenamentoTextField.getText();
         String dataArquivamentoDocumento = dataArquivamentoTextField.getText();
@@ -105,7 +105,12 @@ public class AlterarDocumentoController {
     }
     @FXML
     private void confirmarAlteracaoOnAction(ActionEvent event) {
-        atualiza();
+        resultado4LabelMessage.setText("");
+        if (tipoDocumentoTextField.getText().isBlank() == false && interessadoTextField.getText().isBlank() == false && tipoArmazenamentoTextField.getText().isBlank() == false && dataArquivamentoTextField.getText().isBlank() == false && localArmazenamentoTextField.getText().isBlank() == false && descricaoTextField.getText().isBlank() == false) {
+            atualiza();
+        } else{
+            resultado3MessageLabel.setText("Verifique se todos os campos estão preenchidos!");
+        }
     }
 
     public void encerrarSessaoOnAction(ActionEvent event){
@@ -125,6 +130,8 @@ public class AlterarDocumentoController {
     }
 
     public void voltarOnAction(ActionEvent event){
+        resultado3MessageLabel.setText("");
+        resultado4LabelMessage.setText("");
         Main.changeScreen("documento-view");
     }
 

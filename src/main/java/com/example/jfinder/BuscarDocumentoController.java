@@ -40,6 +40,12 @@ public class BuscarDocumentoController {
                 if (doc == null){
                     System.out.println("Documento não encontrado!");
                     resultadoMessageLabel.setText("Documento não encontrado!");
+                    resultado2MessageLabel.setText("");
+                    resultado3MessageLabel.setText("");
+                    resultado4MessageLabel.setText("");
+                    resultado5MessageLabel.setText("");
+                    resultado6MessageLabel.setText("");
+                    resultado7MessageLabel.setText("");
 
                 }else{
                     resultadoMessageLabel.setText("");
@@ -53,9 +59,21 @@ public class BuscarDocumentoController {
                 }
             }else{
                 resultadoMessageLabel.setText("Insira o nº de referência!");
+                resultado2MessageLabel.setText("");
+                resultado3MessageLabel.setText("");
+                resultado4MessageLabel.setText("");
+                resultado5MessageLabel.setText("");
+                resultado6MessageLabel.setText("");
+                resultado7MessageLabel.setText("");
             }
         }catch (NumberFormatException e){
-            resultadoMessageLabel.setText("Nº de referência incorreto!");
+            resultadoMessageLabel.setText("Nº de referência inválido!");
+            resultado2MessageLabel.setText("");
+            resultado3MessageLabel.setText("");
+            resultado4MessageLabel.setText("");
+            resultado5MessageLabel.setText("");
+            resultado6MessageLabel.setText("");
+            resultado7MessageLabel.setText("");
         }
 
     }

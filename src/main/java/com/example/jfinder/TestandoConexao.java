@@ -26,7 +26,7 @@ public class TestandoConexao {
     public static void main(String[] args) {
         TestandoConexao banco = new TestandoConexao();
         banco.verificarConexao();
-        System.out.println(BancodeDados.getConexao()+"oi");
+        System.out.println(BancodeDados.getConexao());
     }
 }
 

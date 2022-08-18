@@ -33,6 +33,10 @@ public class BuscarUsuarioController{
                 if (usr == null){ //usuario nao encontrado
                     System.out.println("Nao encontrado");
                     resultado6MessageLabel.setText("Usuario não encontrado!");
+                    resultadoMessageLabel.setText("");
+                    resultado3MessageLabel.setText("");
+                    resultado4MessageLabel.setText("");
+                    resultado5MessageLabel.setText("");
                 }
                 else{
                     resultado6MessageLabel.setText("");
@@ -55,6 +59,12 @@ public class BuscarUsuarioController{
 
 
     public void voltarBuscarOnAction(ActionEvent event){
+        resultadoMessageLabel.setText("");
+        resultado3MessageLabel.setText("");
+        resultado4MessageLabel.setText("");
+        resultado5MessageLabel.setText("");
+        cpfBuscarMessageLabel.setText("");
+        resultado6MessageLabel.setText("");
         Main.changeScreen("usuario-view");
     }
     public void encerrarSessaoOnAction(ActionEvent event){

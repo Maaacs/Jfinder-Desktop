@@ -91,6 +91,12 @@ public class AlterarUsuarioController {
 
 
     public void voltarOnAction(ActionEvent event){
+        cpfTextField.setText("");
+        nomeAlterarUsuario.setText("");
+        sobrenomeAlterarUsuario.setText("");
+        cargoAlterarUsuario.setText("");
+        alterarLabelMessage.setText("");
+        resultadoMessageLabel.setText("");
         Main.changeScreen("usuario-view");
     }
 

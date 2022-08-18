@@ -30,7 +30,7 @@ public class CadastrarDocumentoController {
     @FXML
     private void cadastrarDocumentoOnAction(ActionEvent event) {
         try {
-            if (numeroReferenciaTextField.getText().isBlank() == false && tipoDocumentoTextField.getText().isBlank() == false && interessadoTextField.getText().isBlank() == false && tipoArmazenamentoTextField.getText().isBlank() == false && descricaoDocumentoTextField.getText().isBlank() == false && localArmazenamentoTextField.getText().isBlank() == false){
+            if (numeroReferenciaTextField.getText().isBlank() == false && tipoDocumentoTextField.getText().isBlank() == false && interessadoTextField.getText().isBlank() == false && tipoArmazenamentoTextField.getText().isBlank() == false && dataArquivamentoDatePicker.getValue() !=null && descricaoDocumentoTextField.getText().isBlank() == false && localArmazenamentoTextField.getText().isBlank() == false){
                 int numeroReferencia = Integer.parseInt(numeroReferenciaTextField.getText());
                 String tipoDocumento = tipoDocumentoTextField.getText();
                 String interessado = interessadoTextField.getText();
@@ -49,21 +49,21 @@ public class CadastrarDocumentoController {
                     tipoArmazenamentoTextField.setText("");
                     descricaoDocumentoTextField.setText("");
                     localArmazenamentoTextField.setText("");
+                    dataArquivamentoDatePicker.setValue(null);
                     resultado2MessageLabel.setText("Cadastro realizado com sucesso!");
                 }else{
                     resultado2MessageLabel.setText("");
                     resultadoMessageLabel.setText("Este Nº de referência já está cadastrado!");
                 }
-                //BancodeDados.adicionarDocumento(documento);
 
             }else{
                 resultado2MessageLabel.setText("");
-                resultadoMessageLabel.setText("Insira os dados!");
+                resultadoMessageLabel.setText("Verifique se os dados estão preenchidos corretamente!");
             }
 
         }catch (NumberFormatException e){
             resultado2MessageLabel.setText("");
-            resultadoMessageLabel.setText("Dado inválido!");
+            resultadoMessageLabel.setText("Nº de referência inválido!");
         }
     }
 

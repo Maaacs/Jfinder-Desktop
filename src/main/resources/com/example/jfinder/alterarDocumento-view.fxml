@@ -134,7 +134,7 @@
                         <Label layoutX="14.0" layoutY="183.0" text="Nova data de arquivamento:" />
                         <Label layoutX="15.0" layoutY="235.0" text="Novo local de armazenamento:" />
                         <Label layoutX="285.0" layoutY="114.0" text="Nova descrição:" />
-                        <Label fx:id="resultado3MessageLabel" layoutX="199.0" layoutY="331.0" prefHeight="17.0" prefWidth="232.0" textFill="#dd4040" />
+                        <Label fx:id="resultado3MessageLabel" layoutX="137.0" layoutY="331.0" prefHeight="17.0" prefWidth="294.0" textFill="#dd4040" />
                         <Label fx:id="resultado4LabelMessage" alignment="CENTER" layoutX="194.0" layoutY="331.0" prefHeight="17.0" prefWidth="242.0" textFill="#36ae2d">
                            <font>
                               <Font size="14.0" />

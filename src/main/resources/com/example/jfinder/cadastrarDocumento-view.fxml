@@ -104,11 +104,11 @@
                   <TextArea fx:id="descricaoDocumentoTextField" layoutX="282.0" layoutY="54.0" prefHeight="165.0" prefWidth="305.0" promptText="Breve descrição do documento" />
                   <TextArea fx:id="localArmazenamentoTextField" layoutX="282.0" layoutY="226.0" prefHeight="59.0" prefWidth="305.0" promptText="Local completo de armazenamento" />
                   <TextField fx:id="tipoArmazenamentoTextField" layoutX="14.0" layoutY="189.0" prefHeight="29.0" prefWidth="194.0" promptText="Armazenamento Físico ou Virtual" />
-                  <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutX="2.0" layoutY="336.0" prefHeight="18.0" prefWidth="236.0" textFill="#cd3e1d">
+                  <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutX="61.0" layoutY="328.0" prefHeight="18.0" prefWidth="342.0" textFill="#cd3e1d">
                      <font>
                         <Font size="14.0" />
                      </font></Label>
-                  <Label fx:id="resultado2MessageLabel" alignment="CENTER" layoutX="-4.0" layoutY="336.0" prefHeight="18.0" prefWidth="233.0" textFill="#53ae17">
+                  <Label fx:id="resultado2MessageLabel" alignment="CENTER" layoutX="169.0" layoutY="328.0" prefHeight="18.0" prefWidth="233.0" textFill="#53ae17">
                      <font>
                         <Font size="14.0" />
                      </font>

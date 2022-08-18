@@ -78,7 +78,7 @@ public class RemoverDocumentoController implements Initializable {
 
         }catch (NumberFormatException e){
             documentoMessageLabel.setText("");
-            tabelaMessageLabel.setText("Nº de Referencia incorreto!");
+            tabelaMessageLabel.setText("Nº de Referencia inválido!");
         }
     }
 

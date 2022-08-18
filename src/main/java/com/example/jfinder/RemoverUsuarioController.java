@@ -86,6 +86,9 @@ public class RemoverUsuarioController implements Initializable{
 
 
     public void voltarOnAction(ActionEvent event){
+        resultadoMessageLabel.setText("");
+        tabelaMessageLabel.setText("");
+        cpfBuscarMessageLabel.setText("");
         Main.changeScreen("usuario-view");
     }
     public void encerrarSessaoOnAction(ActionEvent event){
