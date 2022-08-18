@@ -105,6 +105,7 @@ public class AlterarDocumentoController {
     }
     @FXML
     private void confirmarAlteracaoOnAction(ActionEvent event) {
+        resultado3MessageLabel.setText("");
         resultado4LabelMessage.setText("");
         if (tipoDocumentoTextField.getText().isBlank() == false && interessadoTextField.getText().isBlank() == false && tipoArmazenamentoTextField.getText().isBlank() == false && dataArquivamentoTextField.getText().isBlank() == false && localArmazenamentoTextField.getText().isBlank() == false && descricaoTextField.getText().isBlank() == false) {
             atualiza();
@@ -132,6 +133,13 @@ public class AlterarDocumentoController {
     public void voltarOnAction(ActionEvent event){
         resultado3MessageLabel.setText("");
         resultado4LabelMessage.setText("");
+        numeroReferenciaTextField.setText(null);
+        tipoDocumentoTextField.setText("");
+        interessadoTextField.setText("");
+        tipoArmazenamentoTextField.setText("");
+        dataArquivamentoTextField.setText("");
+        descricaoTextField.setText("");
+        localArmazenamentoTextField.setText("");
         Main.changeScreen("documento-view");
     }
 
