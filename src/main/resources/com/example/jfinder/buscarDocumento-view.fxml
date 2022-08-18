@@ -32,7 +32,7 @@
                               <Image url="@icons/folder.png" />
                            </image>
                         </ImageView>
-                        <Label prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
+                        <Label prefHeight="26.0" prefWidth="87.0" text="Jfinder" textFill="#6a05c3">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -114,7 +114,7 @@
                               <Image url="@icons/SearchDoc2.png" />
                            </image>
                         </ImageView>
-                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="160.0" text="Buscar Documento" textFill="#631eda">
+                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="200.0" text="Buscar Documento" textFill="#631eda">
                            <font>
                               <Font size="17.0" />
                            </font>
