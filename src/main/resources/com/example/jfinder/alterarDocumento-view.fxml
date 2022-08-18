@@ -27,7 +27,7 @@
                               <Image url="@icons/folder.png" />
                            </image>
                         </ImageView>
-                        <Label prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
+                        <Label prefHeight="26.0" prefWidth="73.0" text="Jfinder" textFill="#6a05c3">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -121,13 +121,13 @@
                <bottom>
                   <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
                      <children>
-                        <TextField fx:id="interessadoTextField" layoutX="14.0" layoutY="92.0" prefHeight="29.0" prefWidth="192.0" />
+                        <TextField fx:id="interessadoTextField" layoutX="14.0" layoutY="92.0" prefHeight="29.0" prefWidth="200.0" />
                         <TextArea fx:id="descricaoTextField" layoutX="285.0" layoutY="131.0" prefHeight="177.0" prefWidth="300.0" />
-                        <TextField fx:id="numeroReferenciaTextField" layoutX="351.0" layoutY="6.0" prefHeight="28.0" prefWidth="169.0" promptText="Nº de referência" />
-                        <TextArea fx:id="localArmazenamentoTextField" layoutX="14.0" layoutY="251.0" prefHeight="56.0" prefWidth="192.0" />
-                        <TextField fx:id="tipoDocumentoTextField" layoutX="13.0" layoutY="39.0" prefHeight="29.0" prefWidth="192.0" />
-                        <TextField fx:id="tipoArmazenamentoTextField" layoutX="14.0" layoutY="147.0" prefHeight="29.0" prefWidth="192.0" />
-                        <TextField fx:id="dataArquivamentoTextField" layoutX="14.0" layoutY="200.0" prefHeight="29.0" prefWidth="192.0" />
+                        <TextField fx:id="numeroReferenciaTextField" layoutX="327.0" layoutY="6.0" prefHeight="28.0" prefWidth="169.0" promptText="Nº de referência" />
+                        <TextArea fx:id="localArmazenamentoTextField" layoutX="14.0" layoutY="251.0" prefHeight="56.0" prefWidth="200.0" />
+                        <TextField fx:id="tipoDocumentoTextField" layoutX="13.0" layoutY="39.0" prefHeight="29.0" prefWidth="200.0" />
+                        <TextField fx:id="tipoArmazenamentoTextField" layoutX="14.0" layoutY="147.0" prefHeight="29.0" prefWidth="200.0" />
+                        <TextField fx:id="dataArquivamentoTextField" layoutX="14.0" layoutY="200.0" prefHeight="29.0" prefWidth="200.0" />
                         <Label layoutX="13.0" layoutY="22.0" text="Novo tipo de documento:" />
                         <Label layoutX="13.0" layoutY="75.0" text="Novo interessado:" />
                         <Label layoutX="14.0" layoutY="129.0" text="Novo tipo de armazenamento:" />
@@ -144,12 +144,12 @@
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="confirmarAlteracaoUsuario" layoutX="440.0" layoutY="326.0" mnemonicParsing="false" onAction="#confirmarAlteracaoOnAction" prefHeight="27.0" prefWidth="138.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar Alteração" textFill="WHITE">
+                        <Button fx:id="confirmarAlteracaoUsuario" layoutX="391.0" layoutY="326.0" mnemonicParsing="false" onAction="#confirmarAlteracaoOnAction" prefHeight="27.0" prefWidth="187.0" styleClass="navbutton" stylesheets="@css/style.css" text="Confirmar Alteração" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="buscarDocumento" layoutX="526.0" layoutY="6.0" mnemonicParsing="false" onAction="#buscarDocumentoOnAction" prefHeight="13.0" prefWidth="60.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                        <Button fx:id="buscarDocumento" layoutX="502.0" layoutY="6.0" mnemonicParsing="false" onAction="#buscarDocumentoOnAction" prefHeight="27.0" prefWidth="79.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>

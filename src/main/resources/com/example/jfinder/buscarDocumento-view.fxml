@@ -136,12 +136,12 @@
                         </Pane>
                         <Text fx:id="colunaInteressado" fill="WHITE" layoutX="27.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interessado" textAlignment="CENTER" wrappingWidth="96.09033203125">
                            <font>
-                              <Font size="15.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
                         <Text fx:id="colunaLocalArmazenamento" fill="WHITE" layoutX="267.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Local de armazenamento" textAlignment="CENTER" wrappingWidth="227.09033203125">
                            <font>
-                              <Font size="15.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
                         <TextField fx:id="numeroReferencia" layoutX="83.0" layoutY="8.0" prefHeight="30.0" prefWidth="160.0" promptText="Nº de referência" />
@@ -178,7 +178,7 @@
                               <Font size="14.0" />
                            </font></Label>
                         <Label layoutX="6.0" layoutY="187.0" text="Descrição:" />
-                        <Label layoutX="415.0" layoutY="184.0" onMouseClicked="#buscaAvancadaOnAction" text="Não encontrou o que procurava?" textFill="#511ebf" underline="true">
+                        <Label alignment="CENTER_RIGHT" layoutX="346.0" layoutY="184.0" onMouseClicked="#buscaAvancadaOnAction" prefHeight="17.0" prefWidth="246.0" text="Não encontrou o que procurava?" textFill="#511ebf" underline="true">
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
@@ -206,17 +206,17 @@
                         </Pane>
                         <Text fx:id="colunaTipo1" fill="WHITE" layoutX="398.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de arquivamento" textAlignment="CENTER" wrappingWidth="186.09033203125">
                            <font>
-                              <Font size="15.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fx:id="colunaInteressado1" fill="WHITE" layoutX="182.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de armazenamento" textAlignment="CENTER" wrappingWidth="171.09033203125">
+                        <Text fx:id="colunaInteressado1" fill="WHITE" layoutX="142.0" layoutY="132.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de armazenamento" textAlignment="CENTER" wrappingWidth="235.09033203125">
                            <font>
-                              <Font size="15.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
                         <Text fx:id="colunaInteressado11" fill="WHITE" layoutX="-3.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo de documento" textAlignment="CENTER" wrappingWidth="155.09033203125">
                            <font>
-                              <Font size="15.0" />
+                              <Font size="14.0" />
                            </font>
                         </Text>
                         <Pane layoutX="149.0" layoutY="139.0" prefHeight="36.0" prefWidth="233.0" styleClass="menubutton" stylesheets="@css/style.css">

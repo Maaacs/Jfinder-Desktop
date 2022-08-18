@@ -88,7 +88,7 @@
                   <ImageView fitHeight="41.0" fitWidth="49.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
                      <Image url="@icons/addDoc2.png" />
                   </ImageView>
-                  <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="160.0" text="Cadastrar Documento" textFill="#631eda">
+                  <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="196.0" text="Cadastrar Documento" textFill="#631eda">
                      <font>
                         <Font size="17.0" />
                      </font>
@@ -97,13 +97,13 @@
             </top>
             <bottom>
                <Pane prefHeight="368.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-                  <TextField fx:id="numeroReferenciaTextField" layoutX="14.0" layoutY="54.0" prefHeight="29.0" prefWidth="194.0" promptText="Nº de referência" />
-                  <TextField fx:id="tipoDocumentoTextField" layoutX="14.0" layoutY="99.0" prefHeight="29.0" prefWidth="194.0" promptText="Tipo de documento" />
-                  <TextField fx:id="interessadoTextField" layoutX="14.0" layoutY="145.0" prefHeight="29.0" prefWidth="194.0" promptText="Interessado" />
-                  <DatePicker fx:id="dataArquivamentoDatePicker" layoutX="14.0" layoutY="234.0" prefWidth="194.0" promptText="Data de arquivamento" />
+                  <TextField fx:id="numeroReferenciaTextField" layoutX="14.0" layoutY="54.0" prefHeight="29.0" prefWidth="200.0" promptText="Nº de referência" />
+                  <TextField fx:id="tipoDocumentoTextField" layoutX="14.0" layoutY="99.0" prefHeight="29.0" prefWidth="200.0" promptText="Tipo de documento" />
+                  <TextField fx:id="interessadoTextField" layoutX="14.0" layoutY="145.0" prefHeight="29.0" prefWidth="200.0" promptText="Interessado" />
+                  <DatePicker fx:id="dataArquivamentoDatePicker" layoutX="14.0" layoutY="234.0" prefHeight="29.0" prefWidth="200.0" promptText="Data de arquivamento" />
                   <TextArea fx:id="descricaoDocumentoTextField" layoutX="282.0" layoutY="54.0" prefHeight="165.0" prefWidth="305.0" promptText="Breve descrição do documento" />
                   <TextArea fx:id="localArmazenamentoTextField" layoutX="282.0" layoutY="226.0" prefHeight="59.0" prefWidth="305.0" promptText="Local completo de armazenamento" />
-                  <TextField fx:id="tipoArmazenamentoTextField" layoutX="14.0" layoutY="189.0" prefHeight="29.0" prefWidth="194.0" promptText="Armazenamento Físico ou Virtual">
+                  <TextField fx:id="tipoArmazenamentoTextField" layoutX="14.0" layoutY="189.0" prefHeight="29.0" prefWidth="200.0" promptText="Armazenamento Físico ou Virtual">
                      <font>
                         <Font size="11.0" />
                      </font></TextField>

@@ -32,7 +32,7 @@
                               <Image url="@icons/folder.png" />
                            </image>
                         </ImageView>
-                        <Label prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
+                        <Label prefHeight="26.0" prefWidth="76.0" text="Jfinder" textFill="#6a05c3">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -114,7 +114,7 @@
                               <Image url="@icons/usuarios2.png" />
                            </image>
                         </ImageView>
-                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="160.0" text="Relatório de Usuários" textFill="#631eda">
+                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="203.0" text="Relatório de Usuários" textFill="#631eda">
                            <font>
                               <Font size="17.0" />
                            </font>
@@ -147,7 +147,7 @@
                               <Font size="14.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="203.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome" textAlignment="CENTER" wrappingWidth="78.09033203125">
+                        <Text fill="WHITE" layoutX="203.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sobrenome" textAlignment="CENTER" wrappingWidth="101.09033203125">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -162,17 +162,17 @@
                         <ChoiceBox fx:id="choiceButton" layoutX="228.0" layoutY="2.0" prefWidth="150.0" styleClass="opacoGradiente" stylesheets="@css/style.css" />
                         <TextField fx:id="itemMessageLabel" layoutX="16.0" layoutY="2.0" prefHeight="26.0" prefWidth="194.0" promptText="Pesquisar" styleClass="opaco" stylesheets="@css/style.css" />
                         <Label fx:id="resultadoMessageLabel" alignment="CENTER" layoutX="202.0" layoutY="295.0" prefHeight="17.0" prefWidth="206.0" textFill="#c32f2f" />
-                        <Button fx:id="buscarButton" layoutX="393.0" layoutY="2.0" mnemonicParsing="false" onAction="#consultaPorDiferentesEntradas" prefHeight="0.0" prefWidth="60.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
+                        <Button fx:id="buscarButton" layoutX="393.0" layoutY="2.0" mnemonicParsing="false" onAction="#consultaPorDiferentesEntradas" prefHeight="27.0" prefWidth="86.0" styleClass="navbutton" stylesheets="@css/style.css" text="Buscar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="voltarRelatorioUsuario" layoutX="502.0" layoutY="323.0" mnemonicParsing="false" onAction="#voltarOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Voltar" textFill="WHITE">
+                        <Button fx:id="voltarRelatorioUsuario" layoutX="502.0" layoutY="318.0" mnemonicParsing="false" onAction="#voltarOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="navbutton" stylesheets="@css/style.css" text="Voltar" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="atualizaTabela" layoutX="10.0" layoutY="323.0" mnemonicParsing="false" onAction="#atualizaTabelaOnAction" prefHeight="27.0" prefWidth="113.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar tabela" textFill="WHITE">
+                        <Button fx:id="atualizaTabela" layoutX="10.0" layoutY="318.0" mnemonicParsing="false" onAction="#atualizaTabelaOnAction" prefHeight="27.0" prefWidth="145.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar tabela" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>

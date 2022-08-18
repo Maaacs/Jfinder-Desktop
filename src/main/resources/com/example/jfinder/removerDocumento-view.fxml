@@ -31,7 +31,7 @@
                               <Image url="@icons/folder.png" />
                            </image>
                         </ImageView>
-                        <Label prefHeight="26.0" prefWidth="50.0" text="Jfinder" textFill="#6a05c3">
+                        <Label prefHeight="26.0" prefWidth="79.0" text="Jfinder" textFill="#6a05c3">
                            <font>
                               <Font size="16.0" />
                            </font>
@@ -113,7 +113,7 @@
                               <Image url="@icons/removeDoc2.png" />
                            </image>
                         </ImageView>
-                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="160.0" text="Remover Documento" textFill="#631eda">
+                        <Label graphicTextGap="10.0" layoutX="43.0" layoutY="38.0" prefHeight="28.0" prefWidth="203.0" text="Remover Documento" textFill="#631eda">
                            <font>
                               <Font size="17.0" />
                            </font>
@@ -143,17 +143,17 @@
                               </Lighting>
                            </effect>
                         </Pane>
-                        <Text fill="WHITE" layoutX="180.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo" textAlignment="CENTER" wrappingWidth="78.09033203125">
+                        <Text fill="WHITE" layoutX="180.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipo" textAlignment="CENTER" wrappingWidth="78.09033203125">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="344.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interessado" textAlignment="CENTER" wrappingWidth="78.09033203125">
+                        <Text fill="WHITE" layoutX="313.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interessado" textAlignment="CENTER" wrappingWidth="109.09033203125">
                            <font>
                               <Font size="15.0" />
                            </font>
                         </Text>
-                        <Text fill="WHITE" layoutX="482.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arquivamento" textAlignment="CENTER" wrappingWidth="102.09033203125">
+                        <Text fill="WHITE" layoutX="453.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Arquivamento" textAlignment="CENTER" wrappingWidth="132.09033203125">
                            <font>
                               <Font size="15.0" />
                            </font>
@@ -180,7 +180,7 @@
                               <Font size="14.0" />
                            </font>
                         </Button>
-                        <Button fx:id="atualizarTabela" layoutX="8.0" layoutY="249.0" mnemonicParsing="false" onAction="#atualizarTabelaDocumentosOnAction" prefHeight="27.0" prefWidth="116.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar tabela" textFill="WHITE">
+                        <Button fx:id="atualizarTabela" layoutX="8.0" layoutY="249.0" mnemonicParsing="false" onAction="#atualizarTabelaDocumentosOnAction" prefHeight="27.0" prefWidth="160.0" styleClass="navbutton" stylesheets="@css/style.css" text="Atualizar tabela" textFill="WHITE">
                            <font>
                               <Font size="14.0" />
                            </font>
