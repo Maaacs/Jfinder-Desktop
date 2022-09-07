@@ -19,7 +19,7 @@ That said, this project is part of my personal portfolio and aims to solve this 
 ###Prerequisites
 - Java SE Development Kit
 - Mysql
-Tutorial how to open the project in Intellij [Jfinder](https://github.com/Maaacs/Jfinder-Desktop/blob/main/Readme.pdf)
+- Complete tutorial on how to open and run the project in Intellij [Jfinder](https://github.com/Maaacs/Jfinder-Desktop/blob/main/Readme.pdf)
 
 ## 🚀 Functionalities
 ### Documents
