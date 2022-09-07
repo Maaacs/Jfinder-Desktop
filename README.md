@@ -15,7 +15,7 @@ I am majoring in Computer Science and, in my institute (ICOMP), there are a seri
 That said, this project is part of my personal portfolio and aims to solve this problem for my institute. However, it can also be reused for any other application within that context. I also developed a mobile version that can be found here [Jfinder-Mobile](https://github.com/Maaacs/Jfinder-Mobile)
 
 ## Getting Started
-##Prerequisites
+Prerequisites
 - Java SE Development Kit
 - Mysql
 - Complete tutorial on how to open and run the project in Intellij [Jfinder](https://github.com/Maaacs/Jfinder-Desktop/blob/main/Readme.pdf)
